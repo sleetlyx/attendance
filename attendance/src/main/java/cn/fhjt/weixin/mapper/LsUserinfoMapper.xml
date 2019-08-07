@@ -1,0 +1,776 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.fhjt.weixin.mapper.LsUserinfoMapper" >
+  <resultMap id="BaseResultMap" type="cn.fhjt.weixin.pojo.LsUserinfo" >
+    <result column="userid" property="userid" jdbcType="INTEGER" />
+    <result column="badgenumber" property="badgenumber" jdbcType="NVARCHAR" />
+    <result column="name" property="name" jdbcType="NVARCHAR" />
+    <result column="defaultdeptid" property="defaultdeptid" jdbcType="INTEGER" />
+    <result column="Password" property="password" jdbcType="NVARCHAR" />
+    <result column="MVerifyPass" property="mverifypass" jdbcType="NVARCHAR" />
+    <result column="Privilege" property="privilege" jdbcType="INTEGER" />
+    <result column="Card" property="card" jdbcType="NVARCHAR" />
+    <result column="AccGroup" property="accgroup" jdbcType="INTEGER" />
+    <result column="TimeZones" property="timezones" jdbcType="NVARCHAR" />
+    <result column="Gender" property="gender" jdbcType="NVARCHAR" />
+    <result column="Birthday" property="birthday" jdbcType="TIMESTAMP" />
+    <result column="street" property="street" jdbcType="NVARCHAR" />
+    <result column="zip" property="zip" jdbcType="NVARCHAR" />
+    <result column="ophone" property="ophone" jdbcType="NVARCHAR" />
+    <result column="FPHONE" property="fphone" jdbcType="NVARCHAR" />
+    <result column="pager" property="pager" jdbcType="NVARCHAR" />
+    <result column="minzu" property="minzu" jdbcType="NVARCHAR" />
+    <result column="title" property="title" jdbcType="NVARCHAR" />
+    <result column="SN" property="sn" jdbcType="NVARCHAR" />
+    <result column="SSN" property="ssn" jdbcType="NVARCHAR" />
+    <result column="UTime" property="utime" jdbcType="TIMESTAMP" />
+    <result column="Hiredday" property="hiredday" jdbcType="TIMESTAMP" />
+    <result column="VERIFICATIONMETHOD" property="verificationmethod" jdbcType="SMALLINT" />
+    <result column="State" property="state" jdbcType="NVARCHAR" />
+    <result column="City" property="city" jdbcType="NVARCHAR" />
+    <result column="SECURITYFLAGS" property="securityflags" jdbcType="SMALLINT" />
+    <result column="ATT" property="att" jdbcType="BIT" />
+    <result column="OverTime" property="overtime" jdbcType="BIT" />
+    <result column="Holiday" property="holiday" jdbcType="BIT" />
+    <result column="INLATE" property="inlate" jdbcType="SMALLINT" />
+    <result column="OutEarly" property="outearly" jdbcType="SMALLINT" />
+    <result column="Lunchduration" property="lunchduration" jdbcType="SMALLINT" />
+    <result column="SEP" property="sep" jdbcType="SMALLINT" />
+    <result column="OffDuty" property="offduty" jdbcType="SMALLINT" />
+    <result column="DelTag" property="deltag" jdbcType="SMALLINT" />
+    <result column="AutoSchPlan" property="autoschplan" jdbcType="SMALLINT" />
+    <result column="MinAutoSchInterval" property="minautoschinterval" jdbcType="INTEGER" />
+    <result column="RegisterOT" property="registerot" jdbcType="INTEGER" />
+    <result column="sysPass" property="syspass" jdbcType="NVARCHAR" />
+    <result column="email" property="email" jdbcType="NVARCHAR" />
+    <result column="OpStamp" property="opstamp" jdbcType="TIMESTAMP" />
+    <result column="Reserved" property="reserved" jdbcType="INTEGER" />
+    <result column="Annualleave" property="annualleave" jdbcType="DOUBLE" />
+    <result column="Educational" property="educational" jdbcType="NVARCHAR" />
+    <result column="Trialstarttime" property="trialstarttime" jdbcType="TIMESTAMP" />
+    <result column="Trialendtime" property="trialendtime" jdbcType="TIMESTAMP" />
+    <result column="Contractstarttime" property="contractstarttime" jdbcType="TIMESTAMP" />
+    <result column="Contractendtime" property="contractendtime" jdbcType="TIMESTAMP" />
+    <result column="Employeetype" property="employeetype" jdbcType="NVARCHAR" />
+    <result column="Image_id" property="imageId" jdbcType="INTEGER" />
+    <result column="SimName" property="simname" jdbcType="NVARCHAR" />
+    <result column="SimNumber" property="simnumber" jdbcType="NVARCHAR" />
+    <result column="Phone" property="phone" jdbcType="NVARCHAR" />
+    <result column="SimZt" property="simzt" jdbcType="NVARCHAR" />
+    <result column="SimTime" property="simtime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    userid, badgenumber, name, defaultdeptid, Password, MVerifyPass, Privilege, Card, 
+    AccGroup, TimeZones, Gender, Birthday, street, zip, ophone, FPHONE, pager, minzu, 
+    title, SN, SSN, UTime, Hiredday, VERIFICATIONMETHOD, State, City, SECURITYFLAGS, 
+    ATT, OverTime, Holiday, INLATE, OutEarly, Lunchduration, SEP, OffDuty, DelTag, AutoSchPlan, 
+    MinAutoSchInterval, RegisterOT, sysPass, email, OpStamp, Reserved, Annualleave, Educational, 
+    Trialstarttime, Trialendtime, Contractstarttime, Contractendtime, Employeetype, Image_id, 
+    SimName, SimNumber, Phone, SimZt, SimTime
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="cn.fhjt.weixin.pojo.LsUserinfoExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from ls_userinfo
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <delete id="deleteByExample" parameterType="cn.fhjt.weixin.pojo.LsUserinfoExample" >
+    delete from ls_userinfo
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="cn.fhjt.weixin.pojo.LsUserinfo" >
+    insert into ls_userinfo (userid, badgenumber, name, 
+      defaultdeptid, Password, MVerifyPass, 
+      Privilege, Card, AccGroup, 
+      TimeZones, Gender, Birthday, 
+      street, zip, ophone, 
+      FPHONE, pager, minzu, 
+      title, SN, SSN, 
+      UTime, Hiredday, VERIFICATIONMETHOD, 
+      State, City, SECURITYFLAGS, 
+      ATT, OverTime, Holiday, INLATE, 
+      OutEarly, Lunchduration, SEP, 
+      OffDuty, DelTag, AutoSchPlan, 
+      MinAutoSchInterval, RegisterOT, sysPass, 
+      email, OpStamp, Reserved, 
+      Annualleave, Educational, Trialstarttime, 
+      Trialendtime, Contractstarttime, Contractendtime, 
+      Employeetype, Image_id, SimName, 
+      SimNumber, Phone, SimZt, 
+      SimTime)
+    values (#{userid,jdbcType=INTEGER}, #{badgenumber,jdbcType=NVARCHAR}, #{name,jdbcType=NVARCHAR}, 
+      #{defaultdeptid,jdbcType=INTEGER}, #{password,jdbcType=NVARCHAR}, #{mverifypass,jdbcType=NVARCHAR}, 
+      #{privilege,jdbcType=INTEGER}, #{card,jdbcType=NVARCHAR}, #{accgroup,jdbcType=INTEGER}, 
+      #{timezones,jdbcType=NVARCHAR}, #{gender,jdbcType=NVARCHAR}, #{birthday,jdbcType=TIMESTAMP}, 
+      #{street,jdbcType=NVARCHAR}, #{zip,jdbcType=NVARCHAR}, #{ophone,jdbcType=NVARCHAR}, 
+      #{fphone,jdbcType=NVARCHAR}, #{pager,jdbcType=NVARCHAR}, #{minzu,jdbcType=NVARCHAR}, 
+      #{title,jdbcType=NVARCHAR}, #{sn,jdbcType=NVARCHAR}, #{ssn,jdbcType=NVARCHAR}, 
+      #{utime,jdbcType=TIMESTAMP}, #{hiredday,jdbcType=TIMESTAMP}, #{verificationmethod,jdbcType=SMALLINT}, 
+      #{state,jdbcType=NVARCHAR}, #{city,jdbcType=NVARCHAR}, #{securityflags,jdbcType=SMALLINT}, 
+      #{att,jdbcType=BIT}, #{overtime,jdbcType=BIT}, #{holiday,jdbcType=BIT}, #{inlate,jdbcType=SMALLINT}, 
+      #{outearly,jdbcType=SMALLINT}, #{lunchduration,jdbcType=SMALLINT}, #{sep,jdbcType=SMALLINT}, 
+      #{offduty,jdbcType=SMALLINT}, #{deltag,jdbcType=SMALLINT}, #{autoschplan,jdbcType=SMALLINT}, 
+      #{minautoschinterval,jdbcType=INTEGER}, #{registerot,jdbcType=INTEGER}, #{syspass,jdbcType=NVARCHAR}, 
+      #{email,jdbcType=NVARCHAR}, #{opstamp,jdbcType=TIMESTAMP}, #{reserved,jdbcType=INTEGER}, 
+      #{annualleave,jdbcType=DOUBLE}, #{educational,jdbcType=NVARCHAR}, #{trialstarttime,jdbcType=TIMESTAMP}, 
+      #{trialendtime,jdbcType=TIMESTAMP}, #{contractstarttime,jdbcType=TIMESTAMP}, #{contractendtime,jdbcType=TIMESTAMP}, 
+      #{employeetype,jdbcType=NVARCHAR}, #{imageId,jdbcType=INTEGER}, #{simname,jdbcType=NVARCHAR}, 
+      #{simnumber,jdbcType=NVARCHAR}, #{phone,jdbcType=NVARCHAR}, #{simzt,jdbcType=NVARCHAR}, 
+      #{simtime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.fhjt.weixin.pojo.LsUserinfo" >
+    insert into ls_userinfo
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="userid != null" >
+        userid,
+      </if>
+      <if test="badgenumber != null" >
+        badgenumber,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="defaultdeptid != null" >
+        defaultdeptid,
+      </if>
+      <if test="password != null" >
+        Password,
+      </if>
+      <if test="mverifypass != null" >
+        MVerifyPass,
+      </if>
+      <if test="privilege != null" >
+        Privilege,
+      </if>
+      <if test="card != null" >
+        Card,
+      </if>
+      <if test="accgroup != null" >
+        AccGroup,
+      </if>
+      <if test="timezones != null" >
+        TimeZones,
+      </if>
+      <if test="gender != null" >
+        Gender,
+      </if>
+      <if test="birthday != null" >
+        Birthday,
+      </if>
+      <if test="street != null" >
+        street,
+      </if>
+      <if test="zip != null" >
+        zip,
+      </if>
+      <if test="ophone != null" >
+        ophone,
+      </if>
+      <if test="fphone != null" >
+        FPHONE,
+      </if>
+      <if test="pager != null" >
+        pager,
+      </if>
+      <if test="minzu != null" >
+        minzu,
+      </if>
+      <if test="title != null" >
+        title,
+      </if>
+      <if test="sn != null" >
+        SN,
+      </if>
+      <if test="ssn != null" >
+        SSN,
+      </if>
+      <if test="utime != null" >
+        UTime,
+      </if>
+      <if test="hiredday != null" >
+        Hiredday,
+      </if>
+      <if test="verificationmethod != null" >
+        VERIFICATIONMETHOD,
+      </if>
+      <if test="state != null" >
+        State,
+      </if>
+      <if test="city != null" >
+        City,
+      </if>
+      <if test="securityflags != null" >
+        SECURITYFLAGS,
+      </if>
+      <if test="att != null" >
+        ATT,
+      </if>
+      <if test="overtime != null" >
+        OverTime,
+      </if>
+      <if test="holiday != null" >
+        Holiday,
+      </if>
+      <if test="inlate != null" >
+        INLATE,
+      </if>
+      <if test="outearly != null" >
+        OutEarly,
+      </if>
+      <if test="lunchduration != null" >
+        Lunchduration,
+      </if>
+      <if test="sep != null" >
+        SEP,
+      </if>
+      <if test="offduty != null" >
+        OffDuty,
+      </if>
+      <if test="deltag != null" >
+        DelTag,
+      </if>
+      <if test="autoschplan != null" >
+        AutoSchPlan,
+      </if>
+      <if test="minautoschinterval != null" >
+        MinAutoSchInterval,
+      </if>
+      <if test="registerot != null" >
+        RegisterOT,
+      </if>
+      <if test="syspass != null" >
+        sysPass,
+      </if>
+      <if test="email != null" >
+        email,
+      </if>
+      <if test="opstamp != null" >
+        OpStamp,
+      </if>
+      <if test="reserved != null" >
+        Reserved,
+      </if>
+      <if test="annualleave != null" >
+        Annualleave,
+      </if>
+      <if test="educational != null" >
+        Educational,
+      </if>
+      <if test="trialstarttime != null" >
+        Trialstarttime,
+      </if>
+      <if test="trialendtime != null" >
+        Trialendtime,
+      </if>
+      <if test="contractstarttime != null" >
+        Contractstarttime,
+      </if>
+      <if test="contractendtime != null" >
+        Contractendtime,
+      </if>
+      <if test="employeetype != null" >
+        Employeetype,
+      </if>
+      <if test="imageId != null" >
+        Image_id,
+      </if>
+      <if test="simname != null" >
+        SimName,
+      </if>
+      <if test="simnumber != null" >
+        SimNumber,
+      </if>
+      <if test="phone != null" >
+        Phone,
+      </if>
+      <if test="simzt != null" >
+        SimZt,
+      </if>
+      <if test="simtime != null" >
+        SimTime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="userid != null" >
+        #{userid,jdbcType=INTEGER},
+      </if>
+      <if test="badgenumber != null" >
+        #{badgenumber,jdbcType=NVARCHAR},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=NVARCHAR},
+      </if>
+      <if test="defaultdeptid != null" >
+        #{defaultdeptid,jdbcType=INTEGER},
+      </if>
+      <if test="password != null" >
+        #{password,jdbcType=NVARCHAR},
+      </if>
+      <if test="mverifypass != null" >
+        #{mverifypass,jdbcType=NVARCHAR},
+      </if>
+      <if test="privilege != null" >
+        #{privilege,jdbcType=INTEGER},
+      </if>
+      <if test="card != null" >
+        #{card,jdbcType=NVARCHAR},
+      </if>
+      <if test="accgroup != null" >
+        #{accgroup,jdbcType=INTEGER},
+      </if>
+      <if test="timezones != null" >
+        #{timezones,jdbcType=NVARCHAR},
+      </if>
+      <if test="gender != null" >
+        #{gender,jdbcType=NVARCHAR},
+      </if>
+      <if test="birthday != null" >
+        #{birthday,jdbcType=TIMESTAMP},
+      </if>
+      <if test="street != null" >
+        #{street,jdbcType=NVARCHAR},
+      </if>
+      <if test="zip != null" >
+        #{zip,jdbcType=NVARCHAR},
+      </if>
+      <if test="ophone != null" >
+        #{ophone,jdbcType=NVARCHAR},
+      </if>
+      <if test="fphone != null" >
+        #{fphone,jdbcType=NVARCHAR},
+      </if>
+      <if test="pager != null" >
+        #{pager,jdbcType=NVARCHAR},
+      </if>
+      <if test="minzu != null" >
+        #{minzu,jdbcType=NVARCHAR},
+      </if>
+      <if test="title != null" >
+        #{title,jdbcType=NVARCHAR},
+      </if>
+      <if test="sn != null" >
+        #{sn,jdbcType=NVARCHAR},
+      </if>
+      <if test="ssn != null" >
+        #{ssn,jdbcType=NVARCHAR},
+      </if>
+      <if test="utime != null" >
+        #{utime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="hiredday != null" >
+        #{hiredday,jdbcType=TIMESTAMP},
+      </if>
+      <if test="verificationmethod != null" >
+        #{verificationmethod,jdbcType=SMALLINT},
+      </if>
+      <if test="state != null" >
+        #{state,jdbcType=NVARCHAR},
+      </if>
+      <if test="city != null" >
+        #{city,jdbcType=NVARCHAR},
+      </if>
+      <if test="securityflags != null" >
+        #{securityflags,jdbcType=SMALLINT},
+      </if>
+      <if test="att != null" >
+        #{att,jdbcType=BIT},
+      </if>
+      <if test="overtime != null" >
+        #{overtime,jdbcType=BIT},
+      </if>
+      <if test="holiday != null" >
+        #{holiday,jdbcType=BIT},
+      </if>
+      <if test="inlate != null" >
+        #{inlate,jdbcType=SMALLINT},
+      </if>
+      <if test="outearly != null" >
+        #{outearly,jdbcType=SMALLINT},
+      </if>
+      <if test="lunchduration != null" >
+        #{lunchduration,jdbcType=SMALLINT},
+      </if>
+      <if test="sep != null" >
+        #{sep,jdbcType=SMALLINT},
+      </if>
+      <if test="offduty != null" >
+        #{offduty,jdbcType=SMALLINT},
+      </if>
+      <if test="deltag != null" >
+        #{deltag,jdbcType=SMALLINT},
+      </if>
+      <if test="autoschplan != null" >
+        #{autoschplan,jdbcType=SMALLINT},
+      </if>
+      <if test="minautoschinterval != null" >
+        #{minautoschinterval,jdbcType=INTEGER},
+      </if>
+      <if test="registerot != null" >
+        #{registerot,jdbcType=INTEGER},
+      </if>
+      <if test="syspass != null" >
+        #{syspass,jdbcType=NVARCHAR},
+      </if>
+      <if test="email != null" >
+        #{email,jdbcType=NVARCHAR},
+      </if>
+      <if test="opstamp != null" >
+        #{opstamp,jdbcType=TIMESTAMP},
+      </if>
+      <if test="reserved != null" >
+        #{reserved,jdbcType=INTEGER},
+      </if>
+      <if test="annualleave != null" >
+        #{annualleave,jdbcType=DOUBLE},
+      </if>
+      <if test="educational != null" >
+        #{educational,jdbcType=NVARCHAR},
+      </if>
+      <if test="trialstarttime != null" >
+        #{trialstarttime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="trialendtime != null" >
+        #{trialendtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="contractstarttime != null" >
+        #{contractstarttime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="contractendtime != null" >
+        #{contractendtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="employeetype != null" >
+        #{employeetype,jdbcType=NVARCHAR},
+      </if>
+      <if test="imageId != null" >
+        #{imageId,jdbcType=INTEGER},
+      </if>
+      <if test="simname != null" >
+        #{simname,jdbcType=NVARCHAR},
+      </if>
+      <if test="simnumber != null" >
+        #{simnumber,jdbcType=NVARCHAR},
+      </if>
+      <if test="phone != null" >
+        #{phone,jdbcType=NVARCHAR},
+      </if>
+      <if test="simzt != null" >
+        #{simzt,jdbcType=NVARCHAR},
+      </if>
+      <if test="simtime != null" >
+        #{simtime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="cn.fhjt.weixin.pojo.LsUserinfoExample" resultType="java.lang.Integer" >
+    select count(*) from ls_userinfo
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update ls_userinfo
+    <set >
+      <if test="record.userid != null" >
+        userid = #{record.userid,jdbcType=INTEGER},
+      </if>
+      <if test="record.badgenumber != null" >
+        badgenumber = #{record.badgenumber,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.name != null" >
+        name = #{record.name,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.defaultdeptid != null" >
+        defaultdeptid = #{record.defaultdeptid,jdbcType=INTEGER},
+      </if>
+      <if test="record.password != null" >
+        Password = #{record.password,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.mverifypass != null" >
+        MVerifyPass = #{record.mverifypass,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.privilege != null" >
+        Privilege = #{record.privilege,jdbcType=INTEGER},
+      </if>
+      <if test="record.card != null" >
+        Card = #{record.card,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.accgroup != null" >
+        AccGroup = #{record.accgroup,jdbcType=INTEGER},
+      </if>
+      <if test="record.timezones != null" >
+        TimeZones = #{record.timezones,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.gender != null" >
+        Gender = #{record.gender,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.birthday != null" >
+        Birthday = #{record.birthday,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.street != null" >
+        street = #{record.street,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.zip != null" >
+        zip = #{record.zip,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.ophone != null" >
+        ophone = #{record.ophone,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.fphone != null" >
+        FPHONE = #{record.fphone,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.pager != null" >
+        pager = #{record.pager,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.minzu != null" >
+        minzu = #{record.minzu,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.title != null" >
+        title = #{record.title,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.sn != null" >
+        SN = #{record.sn,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.ssn != null" >
+        SSN = #{record.ssn,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.utime != null" >
+        UTime = #{record.utime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.hiredday != null" >
+        Hiredday = #{record.hiredday,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.verificationmethod != null" >
+        VERIFICATIONMETHOD = #{record.verificationmethod,jdbcType=SMALLINT},
+      </if>
+      <if test="record.state != null" >
+        State = #{record.state,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.city != null" >
+        City = #{record.city,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.securityflags != null" >
+        SECURITYFLAGS = #{record.securityflags,jdbcType=SMALLINT},
+      </if>
+      <if test="record.att != null" >
+        ATT = #{record.att,jdbcType=BIT},
+      </if>
+      <if test="record.overtime != null" >
+        OverTime = #{record.overtime,jdbcType=BIT},
+      </if>
+      <if test="record.holiday != null" >
+        Holiday = #{record.holiday,jdbcType=BIT},
+      </if>
+      <if test="record.inlate != null" >
+        INLATE = #{record.inlate,jdbcType=SMALLINT},
+      </if>
+      <if test="record.outearly != null" >
+        OutEarly = #{record.outearly,jdbcType=SMALLINT},
+      </if>
+      <if test="record.lunchduration != null" >
+        Lunchduration = #{record.lunchduration,jdbcType=SMALLINT},
+      </if>
+      <if test="record.sep != null" >
+        SEP = #{record.sep,jdbcType=SMALLINT},
+      </if>
+      <if test="record.offduty != null" >
+        OffDuty = #{record.offduty,jdbcType=SMALLINT},
+      </if>
+      <if test="record.deltag != null" >
+        DelTag = #{record.deltag,jdbcType=SMALLINT},
+      </if>
+      <if test="record.autoschplan != null" >
+        AutoSchPlan = #{record.autoschplan,jdbcType=SMALLINT},
+      </if>
+      <if test="record.minautoschinterval != null" >
+        MinAutoSchInterval = #{record.minautoschinterval,jdbcType=INTEGER},
+      </if>
+      <if test="record.registerot != null" >
+        RegisterOT = #{record.registerot,jdbcType=INTEGER},
+      </if>
+      <if test="record.syspass != null" >
+        sysPass = #{record.syspass,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.email != null" >
+        email = #{record.email,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.opstamp != null" >
+        OpStamp = #{record.opstamp,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.reserved != null" >
+        Reserved = #{record.reserved,jdbcType=INTEGER},
+      </if>
+      <if test="record.annualleave != null" >
+        Annualleave = #{record.annualleave,jdbcType=DOUBLE},
+      </if>
+      <if test="record.educational != null" >
+        Educational = #{record.educational,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.trialstarttime != null" >
+        Trialstarttime = #{record.trialstarttime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.trialendtime != null" >
+        Trialendtime = #{record.trialendtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.contractstarttime != null" >
+        Contractstarttime = #{record.contractstarttime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.contractendtime != null" >
+        Contractendtime = #{record.contractendtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.employeetype != null" >
+        Employeetype = #{record.employeetype,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.imageId != null" >
+        Image_id = #{record.imageId,jdbcType=INTEGER},
+      </if>
+      <if test="record.simname != null" >
+        SimName = #{record.simname,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.simnumber != null" >
+        SimNumber = #{record.simnumber,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.phone != null" >
+        Phone = #{record.phone,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.simzt != null" >
+        SimZt = #{record.simzt,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.simtime != null" >
+        SimTime = #{record.simtime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update ls_userinfo
+    set userid = #{record.userid,jdbcType=INTEGER},
+      badgenumber = #{record.badgenumber,jdbcType=NVARCHAR},
+      name = #{record.name,jdbcType=NVARCHAR},
+      defaultdeptid = #{record.defaultdeptid,jdbcType=INTEGER},
+      Password = #{record.password,jdbcType=NVARCHAR},
+      MVerifyPass = #{record.mverifypass,jdbcType=NVARCHAR},
+      Privilege = #{record.privilege,jdbcType=INTEGER},
+      Card = #{record.card,jdbcType=NVARCHAR},
+      AccGroup = #{record.accgroup,jdbcType=INTEGER},
+      TimeZones = #{record.timezones,jdbcType=NVARCHAR},
+      Gender = #{record.gender,jdbcType=NVARCHAR},
+      Birthday = #{record.birthday,jdbcType=TIMESTAMP},
+      street = #{record.street,jdbcType=NVARCHAR},
+      zip = #{record.zip,jdbcType=NVARCHAR},
+      ophone = #{record.ophone,jdbcType=NVARCHAR},
+      FPHONE = #{record.fphone,jdbcType=NVARCHAR},
+      pager = #{record.pager,jdbcType=NVARCHAR},
+      minzu = #{record.minzu,jdbcType=NVARCHAR},
+      title = #{record.title,jdbcType=NVARCHAR},
+      SN = #{record.sn,jdbcType=NVARCHAR},
+      SSN = #{record.ssn,jdbcType=NVARCHAR},
+      UTime = #{record.utime,jdbcType=TIMESTAMP},
+      Hiredday = #{record.hiredday,jdbcType=TIMESTAMP},
+      VERIFICATIONMETHOD = #{record.verificationmethod,jdbcType=SMALLINT},
+      State = #{record.state,jdbcType=NVARCHAR},
+      City = #{record.city,jdbcType=NVARCHAR},
+      SECURITYFLAGS = #{record.securityflags,jdbcType=SMALLINT},
+      ATT = #{record.att,jdbcType=BIT},
+      OverTime = #{record.overtime,jdbcType=BIT},
+      Holiday = #{record.holiday,jdbcType=BIT},
+      INLATE = #{record.inlate,jdbcType=SMALLINT},
+      OutEarly = #{record.outearly,jdbcType=SMALLINT},
+      Lunchduration = #{record.lunchduration,jdbcType=SMALLINT},
+      SEP = #{record.sep,jdbcType=SMALLINT},
+      OffDuty = #{record.offduty,jdbcType=SMALLINT},
+      DelTag = #{record.deltag,jdbcType=SMALLINT},
+      AutoSchPlan = #{record.autoschplan,jdbcType=SMALLINT},
+      MinAutoSchInterval = #{record.minautoschinterval,jdbcType=INTEGER},
+      RegisterOT = #{record.registerot,jdbcType=INTEGER},
+      sysPass = #{record.syspass,jdbcType=NVARCHAR},
+      email = #{record.email,jdbcType=NVARCHAR},
+      OpStamp = #{record.opstamp,jdbcType=TIMESTAMP},
+      Reserved = #{record.reserved,jdbcType=INTEGER},
+      Annualleave = #{record.annualleave,jdbcType=DOUBLE},
+      Educational = #{record.educational,jdbcType=NVARCHAR},
+      Trialstarttime = #{record.trialstarttime,jdbcType=TIMESTAMP},
+      Trialendtime = #{record.trialendtime,jdbcType=TIMESTAMP},
+      Contractstarttime = #{record.contractstarttime,jdbcType=TIMESTAMP},
+      Contractendtime = #{record.contractendtime,jdbcType=TIMESTAMP},
+      Employeetype = #{record.employeetype,jdbcType=NVARCHAR},
+      Image_id = #{record.imageId,jdbcType=INTEGER},
+      SimName = #{record.simname,jdbcType=NVARCHAR},
+      SimNumber = #{record.simnumber,jdbcType=NVARCHAR},
+      Phone = #{record.phone,jdbcType=NVARCHAR},
+      SimZt = #{record.simzt,jdbcType=NVARCHAR},
+      SimTime = #{record.simtime,jdbcType=TIMESTAMP}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+</mapper>
