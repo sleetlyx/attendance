@@ -113,7 +113,7 @@ public class EmpController {
         wxcode =  null;
         return map;
     }
-    //解除员工微信的绑定
+    //解除员工微信的绑定  解绑逻辑   清除 openID 绑定码  绑定码恢复可用状态
     @RequestMapping("/updateByEmpid")
     public Map<String,Object> updateByEmpid(String empid){
         Map<String,Object> map = new HashMap<>();

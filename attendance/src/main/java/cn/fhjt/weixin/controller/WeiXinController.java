@@ -41,11 +41,11 @@ public class WeiXinController {
 	//图片保存路径
 	@Value("${URL}")
 	private  String url;
-	//从小程序获取的随机字符串
-	public String wxCode;
+	//从小程序获取的随机字符串  放弃使用全局变量  eg:单列模式  多线程不安全
+//	public String wxCode;
 	//存储openId 和密匙
-	private  String openid = null;
-	private  String secret = null;
+//	private  String openid = null;
+//	private  String secret = null;
 
 	@Autowired
 	private TbBindingWechatService tbBindingWechatService;
@@ -64,11 +64,11 @@ public class WeiXinController {
 	public
 	Map<String,Object> isbind(String code){
 		Map<String, Object> resmap = new HashMap();
-		wxCode = code;
+//		wxCode = code;
 		//获取当前微信用户的唯一标识
-		JSONObject json = getUserInfo();
-		 openid = json.getString("openid");
-		 secret = json.getString("session_key");
+		JSONObject json = getUserInfo(code);
+		String openid = json.getString("openid");
+		String secret = json.getString("session_key");
 		//通过唯一表示  判断是否存在数据
 		 TbBindingWechat bidwechat = tbBindingWechatService.findByOpenid(openid);
 		 if(bidwechat == null){
@@ -133,21 +133,22 @@ public class WeiXinController {
 
 	/**
 	 * 通过工号和 绑定 进行工号和绑定码的唯一性绑定
-	 * @param code
-	 * @param userId
+	 * @param code 微信获得openid
+	 * @param userId  工号
+	 * @param openid
 	 * @return
 	 */
 	@RequestMapping("/bindUser")
-	public @ResponseBody Map<String,Object> bindUser(String code,String userId){
-
+	public @ResponseBody Map<String,Object> bindUser(String code,String userId,String openid){
+		String sessionKey = null;
 		Long id = new Long(userId);
 		TbBindingWechat entity = tbBindingWechatService.findOne(id);
 
-		if(openid == null){
-			wxCode = code;
-			JSONObject json = getUserInfo();
+		if(openid == null || "".equals(openid)){
+//			wxCode = code;
+			JSONObject json = getUserInfo(code);
 			String inopenId = json.getString("openid");
-			String sessionKey = json.getString("session_key");
+			sessionKey = json.getString("session_key");
 
 			if(inopenId == null){
 				entity.setOpenId(entity.getSpare1());
@@ -158,7 +159,7 @@ public class WeiXinController {
 			entity.setSpare1(inopenId);
 		}else {
 			entity.setOpenId(openid);
-			entity.setSessionKey(secret);
+			entity.setSessionKey(sessionKey);
 			entity.setSpare1(openid);
 		}
 		//修改该绑定数据的code有效性 1 为无效；已经被绑定过；
@@ -177,15 +178,7 @@ public class WeiXinController {
 
 
 
-	/**
-	 * 获取openID和会话密匙
-	 * @return
-	 */
-	public JSONObject getUserInfo(){
-		// 获取session_key和openid
-		JSONObject json = WXAppletUserInfo.getSessionKeyAndOropenid(wxCode,appId,appSecret);
-		return json;
-	}
+
 
 
 	@RequestMapping("/uplodfile")
@@ -246,6 +239,17 @@ public class WeiXinController {
 			map.put("status", 1);
 			return map;
 		}
+	}
+
+
+	/**
+	 * 获取openID和会话密匙
+	 * @return
+	 */
+	public JSONObject getUserInfo(String code){
+		// 获取session_key和openid
+		JSONObject json = WXAppletUserInfo.getSessionKeyAndOropenid(code,appId,appSecret);
+		return json;
 	}
 
 }
