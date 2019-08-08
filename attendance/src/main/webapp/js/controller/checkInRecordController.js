@@ -68,8 +68,45 @@ app.controller('checkInRecordController' ,function($scope,$controller   ,checkIn
 	$scope.searchEntity={};//定义搜索对象 
 	
 	//搜索
-	$scope.search=function(page,rows){			
-		checkInRecordService.search(page,rows,$scope.searchEntity).success(
+	$scope.search=function(page,rows){
+
+
+//如果存在结束日期 必须有开始日期
+		if($scope.enddate != null && !angular.isUndefined($scope.enddate)){
+
+			if(angular.isUndefined($scope.startdate)|| $scope.startdate == null){
+				alert("有终止日期时，必须有开始日期");
+				return;
+			}
+		}
+		//存在起始日期  必须小于当前日期  且不能大于终止日期
+		else  if($scope.startdate != null && !angular.isUndefined($scope.startdate)){
+			var crentTime = new Date(new Date().getTime());
+			var crent = crentTime.valueOf(); // 时间戳
+
+			var starttTime = new Date($scope.startdate);
+			var start = starttTime.valueOf(); // 时间戳
+
+			if(start > crent){
+				alert("起始时间不得大于当前时间");
+				return;
+			}
+			else if($scope.enddate != null || !angular.isUndefined($scope.enddate) ){
+				var sendTime = new Date($scope.enddate);
+				var end = sendTime.valueOf(); // 时间戳
+				if(start > end){
+					alert("起始时间不得大于终止日期时间");
+					return;
+				}
+			}
+			// else if(angular.isUndefined($scope.enddate) || $scope.enddate == null){
+			// 	$scope.enddate = new Date(new Date().getTime());
+			// }
+
+		}
+
+
+		checkInRecordService.search(page,rows,$scope.searchEntity,$scope.startdate,$scope.enddate).success(
 			function(response){
 				$scope.list=response.rows;	
 				$scope.paginationConf.totalItems=response.total;//更新总记录数

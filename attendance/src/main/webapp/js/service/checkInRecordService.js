@@ -26,7 +26,7 @@ app.service('checkInRecordService',function($http){
 		return $http.get('../checkInRecord/delete.do?ids='+ids);
 	}
 	//搜索
-	this.search=function(page,rows,searchEntity){
-		return $http.post('../checkInRecord/search.do?page='+page+"&rows="+rows, searchEntity);
+	this.search=function(page,rows,searchEntity,startdate,enddate){
+		return $http.post('../checkInRecord/search.do?page='+page+"&rows="+rows+"&startdate="+startdate+"&enddate="+enddate, searchEntity);
 	}    	
 });

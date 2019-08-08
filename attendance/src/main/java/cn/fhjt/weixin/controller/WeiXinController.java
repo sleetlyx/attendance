@@ -71,21 +71,20 @@ public class WeiXinController {
 		String secret = json.getString("session_key");
 		//通过唯一表示  判断是否存在数据
 		 TbBindingWechat bidwechat = tbBindingWechatService.findByOpenid(openid);
+        resmap.put("openid",openid);
+        resmap.put("sessionKey",secret);
+
 		 if(bidwechat == null){
 		 	//code 响应状态码
 			 resmap.put("code", 0);//没过绑定
 			 resmap.put("openid", openid);
 		 }
 		 else {
+             resmap.put("bindcode",bidwechat.getCode());
+             resmap.put("empid",bidwechat.getUserId());
+             resmap.put("dept",bidwechat.getDepartment());
+             resmap.put("name",bidwechat.getUserName());
 			 resmap.put("code", 1);//已经绑定过
-			 resmap.put("openid",openid);
-			 resmap.put("sessionKey",secret);
-			 resmap.put("bindcode",bidwechat.getCode());
-			 resmap.put("empid",bidwechat.getUserId());
-//			 resmap.put("dept",bidwechat.getDepartment());
-//			 resmap.put("name",bidwechat.getDepartment());
-
-
 		 }
 		return resmap;
 	}
@@ -168,6 +167,10 @@ public class WeiXinController {
 		Map<String,Object> map = new HashMap<>();
 		try {
 			tbBindingWechatService.update(entity);
+            map.put("bindcode",entity.getCode());
+            map.put("empid",entity.getUserId());
+            map.put("dept",entity.getDepartment());
+            map.put("name",entity.getUserName());
 			map.put("status","0");
 		}catch (Exception e){
 			e.printStackTrace();

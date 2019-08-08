@@ -1,9 +1,12 @@
 package cn.fhjt.weixin.controller;
-import java.util.List;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import cn.fhjt.weixin.pojo.TbCheckInRecord;
 import cn.fhjt.weixin.pojo.entity.PageResult;
 import cn.fhjt.weixin.pojo.entity.Result;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,28 +21,15 @@ import cn.fhjt.weixin.service.CheckInRecordService;
 @RequestMapping("/checkInRecord")
 public class CheckInRecordController {
 
+	private  final Logger logger =  Logger.getLogger(CheckInRecordController.class);
+
 	@Autowired
 	private CheckInRecordService checkInRecordService;
 	
-	/**
-	 * 返回全部列表
-	 * @return
-	 */
-	@RequestMapping("/findAll")
-	public List<TbCheckInRecord> findAll(){
-		return checkInRecordService.findAll();
-	}
+
 	
-	
-	/**
-	 * 返回全部列表
-	 * @return
-	 */
-	@RequestMapping("/findPage")
-	public PageResult findPage(int page, int rows){
-		return checkInRecordService.findPage(page, rows);
-	}
-	
+
+
 	/**
 	 * 增加
 	 * @param checkInRecord
@@ -106,8 +96,27 @@ public class CheckInRecordController {
 	 * @return
 	 */
 	@RequestMapping("/search")
-	public PageResult search(@RequestBody TbCheckInRecord checkInRecord, int page, int rows  ){
-		return checkInRecordService.findPage(checkInRecord, page, rows);		
+	public PageResult search(@RequestBody TbCheckInRecord checkInRecord, int page, int rows , String  startdate,String  enddate){
+
+		Date start =null;
+		Date end = null;
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		if(startdate != null && !"undefined".equals(startdate)){
+			try {
+				start = sdf.parse(startdate);
+				if(enddate == null || "undefined".equals(enddate)){
+					end = sdf.parse(sdf.format(new Date()));
+				}
+				else {
+					end = sdf.parse(enddate);
+				}
+			} catch (ParseException e) {
+				logger.error("=====CheckInRecordController 中开始日期转换错误===="+e);
+				e.printStackTrace();
+			}
+		}
+
+		return checkInRecordService.findPage(checkInRecord, page, rows,start,end);
 	}
 	
 }

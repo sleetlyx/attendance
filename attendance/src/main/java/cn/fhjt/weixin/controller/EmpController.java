@@ -94,6 +94,7 @@ public class EmpController {
                 tbBindingWechat.setSex(emp.getSex());
                 tbBindingWechat.setBirthday(emp.getBirthday());
                 tbBindingWechat.setState(emp.getState());//任职状态
+                tbBindingWechat.setDepartment(emp.getDeptId());
                 //获得当前的登录管理员名称
 //            TODO
 //          tbBindingWechat.setOperator();

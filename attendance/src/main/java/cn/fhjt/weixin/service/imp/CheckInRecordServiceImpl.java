@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Date;
 import java.util.List;
 
 
@@ -80,22 +81,39 @@ public class CheckInRecordServiceImpl implements CheckInRecordService {
 			checkInRecordMapper.deleteByPrimaryKey(id);
 		}		
 	}
-	
-	
 		@Override
-	public PageResult findPage(TbCheckInRecord checkInRecord, int pageNum, int pageSize) {
+	public PageResult findPage(TbCheckInRecord checkInRecord, int pageNum, int pageSize , Date start, Date end) {
+
+//		Date parStart;
+//		Date parEnd;
+
 		PageHelper.startPage(pageNum, pageSize);
-		
 		TbCheckInRecordExample example=new TbCheckInRecordExample();
+		example.setOrderByClause("id desc");
 		TbCheckInRecordExample.Criteria criteria = example.createCriteria();
-		
+
+
+//		if(start != null){
+//			parStart = start;
+//		}
+//		if(end != null){
+//			parEnd = end;
+//		}
+
+
 		if(checkInRecord!=null){			
-						if(checkInRecord.getEmpId()!=null && checkInRecord.getEmpId().length()>0){
-				criteria.andEmpIdLike("%"+checkInRecord.getEmpId()+"%");
+						if(checkInRecord.getEmpId()!=null && !"".equals(checkInRecord.getEmpId())){
+				criteria.andEmpIdEqualTo(checkInRecord.getEmpId());
 			}
-			if(checkInRecord.getName()!=null && checkInRecord.getName().length()>0){
-				criteria.andNameLike("%"+checkInRecord.getName()+"%");
+			if(checkInRecord.getName()!=null && !"".equals(checkInRecord.getName())){
+				criteria.andNameEqualTo(checkInRecord.getName());
 			}
+			if(start != null && end != null){
+				criteria.andCheckTimeBetween(start,end);
+			}
+
+
+
 			if(checkInRecord.getDept()!=null && checkInRecord.getDept().length()>0){
 				criteria.andDeptLike("%"+checkInRecord.getDept()+"%");
 			}
@@ -126,7 +144,6 @@ public class CheckInRecordServiceImpl implements CheckInRecordService {
 			if(checkInRecord.getSpare3()!=null && checkInRecord.getSpare3().length()>0){
 				criteria.andSpare3Like("%"+checkInRecord.getSpare3()+"%");
 			}
-	
 		}
 		
 		Page<TbCheckInRecord> page= (Page<TbCheckInRecord>)checkInRecordMapper.selectByExample(example);		

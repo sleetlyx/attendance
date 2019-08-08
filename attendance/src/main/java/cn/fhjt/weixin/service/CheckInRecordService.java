@@ -1,4 +1,5 @@
 package cn.fhjt.weixin.service;
+import java.util.Date;
 import java.util.List;
 
 import cn.fhjt.weixin.pojo.TbCheckInRecord;
@@ -56,6 +57,6 @@ public interface CheckInRecordService {
 	 * @param pageSize 每页记录数
 	 * @return
 	 */
-	public PageResult findPage(TbCheckInRecord checkInRecord, int pageNum, int pageSize);
+	public PageResult findPage(TbCheckInRecord checkInRecord, int pageNum, int pageSize, Date start,Date end);
 	
 }
