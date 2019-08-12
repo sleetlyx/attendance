@@ -8,6 +8,7 @@ import cn.fhjt.weixin.pojo.TbUser;
 import cn.fhjt.weixin.service.TbUserService;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -42,6 +43,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 		TbUser tbUser = tbUserService.findByName(username);
 		if(tbUser != null){
 			if(tbUser.getStatus().equals("0")){
+
 				return new User(username,tbUser.getPassword(),grantAuths );
 			}else{
 				return null;

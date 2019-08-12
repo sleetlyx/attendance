@@ -22,13 +22,14 @@ app.controller('LsUserController' ,function($scope,$controller,lsuserService){
 
 	}
 
-	
-	//查询实体 
-	$scope.findOne=function(id){				
+	// $scope.wxCode="";
+	//查询实体
+	$scope.findOne=function(id){
 		lsuserService.findOne(id).success(
 			function(response){
 				$scope.entity= response.data;
 				$scope.wxcode= response.wxcode;
+				// $scope.wxCode = response.wxcode;
 
 			}
 		);				

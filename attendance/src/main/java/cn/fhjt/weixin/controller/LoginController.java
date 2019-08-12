@@ -46,7 +46,7 @@ public class LoginController {
 	}
 
 	/**
-	 * 获取登录失败信息
+	 * 从session 域中获取登录失败信息
 	 * @param request
 	 * @return
 	 */

@@ -29,7 +29,7 @@ public class WeiXinController {
 	private  final  static Logger logger = Logger.getLogger(WeiXinController.class);
 
 
-	//开发者APPID
+	//开发者APPID3
 //	@Value("wx515bafb9c3955329")
 	@Value("${APPID}")
 	private String appId;
@@ -89,21 +89,37 @@ public class WeiXinController {
 		return resmap;
 	}
 
-	/**
+	/**  周一 做
 	 * 进入首页后 校验 该用户是否在职且存在 唯一标识
 	 * @param bindcode
 	 * @return
 	 */
 	@RequestMapping("/findBybindcodeToOpenId")
-	public  String findBybindcodeToOpenId(String bindcode){
-	 TbBindingWechat tbBindingWechat = tbBindingWechatService.findBybidcodetToOpenId(bindcode);
-	 String code = "0";//进入绑定页面
-	 if(tbBindingWechat != null){
+	public  Map<String,Object> findBybindcodeToOpenId(String bindcode,String sessionkey){
+		TbBindingWechat tbBindingWechat;
+		String openid = null;
+		Map<String,Object> map = new HashMap<>();
+
+		if(bindcode == null || "".equals(bindcode)){
+			JSONObject json = getUserInfo(sessionkey);
+			openid = json.getString("openid");
+			tbBindingWechat =tbBindingWechatService.findByOpenid(openid);
+		}else {
+			tbBindingWechat= tbBindingWechatService.findBybidcodetToOpenId(bindcode);
+		}
+		String code = "0";//进入绑定页面
+	    if(tbBindingWechat != null){
 	 	if((tbBindingWechat.getOpenId() != null && !"".equals(tbBindingWechat.getOpenId())) && tbBindingWechat.getState().equals("在职")){
 			code = "1";
+			map.put("dept",tbBindingWechat.getDepartment());
+			map.put("name",tbBindingWechat.getUserName());
+			map.put("openid",tbBindingWechat.getOpenId());
+			map.put("empid",tbBindingWechat.getUserId());
 		}
 	 }
-		return  code;
+
+		map.put("code",code);
+		return  map;
 	}
 
 	/**

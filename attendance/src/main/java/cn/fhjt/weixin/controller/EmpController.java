@@ -6,6 +6,8 @@ import cn.fhjt.weixin.service.EmpService;
 import cn.fhjt.weixin.service.TbBindingWechatService;
 import cn.fhjt.weixin.utils.WXAppletUserInfo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -97,14 +99,16 @@ public class EmpController {
                 tbBindingWechat.setDepartment(emp.getDeptId());
                 //获得当前的登录管理员名称
 //            TODO
-//          tbBindingWechat.setOperator();
+                User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+                tbBindingWechat.setOperator(user.getUsername());
                 // 需要切换当前线程的数据源  将部分数据 先插入绑定表中 后期使用
                 tbBindingWechatService.add(tbBindingWechat);
             }else if((idtbBindingWechat.getCode() == null || "".equals(idtbBindingWechat.getCode())) && (idtbBindingWechat.getOpenId() ==null || "".equals(idtbBindingWechat.getOpenId()))){
                 wxcode = WXAppletUserInfo.wxcode(6);//给离职后重新入职的员工  重新生成绑定码// 或者更换微信后 的解绑以前的工号  再次绑定
                 idtbBindingWechat.setCode(wxcode);
                 tbBindingWechatService.update(idtbBindingWechat);
-            } else{
+            }
+            else{
                 wxcode = "该员工已经存在绑定码为："+idtbBindingWechat.getCode();
             }
         }
