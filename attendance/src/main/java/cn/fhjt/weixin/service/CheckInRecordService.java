@@ -22,7 +22,7 @@ public interface CheckInRecordService {
 	 * 返回分页列表
 	 * @return
 	 */
-	public PageResult findPage(int pageNum, int pageSize);
+	public PageResult findPage(TbCheckInRecord checkInRecord, int pageNum, int pageSize);
 	
 	
 	/**
@@ -58,5 +58,14 @@ public interface CheckInRecordService {
 	 * @return
 	 */
 	public PageResult findPage(TbCheckInRecord checkInRecord, int pageNum, int pageSize, Date start,Date end);
-	
+
+
+	/**
+	 *  通过工号 和当天的起始日 结束日 获得当日的打卡次数
+	 * @param empId
+	 * @param stdate
+	 * @param endate
+	 * @return
+	 */
+    TbCheckInRecord findByEmpIdDate(String empId, Date stdate, Date endate);
 }

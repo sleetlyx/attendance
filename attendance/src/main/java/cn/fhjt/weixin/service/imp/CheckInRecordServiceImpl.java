@@ -38,10 +38,20 @@ public class CheckInRecordServiceImpl implements CheckInRecordService {
 	 * 按分页查询
 	 */
 	@Override
-	public PageResult findPage(int pageNum, int pageSize) {
-		PageHelper.startPage(pageNum, pageSize);		
-		Page<TbCheckInRecord> page=   (Page<TbCheckInRecord>) checkInRecordMapper.selectByExample(null);
-		return new PageResult(page.getTotal(), page.getResult());
+	public PageResult findPage(TbCheckInRecord checkInRecord,int pageNum, int pageSize) {
+		PageHelper.startPage(pageNum, pageSize);
+		TbCheckInRecordExample example = new TbCheckInRecordExample();
+		example.setOrderByClause("id desc");
+		if(checkInRecord.getEmpId() != null){
+			example.createCriteria().andEmpIdEqualTo(checkInRecord.getEmpId());
+			Page<TbCheckInRecord> page=   (Page<TbCheckInRecord>) checkInRecordMapper.selectByExample(example);
+			return new PageResult(page.getTotal(), page.getResult());
+		}
+		else {
+			return  null;
+		}
+
+
 	}
 
 	/**
@@ -149,5 +159,22 @@ public class CheckInRecordServiceImpl implements CheckInRecordService {
 		Page<TbCheckInRecord> page= (Page<TbCheckInRecord>)checkInRecordMapper.selectByExample(example);		
 		return new PageResult(page.getTotal(), page.getResult());
 	}
-	
+
+	@Override
+	public TbCheckInRecord findByEmpIdDate(String empId, Date stdate, Date endate) {
+		TbCheckInRecordExample example = new TbCheckInRecordExample();
+		example.setOrderByClause("id desc");
+		TbCheckInRecordExample.Criteria criteria = example.createCriteria();
+		criteria.andEmpIdEqualTo(empId);
+		criteria.andCheckTimeBetween(stdate,endate);
+		List<TbCheckInRecord> tbCheckInRecords = checkInRecordMapper.selectByExample(example);
+
+		if (tbCheckInRecords != null && tbCheckInRecords.size()>0){
+			return  tbCheckInRecords.get(0);
+		}else {
+			return null;
+		}
+
+	}
+
 }

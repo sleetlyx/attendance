@@ -23,7 +23,7 @@ public class TbCheckInRecord {
 
     private String picUrl;
 
-    private String spare0;
+    private String spare0;//给备用字段用于记录打卡的次数
 
     private String spare1;
 

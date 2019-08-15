@@ -1,14 +1,18 @@
 package cn.fhjt.weixin.controller;
 
 import java.io.File;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
 
 import cn.fhjt.weixin.pojo.TbBindingWechat;
 import cn.fhjt.weixin.pojo.TbCheckInRecord;
+import cn.fhjt.weixin.pojo.TbNew;
+import cn.fhjt.weixin.pojo.entity.PageResult;
 import cn.fhjt.weixin.service.CheckInRecordService;
 import cn.fhjt.weixin.service.TbBindingWechatService;
+import cn.fhjt.weixin.service.TbNewService;
 import cn.fhjt.weixin.utils.WXAppletUserInfo;
 import com.alibaba.fastjson.JSONObject;
 import org.apache.log4j.Logger;
@@ -53,6 +57,9 @@ public class WeiXinController {
 	@Autowired
 	private CheckInRecordService checkInRecordService;
 
+	@Autowired
+	private TbNewService tbNewService;
+
 	
 	/**
 	 * 第一次 进入小程序时  通过openID校验是否保定过  从而进入不同的小程序页面
@@ -95,15 +102,19 @@ public class WeiXinController {
 	 * @return
 	 */
 	@RequestMapping("/findBybindcodeToOpenId")
-	public  Map<String,Object> findBybindcodeToOpenId(String bindcode,String sessionkey){
+	public  Map<String,Object> findBybindcodeToOpenId(String bindcode,String resCode,String openid){
 		TbBindingWechat tbBindingWechat;
-		String openid = null;
 		Map<String,Object> map = new HashMap<>();
 
 		if(bindcode == null || "".equals(bindcode)){
-			JSONObject json = getUserInfo(sessionkey);
-			openid = json.getString("openid");
-			tbBindingWechat =tbBindingWechatService.findByOpenid(openid);
+			if(openid != null && !"".equals(openid)){
+				tbBindingWechat =tbBindingWechatService.findByOpenid(openid);
+			}
+			else {
+				JSONObject json = getUserInfo(resCode);
+				openid = json.getString("openid");
+				tbBindingWechat =tbBindingWechatService.findByOpenid(openid);
+			}
 		}else {
 			tbBindingWechat= tbBindingWechatService.findBybidcodetToOpenId(bindcode);
 		}
@@ -196,10 +207,6 @@ public class WeiXinController {
 	}
 
 
-
-
-
-
 	@RequestMapping("/uplodfile")
 	public String uplodfile(MultipartFile uploadfile_ant, HttpServletRequest request){
 		File targetFile=null;
@@ -211,7 +218,7 @@ public class WeiXinController {
 			String extName = fileName.substring( fileName.lastIndexOf(".")+1 );
 			//文件夹名称  按月份命名
 			SimpleDateFormat flodFormat = new SimpleDateFormat("YYYYMM");
-			String flod = flodFormat.format(new Date());
+			String flod = flodFormat.format(new Date());//文件夹
 			//文件名称 按时间+字符串命名
 			String randid = UUID.randomUUID().toString();
 			randid=randid.replaceAll("-","");
@@ -249,10 +256,32 @@ public class WeiXinController {
 	public Map<String, Object> signinother(@RequestBody TbCheckInRecord checkInRecord) {
 		Map<String, Object> map = new HashMap<>();
 		try {
-			checkInRecord.setCheckTime(new Date());
+			SimpleDateFormat simpleDateFormat  = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+			Date date = simpleDateFormat.parse(simpleDateFormat.format(new Date()));
+			checkInRecord.setCheckTime(date);
+
 			checkInRecord.setPicUrl(checkInRecord.getPicUrl().replaceAll("\"", ""));
+
+			//查询当时的打卡次数进行修改打卡次数
+			SimpleDateFormat simpleDateFormat1  = new SimpleDateFormat("yyyy-MM-dd");
+			String cerStartStr = simpleDateFormat1.format(new Date())+" 00:00:00";
+			String cerEndStr = simpleDateFormat1.format(new Date())+" 23:59:59";
+			Date stdate =simpleDateFormat.parse(cerStartStr);
+			Date endate =simpleDateFormat.parse(cerEndStr);
+
+			TbCheckInRecord tbCheckInRecord =checkInRecordService.findByEmpIdDate(checkInRecord.getEmpId(),stdate, endate);
+			if(tbCheckInRecord != null){
+				//获得当前日 最近一次打卡是的次数记录  加1 个当前的打卡数据
+				Integer checkNum = new Integer(tbCheckInRecord.getSpare0());
+				checkInRecord.setSpare0((checkNum+1)+"");
+				map.put("checkNum",checkNum+1);
+			}else {
+				checkInRecord.setSpare0(1+"");
+				map.put("checkNum",1);
+			}
 			checkInRecordService.add(checkInRecord);
 			map.put("status", 0);
+
 			return map;
 		} catch (Exception e) {
 			map.put("status", 1);
@@ -260,7 +289,162 @@ public class WeiXinController {
 		}
 	}
 
+	/**
+	 * 由首页获取 轮播图、公告、新闻、
+	 * @return
+	 */
+	@RequestMapping("/news")
+	public  Map<String,Object> findnews(){
+//		String newType = null;
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("YYYY-MM-dd");
 
+		List<TbNew> banderList = tbNewService.findByType("轮播图");
+
+		List<TbNew> boadrList = tbNewService.findByType("公告");
+
+		List<TbNew> newList = tbNewService.findByType("新闻");
+
+		for (TbNew obj: newList ) {
+			try {
+				String format = simpleDateFormat.format(obj.getNewTime());
+				obj.setNewTime(simpleDateFormat.parse(simpleDateFormat.format(obj.getNewTime())));
+			} catch (ParseException e) {
+				e.printStackTrace();
+			}
+		}
+		Map<String, Object> map  = new HashMap<>();
+
+		map.put("banners",banderList);
+		map.put("noticeList",boadrList);
+		map.put("news",newList);
+		return map;
+	}
+
+	/**
+	 * 通过新闻id 查询新闻的具体类容
+	 * @param id
+	 * @return
+	 */
+	@RequestMapping("/findByid")
+	public TbNew findByid(Long id){
+		TbNew one = tbNewService.findOne(id);
+		return one;
+	}
+
+	/**
+	 *
+	 * @param empid
+	 * @return
+	 */
+	@RequestMapping("/getNotesByEmpid")
+	public  List<Map<String ,Object>> getNotesByEmpid(String empid){
+
+		//用于存放最后的封装数据
+		List<Map<String ,Object>> listmain = new ArrayList<>();
+
+		TbCheckInRecord checkInRecord  = new TbCheckInRecord();
+		checkInRecord.setEmpId(empid);
+		PageResult page = checkInRecordService.findPage(checkInRecord, 1, 50);
+
+		List<TbCheckInRecord> rows = page.getRows();
+		//根据日期封装打卡的数据
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("YYYY年MM月dd日");
+		SimpleDateFormat simpleDateFormat1 = new SimpleDateFormat("HH:mm:ss");
+		String eqcurrentDate = null;
+		List<Map<String ,Object>> listchild = null;
+		if(rows != null && rows.size()>0){
+			for (int i = 0;i < rows.size();i++){
+				TbCheckInRecord tbCheckInRecord = rows.get(i);
+				String currentDate = simpleDateFormat.format(tbCheckInRecord.getCheckTime());
+				String currentTime = simpleDateFormat1.format(tbCheckInRecord.getCheckTime());
+
+				if(eqcurrentDate != null && eqcurrentDate.equals(currentDate)){
+					if(listchild == null){
+						listchild = new ArrayList<>();
+					}
+					Map<String ,Object> mapchild = new HashMap<>();
+					mapchild.put("empid",tbCheckInRecord.getEmpId());
+					mapchild.put("name",tbCheckInRecord.getName());
+					mapchild.put("localname",tbCheckInRecord.getLocalName());
+					mapchild.put("currentTime",currentTime);
+					mapchild.put("id",i*10);
+					listchild.add(mapchild);
+
+					if(i == rows.size()-1){
+						Map<String ,Object> map = new HashMap<>();
+						map.put("listchild",listchild);
+						listchild = null;//进行最后的数据封装后 将子list清空  用到是重新实例化
+						map.put("eqcurrentDate",eqcurrentDate);
+						map.put("id",i);
+						listmain.add(map);
+					}
+				}else {
+					if(i != 0 ){//第一次进入时不进行最后的数据封装
+						Map<String ,Object> map = new HashMap<>();
+						map.put("listchild",listchild);
+						listchild = null;
+						map.put("eqcurrentDate",eqcurrentDate);
+						map.put("id",i);
+						listmain.add(map);
+					}else  if(i ==0 && rows.size() == 1){//如果只有一条数据  则进入保存最后的封装
+						Map<String ,Object> map = new HashMap<>();
+						map.put("listchild",listchild);
+						listchild = null;
+						map.put("eqcurrentDate",eqcurrentDate);
+						map.put("id",i);
+						listmain.add(map);
+					}
+					if(listchild == null){
+						listchild = new ArrayList<>();
+					}
+					Map<String ,Object> mapchild = new HashMap<>();
+					mapchild.put("id",i*10);
+					mapchild.put("empid",tbCheckInRecord.getEmpId());
+					mapchild.put("name",tbCheckInRecord.getName());
+					mapchild.put("localname",tbCheckInRecord.getLocalName());
+					mapchild.put("currentTime",currentTime);
+					listchild.add(mapchild);//将数据封装到子数据列表中
+				}
+
+				eqcurrentDate = currentDate;//用于比较日期
+			}
+		}
+		return  listmain;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	@RequestMapping("/getOpenid")
+	public  String getOpenid(String code){
+		String openid = null;
+		JSONObject json = getUserInfo(code);
+		openid = json.getString("openid");
+//		sessionKey = json.getString("session_key");
+		return openid;
+	}
 	/**
 	 * 获取openID和会话密匙
 	 * @return
