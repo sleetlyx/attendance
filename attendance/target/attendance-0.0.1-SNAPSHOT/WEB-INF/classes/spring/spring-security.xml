@@ -4,17 +4,19 @@
 	xmlns:beans="http://www.springframework.org/schema/beans" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
-						http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-4.0.xsd">
+						http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-4.0.xsd"
+	default-autowire="byType" default-lazy-init="true">
 
+<!--	<context:component-scan base-package="cn.fhjt.weixin.service"/>-->
+	<http pattern="/attendance/login.html" security="none"/>
 	<http pattern="/*.html" security="none"/>
 	<http pattern="/css/**" security="none"/>
 	<http pattern="/img/**" security="none"/>
 	<http pattern="/js/**" security="none"/>
 	<http pattern="/plugins/**" security="none"/>
+	<http pattern="/upload/**" security="none"/>
 	<http pattern="/weixin/*.do" security="none"/>
-<!--	<http pattern="/login.do" security="none"/>-->
-
-	
+	<http pattern="/loginController/*.do" security="none"/><!-- 放行小程序接口-->
 	<!-- use-expressions:设置是否启动SpEL表达式，默认值是true。 -->
 	<http use-expressions="false">
 
@@ -53,14 +55,19 @@
 
 	<beans:bean id="passwordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
 
+<!--	<beans:bean id="userDetailsService" class="cn.fhjt.weixin.service.security.UserDetailsServiceImpl">-->
+<!--				 <beans:property name="tbUserService" ref="tbUserServiceImpl"/>-->
+<!--	</beans:bean>-->
+
+<!--	<beans:bean id="tbUserServiceImpl" class="cn.fhjt.weixin.service.imp.TbUserServiceImpl">-->
+
+<!--	</beans:bean>-->
+
 	<beans:bean id="userDetailsService" class="cn.fhjt.weixin.service.security.UserDetailsServiceImpl">
-				 <beans:property name="securityUserService" ref="securityUserServiceImpl"/>
+					 <beans:property name="tbUserService" ref="tbUserServiceImpl"/>
 	</beans:bean>
 
-<!--	<beans:bean id="securityUserService" class="cn.fhjt.weixin.service.security.SecurityUserServiceImpl"/>-->
-
-
-	<!-- 配置认证管理器 -->
+        <!-- 配置认证管理器 -->
 	<authentication-manager>
 		<!-- 认证的提供者 -->
 		<authentication-provider user-service-ref="userDetailsService">

@@ -7,7 +7,7 @@ app.service('lsuserService',function($http){
 
 
 	//查询实体
-	this.findOne=function(id){
+	this.findOne=function(id,wxCode){
 		return $http.get('../emp/findOne.do?empId='+id);
 	}
 

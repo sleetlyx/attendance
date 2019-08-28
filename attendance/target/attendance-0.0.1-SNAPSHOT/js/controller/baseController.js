@@ -10,9 +10,9 @@ app.controller('baseController' ,function($scope){
 	//分页控件配置 
 	$scope.paginationConf = {
          currentPage: 1,
-         totalItems: 10,
-         itemsPerPage: 10,
-         perPageOptions: [10, 20, 30, 40, 50],
+         totalItems: 50,
+         itemsPerPage: 50,
+         perPageOptions: [50, 100, 150, 200, 300],
          onChange: function(){
         	 $scope.reloadList();//重新加载
      	 }

@@ -9,10 +9,8 @@
                         http://www.springframework.org/schema/context/spring-context-3.1.xsd
                         http://www.springframework.org/schema/mvc
                         http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
-	  <context:property-placeholder
-		location="classpath:/spring/conf.properties" />
-<!--	<mvc:annotation-driven />-->
-
+	<context:property-placeholder
+			location="classpath:config/application.properties" />
 	<context:component-scan
 		base-package="cn.fhjt.weixin.controller" />
 
