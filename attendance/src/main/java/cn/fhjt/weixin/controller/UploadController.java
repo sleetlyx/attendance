@@ -13,6 +13,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Random;
 import java.util.UUID;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 @RestController
 @RequestMapping("/upload")
@@ -29,6 +31,15 @@ public class UploadController {
                 String fileName = file.getOriginalFilename();
                 // 获得文件的扩展名:
                 String extName = fileName.substring( fileName.lastIndexOf(".")+1 );
+
+//                String reg = "/(.*)\\.(jpg|bmp|gif|ico|pcx|jpeg|tif|png|raw|tga)$/";
+                String reg = "(JPEG|jpeg|JPG|jpg|png|ico|bmp)$";
+                Pattern pattern = Pattern.compile(reg);
+                Matcher matcher = pattern.matcher(extName);
+                if(!matcher.find()){
+                    return new Result(false,"只能上传格式为JPEG|jpeg|JPG|jpg|png|ico|bmp的文件");
+                }
+
 
                 //文件名称 按时间+字符串命名
                 String randid = UUID.randomUUID().toString();

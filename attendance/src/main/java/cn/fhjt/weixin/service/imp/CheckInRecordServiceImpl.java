@@ -3,6 +3,7 @@ import cn.fhjt.weixin.mapper.TbCheckInRecordMapper;
 import cn.fhjt.weixin.pojo.TbCheckInRecord;
 import cn.fhjt.weixin.pojo.TbCheckInRecordExample;
 import cn.fhjt.weixin.pojo.entity.PageResult;
+import cn.fhjt.weixin.utils.CustomerContextHolder;
 import com.github.pagehelper.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.github.pagehelper.PageHelper;
@@ -39,6 +40,9 @@ public class CheckInRecordServiceImpl implements CheckInRecordService {
 	 */
 	@Override
 	public PageResult findPage(TbCheckInRecord checkInRecord,int pageNum, int pageSize) {
+
+		CustomerContextHolder.setCustomerType(CustomerContextHolder.DATA_SOURCE_MYSQL);
+
 		PageHelper.startPage(pageNum, pageSize);
 		TbCheckInRecordExample example = new TbCheckInRecordExample();
 		example.setOrderByClause("id desc");
@@ -60,6 +64,8 @@ public class CheckInRecordServiceImpl implements CheckInRecordService {
 	@Override
 	@Transactional(propagation= Propagation.REQUIRED)
 	public void add(TbCheckInRecord checkInRecord) {
+		CustomerContextHolder.setCustomerType(CustomerContextHolder.DATA_SOURCE_MYSQL);
+
 		checkInRecordMapper.insert(checkInRecord);		
 	}
 
@@ -69,6 +75,8 @@ public class CheckInRecordServiceImpl implements CheckInRecordService {
 	 */
 	@Override
 	public void update(TbCheckInRecord checkInRecord){
+		CustomerContextHolder.setCustomerType(CustomerContextHolder.DATA_SOURCE_MYSQL);
+
 		checkInRecordMapper.updateByPrimaryKey(checkInRecord);
 	}	
 	
@@ -79,6 +87,8 @@ public class CheckInRecordServiceImpl implements CheckInRecordService {
 	 */
 	@Override
 	public TbCheckInRecord findOne(Long id){
+		CustomerContextHolder.setCustomerType(CustomerContextHolder.DATA_SOURCE_MYSQL);
+
 		return checkInRecordMapper.selectByPrimaryKey(id);
 	}
 
@@ -87,12 +97,14 @@ public class CheckInRecordServiceImpl implements CheckInRecordService {
 	 */
 	@Override
 	public void delete(Long[] ids) {
+		CustomerContextHolder.setCustomerType(CustomerContextHolder.DATA_SOURCE_MYSQL);
 		for(Long id:ids){
 			checkInRecordMapper.deleteByPrimaryKey(id);
 		}		
 	}
 		@Override
 	public PageResult findPage(TbCheckInRecord checkInRecord, int pageNum, int pageSize , Date start, Date end) {
+			CustomerContextHolder.setCustomerType(CustomerContextHolder.DATA_SOURCE_MYSQL);
 
 //		Date parStart;
 //		Date parEnd;
@@ -162,6 +174,7 @@ public class CheckInRecordServiceImpl implements CheckInRecordService {
 
 	@Override
 	public TbCheckInRecord findByEmpIdDate(String empId, Date stdate, Date endate) {
+		CustomerContextHolder.setCustomerType(CustomerContextHolder.DATA_SOURCE_MYSQL);
 		TbCheckInRecordExample example = new TbCheckInRecordExample();
 		example.setOrderByClause("id desc");
 		TbCheckInRecordExample.Criteria criteria = example.createCriteria();

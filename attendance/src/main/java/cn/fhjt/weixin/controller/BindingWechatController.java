@@ -67,7 +67,10 @@ public class BindingWechatController {
 	 */
 	@RequestMapping("/findOne")
 	public TbBindingWechat findOne(Long id){
-		return bindingWechatService.findOne(id);		
+
+//		Long log = Long.parseLong(id);
+
+		return bindingWechatService.findOne(id);
 	}
 	
 	/**

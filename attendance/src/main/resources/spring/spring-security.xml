@@ -7,6 +7,10 @@
 						http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-4.0.xsd"
 	default-autowire="byType" default-lazy-init="true">
 
+<!--	开启secured 注解-->
+<!--	<global-method-security jsr250-annotations="enabled" />-->
+	<global-method-security secured-annotations="enabled" />
+
 <!--	<context:component-scan base-package="cn.fhjt.weixin.service"/>-->
 	<http pattern="/attendance/login.html" security="none"/>
 	<http pattern="/*.html" security="none"/>
@@ -15,8 +19,8 @@
 	<http pattern="/js/**" security="none"/>
 	<http pattern="/plugins/**" security="none"/>
 	<http pattern="/upload/**" security="none"/>
-	<http pattern="/weixin/*.do" security="none"/>
-	<http pattern="/loginController/*.do" security="none"/><!-- 放行小程序接口-->
+	<http pattern="/weixin/*.do" security="none"/><!-- 放行小程序接口-->
+	<http pattern="/loginController/getLoginSession.do" security="none"/>
 	<!-- use-expressions:设置是否启动SpEL表达式，默认值是true。 -->
 	<http use-expressions="false">
 
@@ -74,5 +78,20 @@
 		 <password-encoder ref="passwordEncoder"/> 
 		</authentication-provider>
 	</authentication-manager>
+
+
+<!--	<beans:bean id="roleVoter" class="org.springframework.security.access.vote.RoleHierarchyVoter">-->
+<!--		<beans:constructor-arg ref="roleHierarchy" />-->
+<!--	</beans:bean>-->
+<!--	<beans:bean id="roleHierarchy"-->
+<!--		  class="org.springframework.security.access.hierarchicalroles.RoleHierarchyImpl">-->
+<!--		<beans:property name="hierarchy">-->
+<!--			<beans:value>-->
+<!--				ROLE_ADMIN > ROLE_STAFF-->
+<!--				ROLE_STAFF > ROLE_USER-->
+<!--				ROLE_USER > ROLE_GUEST-->
+<!--			</beans:value>-->
+<!--		</beans:property>-->
+<!--	</beans:bean>-->
 
 </beans:beans>

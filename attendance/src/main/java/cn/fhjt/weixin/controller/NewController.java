@@ -7,6 +7,7 @@ import cn.fhjt.weixin.pojo.entity.Result;
 import cn.fhjt.weixin.service.TbNewPicService;
 import cn.fhjt.weixin.service.TbNewService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -61,7 +62,10 @@ public class NewController {
      * @return
      */
     @RequestMapping("/findOne")
+//    @Secured("ROLE_USER")
+    @Secured("ROLE_findon")
     public TbNew findOne(Long id){
+
         return tbnewService.findOne(id);
     }
 

@@ -34,6 +34,7 @@ public class TbBindingWechatServiceImpl implements TbBindingWechatService {
      */
     @Override
     public PageResult findPage(int pageNum, int pageSize) {
+        CustomerContextHolder.setCustomerType(CustomerContextHolder.DATA_SOURCE_MYSQL);
         PageHelper.startPage(pageNum, pageSize);
         Page<TbBindingWechat> page=   (Page<TbBindingWechat>) bindingWechatMapper.selectByExample(null);
         return new PageResult(page.getTotal(), page.getResult());
@@ -54,6 +55,8 @@ public class TbBindingWechatServiceImpl implements TbBindingWechatService {
      */
     @Override
     public void update(TbBindingWechat bindingWechat){
+        CustomerContextHolder.setCustomerType(CustomerContextHolder.DATA_SOURCE_MYSQL);
+
         bindingWechatMapper.updateByPrimaryKey(bindingWechat);
     }
 
@@ -64,6 +67,8 @@ public class TbBindingWechatServiceImpl implements TbBindingWechatService {
      */
     @Override
     public TbBindingWechat findOne(Long id){
+        CustomerContextHolder.setCustomerType(CustomerContextHolder.DATA_SOURCE_MYSQL);
+
         return bindingWechatMapper.selectByPrimaryKey(id);
     }
 
@@ -72,6 +77,7 @@ public class TbBindingWechatServiceImpl implements TbBindingWechatService {
      */
     @Override
     public void delete(Long[] ids) {
+        CustomerContextHolder.setCustomerType(CustomerContextHolder.DATA_SOURCE_MYSQL);
         for(Long id:ids){
             bindingWechatMapper.deleteByPrimaryKey(id);
         }
@@ -80,6 +86,7 @@ public class TbBindingWechatServiceImpl implements TbBindingWechatService {
 
     @Override
     public PageResult findPage(TbBindingWechat bindingWechat, int pageNum, int pageSize) {
+        CustomerContextHolder.setCustomerType(CustomerContextHolder.DATA_SOURCE_MYSQL);
         PageHelper.startPage(pageNum, pageSize);
 
         TbBindingWechatExample example=new TbBindingWechatExample();
@@ -153,6 +160,8 @@ public class TbBindingWechatServiceImpl implements TbBindingWechatService {
 
     @Override
     public TbBindingWechat findBybidcodetToOpenId(String code) {
+        CustomerContextHolder.setCustomerType(CustomerContextHolder.DATA_SOURCE_MYSQL);
+
         TbBindingWechatExample example = new TbBindingWechatExample();
         example.createCriteria().andCodeEqualTo(code);
         List<TbBindingWechat> tbBindingWechat = bindingWechatMapper.selectByExample(example);
@@ -188,6 +197,8 @@ public class TbBindingWechatServiceImpl implements TbBindingWechatService {
      */
     @Override
     public TbBindingWechat findByOpenid(String openid) {
+        CustomerContextHolder.setCustomerType(CustomerContextHolder.DATA_SOURCE_MYSQL);
+
         TbBindingWechatExample example = new TbBindingWechatExample();
         example.createCriteria().andOpenIdEqualTo(openid);
         List<TbBindingWechat> tbBindingWechat = bindingWechatMapper.selectByExample(example);

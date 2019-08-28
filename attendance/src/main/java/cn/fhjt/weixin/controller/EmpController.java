@@ -98,9 +98,13 @@ public class EmpController {
                 tbBindingWechat.setState(emp.getState());//任职状态
                 tbBindingWechat.setDepartment(emp.getDeptId());
                 //获得当前的登录管理员名称
-//            TODO
                 User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-                tbBindingWechat.setOperator(user.getUsername());
+                Emp emp1 = empService.findOne(user.getUsername());
+                String username = null;
+                if(emp1 != null){
+                    username = emp1.getName();//获得操作用户的姓名
+                }
+                tbBindingWechat.setOperator("由"+user.getUsername()+"/"+username+"-进行绑定操作");
                 // 需要切换当前线程的数据源  将部分数据 先插入绑定表中 后期使用
                 tbBindingWechatService.add(tbBindingWechat);
             }else if((idtbBindingWechat.getCode() == null || "".equals(idtbBindingWechat.getCode())) && (idtbBindingWechat.getOpenId() ==null || "".equals(idtbBindingWechat.getOpenId()))){
@@ -127,6 +131,13 @@ public class EmpController {
             byDgenumber.setOpenId(null);
             byDgenumber.setCode(null);
             byDgenumber.setStatus("0");
+            User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+            Emp emp1 = empService.findOne(user.getUsername());
+            String username = null;
+            if(emp1 != null){
+                username = emp1.getName();//获得操作用户的姓名
+            }
+            byDgenumber.setSpare2("由"+user.getUsername()+"/"+username+"-进行解绑操作");
             tbBindingWechatService.update(byDgenumber);
         }else {
            map.put("status",0);

@@ -72,7 +72,6 @@ public class LsUserInfoController {
                tbBindingWechat.setCreated(new Date());
                tbBindingWechat.setPhon(lsuser.getPhone());
                //获得当前的登录管理员名称
-//            TODO
 //          tbBindingWechat.setOperator();
                // 需要切换当前线程的数据源
                tbBindingWechatService.add(tbBindingWechat);

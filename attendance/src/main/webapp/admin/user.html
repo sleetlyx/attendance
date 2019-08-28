@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>管理</title>
+    <title>系统用户管理</title>
     <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
     <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../plugins/adminLTE/css/AdminLTE.css">
@@ -28,7 +28,7 @@
 <body class="hold-transition skin-red sidebar-mini" ng-app="fhjt" ng-controller="userController">
 <!-- .box-body -->
 <div class="box-header with-border">
-    <h3 class="box-title">管理</h3>
+    <h3 class="box-title">系统用户管理</h3>
 </div>
 
 <div class="box-body">
@@ -41,7 +41,7 @@
             <div class="form-group form-inline">
                 <div class="btn-group">
                     <button type="button" class="btn btn-default" title="新建" data-toggle="modal" data-target="#addModal"
-                            ng-click="entity={}"><i class="fa fa-file-o"></i> 新建
+                            ng-click="entity={};essage='';entity.status='0';"><i class="fa fa-file-o"></i> 新建
                     </button>
                     <button type="button" class="btn btn-default" title="删除" ng-click="dele()"><i
                             class="fa fa-trash-o"></i> 删除
@@ -66,7 +66,7 @@
                     <input id="selall" type="checkbox" class="icheckbox_square-blue">
                 </th>
                 <th class="sorting">工号</th>
-                <th class="sorting">用户名</th>
+                <th class="sorting">登录用户名</th>
                 <th class="sorting">电话</th>
                 <th class="sorting">创建时间</th>
                 <th class="sorting">姓名</th>
@@ -119,15 +119,15 @@
 
                     <tr>
                         <td>工号</td>
-                        <td><input class="form-control" ng-model="entity.userId" placeholder="工号"></td>
+                        <td><input class="form-control" ng-model="entity.userId" placeholder="工号" readonly onselect="on"></td>
 
                     </tr>
 
                     <tr>
 
-                        <td>用户名</td>
+                        <td>登录用户名</td>
 
-                        <td><input class="form-control" ng-model="entity.userName" placeholder="用户名"></td>
+                        <td><input class="form-control" ng-model="entity.userName" placeholder="用户名" readonly onstalled="on"></td>
 
                     </tr>
 
@@ -141,7 +141,7 @@
 
                     <td>电话</td>
 
-                    <td><input class="form-control" ng-model="entity.phone" placeholder="电话"></td>
+                    <td><input class="form-control" ng-model="entity.phone" placeholder="电话" ></td>
 
                     </tr>
                     <!--		      	<tr>-->
@@ -197,7 +197,7 @@
 
 
 <!-- 增加窗口 -->
-<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -205,18 +205,21 @@
                 <h3 id="myModalLabel">增加</h3>
             </div>
             <div class="modal-body">
+
                 <table class="table table-bordered table-striped" width="800px">
                     <tr>
                         <td>工号</td>
-                        <td><input class="form-control" ng-model="entity.userId" placeholder="工号"></td>
+                        <td><input class="form-control" ng-model="entity.userId" placeholder="工号" ng-blur="checkEmpId()" />
+                            <span style="color: #3f729b" >{{essage}}</span>
+                        </td>
 
                     </tr>
 
                     <tr>
 
-                        <td>用户名</td>
+                        <td>用户登录名</td>
 
-                        <td><input class="form-control" ng-model="entity.userName" placeholder="用户名"></td>
+                        <td><input class="form-control" ng-model="entity.userName" placeholder="用户名" readonly onstalled="on"></td>
 
                     </tr>
 
@@ -230,21 +233,14 @@
 
                     <td>电话</td>
 
-                    <td><input class="form-control" ng-model="entity.phone" placeholder="电话"></td>
+                    <td><input class="form-control" ng-model="entity.phone" placeholder="电话" readonly  onselect="on"/>
+                    </td>
 
                     </tr>
-                    <!--		      	<tr>-->
-                    <!--                             -->
-                    <!--<td>创建时间</td>-->
-
-                    <!--                             <td><input  class="form-control" ng-model="entity.created" placeholder="创建时间" readonly unselectable="on" ></td>-->
-
-                    <!--                        </tr>		-->
-                    <!--		      	<tr>-->
 
                     <td>姓名</td>
 
-                    <td><input class="form-control" ng-model="entity.name" placeholder="真是姓名"></td>
+                    <td><input class="form-control" ng-model="entity.name" placeholder="真是姓名" readonly onstalled="on"></td>
 
                     </tr>
                     <tr>
@@ -252,9 +248,9 @@
                         <td>状态</td>
 
                         <td>
-                            <input type="radio" ng-value=0 ng-model="entity.status" name="b"/>
+                            <input type="radio" ng-value=0 ng-model="entity.status"/>
                             &nbsp;正常&nbsp;
-                            <input type="radio" ng-value=1 ng-model="entity.status" name="b"/>
+                            <input type="radio" ng-value=1 ng-model="entity.status"/>
                             &nbsp;失效&nbsp;
                             <!-- <input  class="form-control" ng-model="entity.status" placeholder="" unselectable="on" >-->
                         </td>
@@ -262,7 +258,7 @@
                     </tr>
                     <tr>
 
-                        <td>性别</td>
+                        <td>性别 </td>
 
                         <td>
                             <input type="radio" ng-value=0 ng-model="entity.sex" name="bb"/>
@@ -270,14 +266,14 @@
                             <input type="radio" ng-value=1 ng-model="entity.sex" name="bb"/>
                             &nbsp;女&nbsp;
                             <!--                                 <input  class="form-control" ng-model="entity.sex" placeholder="" >-->
+<!--                            <span style="color:red;">{{issubmitMessage}}</span>-->
                         </td>
-
                     </tr>
-
                 </table>
+
             </div>
             <div class="modal-footer">
-                <button class="btn btn-success" data-dismiss="modal" aria-hidden="true" ng-click="save()">保存</button>
+                <button ng-show="issubmit" class="btn btn-success" data-dismiss="modal" aria-hidden="true" ng-click="save()">保存</button>
                 <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">关闭</button>
             </div>
         </div>

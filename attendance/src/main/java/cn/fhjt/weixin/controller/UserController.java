@@ -1,10 +1,14 @@
 package cn.fhjt.weixin.controller;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
+import cn.fhjt.weixin.pojo.Emp;
 import cn.fhjt.weixin.pojo.TbUser;
 import cn.fhjt.weixin.pojo.entity.PageResult;
 import cn.fhjt.weixin.pojo.entity.Result;
+import cn.fhjt.weixin.service.EmpService;
 import cn.fhjt.weixin.service.TbUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -23,6 +27,8 @@ public class UserController {
 
 	@Autowired
 	private TbUserService tbUserService;
+	@Autowired
+	private EmpService empService;
 
 	/**
 	 * 增加
@@ -95,6 +101,38 @@ public class UserController {
 	@RequestMapping("/search")
 	public PageResult search(@RequestBody TbUser user, int page, int rows  ){
 		return tbUserService.findPage(user, page, rows);
+	}
+
+	/**
+	 * 检查 添加加用户时工号可用否
+	 * @param empId
+	 * @return
+	 */
+	@RequestMapping("/checkEmpId")
+	public  Result checkEmpId(String empId){
+		Emp emp = null;
+		if(empId != null && !empId.equals("undefined")){
+			 emp = empService.findOne(empId);
+		}
+
+		if(emp == null){
+			return  new Result(false,"该工号不存在，请输入正确的工号！");
+		}
+		else {
+			Long longid = Long.parseLong(empId);
+			TbUser user = tbUserService.findOne(longid);
+			if(user != null){
+				return new Result(true,"该工号已经存在");
+			}else {
+				Map<String,Object> map = new HashMap<>();
+				map.put("phone",emp.getMobile());
+				map.put("name",emp.getName());
+				map.put("sex",emp.getSex().equals("A")? "0":"1");
+				return new Result(true,"该工号可用",map);
+			}
+
+		}
+
 	}
 	
 }

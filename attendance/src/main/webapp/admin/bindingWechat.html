@@ -28,7 +28,7 @@
 <body class="hold-transition skin-red sidebar-mini" ng-app="fhjt" ng-controller="bindingWechatController" >
   <!-- .box-body -->
                     <div class="box-header with-border">
-                        <h3 class="box-title">管理</h3>
+                        <h3 class="box-title">绑定微信用户管理</h3>
                     </div>
 
                     <div class="box-body">
@@ -40,8 +40,8 @@
                             <div class="pull-left">
                                 <div class="form-group form-inline">
                                     <div class="btn-group">
-                                        <button type="button" class="btn btn-default" title="新建" data-toggle="modal" data-target="#editModal" ng-click="entity={}"><i class="fa fa-file-o"></i> 新建</button>
-                                        <button type="button" class="btn btn-default" title="删除" ng-click="dele()"><i class="fa fa-trash-o"></i> 删除</button>           
+<!--                                       -->
+<!--                                        <button type="button" class="btn btn-default" title="删除" ng-click="dele()"><i class="fa fa-trash-o"></i> 删除</button>           -->
                                         <button type="button" class="btn btn-default" title="刷新" onclick="window.location.reload();"><i class="fa fa-refresh"></i> 刷新</button>
                                     </div>
                                 </div>
@@ -60,34 +60,37 @@
 			                                  <input id="selall" type="checkbox" class="icheckbox_square-blue">
 			                              </th> 
 										                               <th class="sorting">工号</th>			
-                             <th class="sorting">由现场提供绑定码，共小程序绑定用户使用</th>			
+                             <th class="sorting">绑定码</th>
                              <th class="sorting">用户名</th>			
                              <th class="sorting">创建时间</th>			
-                             <th class="sorting">操作者</th>			
-                             <th class="sorting">用户唯一标识</th>			
-                             <th class="sorting">会话密匙</th>			
-                             <th class="sorting">验证码的状态0正常,1失效</th>			
-                             <th class="sorting">电话</th>			
-								     				
-					                      <th class="text-center">操作</th>
+                             <th class="sorting">绑定操作者</th>
+                             <th class="sorting">openID用户唯一标识</th>
+<!--                             <th class="sorting">会话密匙</th>			-->
+                             <th class="sorting">绑定码状态</th>
+                             <th class="sorting">电话</th>
+                                          <th class="sorting">解绑操作者</th>
+                                          <!--					            <th class="text-center">操作</th>-->
 			                          </tr>
 			                      </thead>
 			                      <tbody>
 			                          <tr ng-repeat="entity in list">
-			                              <td><input  type="checkbox" ng-click="updateSelection($event,entity.user_id)"></td>			                              
-				                                                       <td>{{entity.userId}}</td>			
+			                              <td><input  type="checkbox" ng-click="updateSelection($event,entity.user_id)"></td>
+				                                                       <td>{{entity.userId}}</td>
                              <td>{{entity.code}}</td>			
                              <td>{{entity.userName}}</td>			
                              <td>{{entity.created}}</td>			
                              <td>{{entity.operator}}</td>			
                              <td>{{entity.openId}}</td>			
-                             <td>{{entity.sessionKey}}</td>			
-                             <td>{{entity.status}}</td>			
-                             <td>{{entity.phon}}</td>			
-		                                 
-		                                  <td class="text-center">                                           
-		                                 	  <button type="button" class="btn bg-olive btn-xs" data-toggle="modal" data-target="#editModal" ng-click="findOne(entity.user_id)" >修改</button>                                           
-		                                  </td>
+<!--                             <td>{{entity.sessionKey}}</td>			-->
+                             <td>{{entity.status == 0 ? '正常' : '失效'}}</td>
+<!--                             <td ng-if="{{entity.status == 0}}">正常</td>-->
+<!--                             <td ng-if="{{entity.status == 1}}">失效</td>-->
+                             <td>{{entity.phon}}</td>
+                                          <td>{{entity.spare2}}</td>
+<!--		                                 -->
+<!--		                                  <td class="text-center">                                           -->
+<!--		                                 	  <button type="button" class="btn bg-olive btn-xs" data-toggle="modal" data-target="#editModal" ng-click="findOne(entity.userId)" >详情</button>-->
+<!--		                                  </td>-->
 			                          </tr>									 
 			                      </tbody>
 			                  </table>

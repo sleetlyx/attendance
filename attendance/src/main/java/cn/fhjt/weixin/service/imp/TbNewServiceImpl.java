@@ -6,6 +6,7 @@ import cn.fhjt.weixin.pojo.TbNewExample;
 import cn.fhjt.weixin.pojo.entity.PageResult;
 import cn.fhjt.weixin.pojo.entity.Result;
 import cn.fhjt.weixin.service.TbNewService;
+import cn.fhjt.weixin.utils.CustomerContextHolder;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +23,7 @@ public class TbNewServiceImpl implements TbNewService {
      */
     @Override
     public void add(TbNew tbNew) {
+        CustomerContextHolder.setCustomerType(CustomerContextHolder.DATA_SOURCE_MYSQL);
         tbNewMapper.insert(tbNew);
     }
 
@@ -31,6 +33,7 @@ public class TbNewServiceImpl implements TbNewService {
      */
     @Override
     public void update(TbNew tbNew) {
+        CustomerContextHolder.setCustomerType(CustomerContextHolder.DATA_SOURCE_MYSQL);
         tbNewMapper.updateByPrimaryKey(tbNew);
     }
 
@@ -42,6 +45,7 @@ public class TbNewServiceImpl implements TbNewService {
      */
     @Override
     public TbNew findOne(Long id) {
+        CustomerContextHolder.setCustomerType(CustomerContextHolder.DATA_SOURCE_MYSQL);
         return tbNewMapper.selectByPrimaryKey(id);
     }
 
@@ -50,6 +54,7 @@ public class TbNewServiceImpl implements TbNewService {
      */
     @Override
     public void delete(Long[] ids) {
+        CustomerContextHolder.setCustomerType(CustomerContextHolder.DATA_SOURCE_MYSQL);
         for (Long id : ids) {
             tbNewMapper.deleteByPrimaryKey(id);
         }
@@ -58,6 +63,7 @@ public class TbNewServiceImpl implements TbNewService {
 
     @Override
     public PageResult findPage(TbNew tbNew, int pageNum, int pageSize) {
+        CustomerContextHolder.setCustomerType(CustomerContextHolder.DATA_SOURCE_MYSQL);
         PageHelper.startPage(pageNum, pageSize);
         TbNewExample example = new TbNewExample();
         TbNewExample.Criteria criteria = example.createCriteria();
@@ -75,6 +81,7 @@ public class TbNewServiceImpl implements TbNewService {
 
     @Override
     public void updateByIds(Long[] ids) {
+        CustomerContextHolder.setCustomerType(CustomerContextHolder.DATA_SOURCE_MYSQL);
         for (Long tbNewId : ids) {
             TbNew tbUser = tbNewMapper.selectByPrimaryKey(tbNewId);
 
@@ -84,6 +91,7 @@ public class TbNewServiceImpl implements TbNewService {
 
     @Override
     public List<TbNew> findByType(String newType) {
+        CustomerContextHolder.setCustomerType(CustomerContextHolder.DATA_SOURCE_MYSQL);
         TbNewExample example = new TbNewExample();
         example.setOrderByClause("id desc");
         example.createCriteria().andTypeEqualTo(newType);

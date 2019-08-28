@@ -15,16 +15,19 @@ app.controller('userController' ,function($scope,$controller   ,userService){
 
 	//保存
 	$scope.save=function(){
+		if($scope.issubmit){
 			userService.add( $scope.entity ).success(
-			function(response){
-				if(response.success){
-					//重新查询
-					$scope.reloadList();//重新加载
-				}else{
-					alert(response.message);
+				function(response){
+					if(response.success){
+						//重新查询
+						$scope.reloadList();//重新加载
+					}else{
+						alert(response.message);
+					}
 				}
-			}
-		);
+			);
+		}
+
 	}
 	// $scope.save=function(){
 	// 	var serviceObject;//服务层对象
@@ -86,5 +89,33 @@ app.controller('userController' ,function($scope,$controller   ,userService){
 			}			
 		);
 	}
-    
+    //校验工号是否存在
+	$scope.issubmit = false;
+	$scope.checkEmpId =  function () {
+			userService.checkEmpId($scope.entity.userId).success(function (res) {
+				if(res.flag){  //  为真值 该工号可用
+					$scope.entity.userName = $scope.entity.userId
+					$scope.essage=res.message;
+					$scope.entity.phone = res.map.phone;
+					$scope.entity.sex = res.map.sex;
+					$scope.entity.name = res.map.name;
+					$scope.issubmit = true;
+				}else { //工号不可用
+					$scope.essage=res.message;
+					$scope.issubmit = false;
+				}
+			})
+
+	}
+
+	//在登录首页获取 登录的用户名称
+
+	$scope.getUserName = function () {
+		userService.getUserName().success(function (res) {
+			$scope.currentUserName = res.userName;
+			$scope.lastTime = res.lastTime;
+
+			console.log(res,"$$$")
+		})
+	}
 });	

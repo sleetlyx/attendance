@@ -73,7 +73,7 @@ app.controller('newsController' ,function($scope,$controller   ,newsService,uplo
 		);
 	}
 
-	$scope.picUrl="";  //存放图片  每条新闻不能超过四张图片
+	$scope.picUrl="";  //存放图片
 
 	$scope.uploadFile = function(){
 		// 调用uploadService的方法完成文件的上传

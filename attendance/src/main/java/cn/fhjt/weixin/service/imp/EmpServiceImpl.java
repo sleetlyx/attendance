@@ -22,7 +22,10 @@ public class EmpServiceImpl implements EmpService {
         EmpExample example = new EmpExample();
         example.createCriteria().andEmpIdEqualTo(empId);
         List<Emp> lsUser = empMapper.selectByExample(example);
-        return lsUser.get(0);
+        if(lsUser != null && lsUser.size()>0){
+            return lsUser.get(0);
+        }
+        return null;
     }
 
     @Override

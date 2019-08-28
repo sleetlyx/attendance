@@ -5,6 +5,7 @@ import java.util.List;
 
 import cn.fhjt.weixin.pojo.TbUserExample;
 import cn.fhjt.weixin.pojo.entity.PageResult;
+import cn.fhjt.weixin.utils.CustomerContextHolder;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import jdk.nashorn.internal.ir.annotations.Reference;
@@ -24,6 +25,7 @@ public class TbUserServiceImpl implements TbUserService {
 	 */
 	@Override
 	public List<TbUser> findAll() {
+		CustomerContextHolder.setCustomerType(CustomerContextHolder.DATA_SOURCE_MYSQL);
 		return userMapper.selectByExample(null);
 	}
 
@@ -32,6 +34,7 @@ public class TbUserServiceImpl implements TbUserService {
 	 */
 	@Override
 	public PageResult findPage(int pageNum, int pageSize) {
+		CustomerContextHolder.setCustomerType(CustomerContextHolder.DATA_SOURCE_MYSQL);
 		PageHelper.startPage(pageNum, pageSize);
 		Page<TbUser> page=   (Page<TbUser>) userMapper.selectByExample(null);
 		return new PageResult(page.getTotal(), page.getResult());
@@ -42,6 +45,7 @@ public class TbUserServiceImpl implements TbUserService {
 	 */
 	@Override
 	public void add(TbUser user) {
+		CustomerContextHolder.setCustomerType(CustomerContextHolder.DATA_SOURCE_MYSQL);
 		userMapper.insert(user);
 	}
 
@@ -51,6 +55,7 @@ public class TbUserServiceImpl implements TbUserService {
 	 */
 	@Override
 	public void update(TbUser user){
+		CustomerContextHolder.setCustomerType(CustomerContextHolder.DATA_SOURCE_MYSQL);
 		userMapper.updateByPrimaryKey(user);
 	}
 
@@ -61,6 +66,7 @@ public class TbUserServiceImpl implements TbUserService {
 	 */
 	@Override
 	public TbUser findOne(Long id){
+		CustomerContextHolder.setCustomerType(CustomerContextHolder.DATA_SOURCE_MYSQL);
 		return userMapper.selectByPrimaryKey(id);
 	}
 
@@ -69,6 +75,7 @@ public class TbUserServiceImpl implements TbUserService {
 	 */
 	@Override
 	public void delete(Long[] ids) {
+		CustomerContextHolder.setCustomerType(CustomerContextHolder.DATA_SOURCE_MYSQL);
 		for(Long id:ids){
 			userMapper.deleteByPrimaryKey(id);
 		}
@@ -77,6 +84,7 @@ public class TbUserServiceImpl implements TbUserService {
 
 	@Override
 	public PageResult findPage(TbUser user, int pageNum, int pageSize) {
+		CustomerContextHolder.setCustomerType(CustomerContextHolder.DATA_SOURCE_MYSQL);
 		PageHelper.startPage(pageNum, pageSize);
 		TbUserExample example=new TbUserExample();
 		TbUserExample.Criteria criteria = example.createCriteria();
@@ -124,6 +132,7 @@ public class TbUserServiceImpl implements TbUserService {
 
 	@Override
 	public void updateByIds(Long[] ids) {
+		CustomerContextHolder.setCustomerType(CustomerContextHolder.DATA_SOURCE_MYSQL);
 		for (Long userId: ids) {
 			TbUser tbUser = userMapper.selectByPrimaryKey(userId);
 			tbUser.setStatus("1");
@@ -138,6 +147,7 @@ public class TbUserServiceImpl implements TbUserService {
 	 */
 	@Override
 	public TbUser findByName(String userName) {
+		CustomerContextHolder.setCustomerType(CustomerContextHolder.DATA_SOURCE_MYSQL);
 		TbUserExample example = new TbUserExample();
 
 		if(userName != null && !"".equals(userName)){
@@ -158,6 +168,7 @@ public class TbUserServiceImpl implements TbUserService {
 
 	@Override
 	public TbUser findInfo() {
+		CustomerContextHolder.setCustomerType(CustomerContextHolder.DATA_SOURCE_MYSQL);
 		 List<TbUser> listUser = userMapper.selectByExample(null);
 		return listUser.get(0);
 	}

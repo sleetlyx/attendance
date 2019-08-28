@@ -35,15 +35,16 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		
 		List<GrantedAuthority> grantAuths = new ArrayList();
-//		grantAuths.add(new SimpleGrantedAuthority("ROLE_ANONYMOUS"));
-		grantAuths.add(new SimpleGrantedAuthority("ROLE_USER"));
+		SimpleGrantedAuthority role_user = new SimpleGrantedAuthority("ROLE_USER");
+//		SimpleGrantedAuthority role_user = new SimpleGrantedAuthority("ROLE_ADMIN");
+		grantAuths.add(new SimpleGrantedAuthority("ROLE_findon"));
+		grantAuths.add(role_user);
 
 		// 去数据库进行查询:
 
 		TbUser tbUser = tbUserService.findByName(username);
 		if(tbUser != null){
 			if(tbUser.getStatus().equals("0")){
-
 				return new User(username,tbUser.getPassword(),grantAuths );
 			}else{
 				return null;
