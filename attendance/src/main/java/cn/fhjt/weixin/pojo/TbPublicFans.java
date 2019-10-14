@@ -2,8 +2,10 @@ package cn.fhjt.weixin.pojo;
 
 import java.io.Serializable;
 
-public class TbPublicFans  implements Serializable {
-    private String id;
+public class TbPublicFans  implements Serializable{
+    private Integer id;
+
+    private String openid;
 
     private String subscribe;
 
@@ -27,12 +29,20 @@ public class TbPublicFans  implements Serializable {
 
     private String spare3;
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
-        this.id = id == null ? null : id.trim();
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getOpenid() {
+        return openid;
+    }
+
+    public void setOpenid(String openid) {
+        this.openid = openid == null ? null : openid.trim();
     }
 
     public String getSubscribe() {

@@ -50,5 +50,10 @@ public class LyxTest {
         int i = Integer.parseInt(s.substring(0, s.length() - 2));
         System.out.println(i);
     }
+    @Test
+    public  void  sdaf(){
+        String str = "530127196501234567";
+        System.out.println(str.substring(str.length()-6));
 
+    }
 }

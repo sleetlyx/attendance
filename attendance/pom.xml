@@ -72,6 +72,7 @@
 				<artifactId>junit</artifactId>
 				<version>4.9</version>
 			</dependency>
+<!--     fastjson 依赖       -->
 			<dependency>
 				<groupId>com.alibaba</groupId>
 				<artifactId>fastjson</artifactId>
@@ -93,6 +94,7 @@
 				<version>2.5</version>
 				<scope>provided</scope>
 			</dependency>
+<!--			分页插件-->
 			<dependency>
 			    <groupId>com.github.pagehelper</groupId>
 			    <artifactId>pagehelper</artifactId>
@@ -131,8 +133,15 @@
 				<groupId>com.alibaba</groupId>
 				<artifactId>druid</artifactId>
 				<version>${druid.version}</version>
-			</dependency>		
-			
+			</dependency>
+			<!-- 引入 apache 工具类 -->
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>3.7</version>
+			</dependency>
+
+
 			<!-- 文件上传组件 -->
 			<dependency>
 				<groupId>commons-fileupload</groupId>

@@ -1,6 +1,5 @@
 package cn.fhjt.weixin.service.imp;
 
-import cn.fhjt.weixin.mapper.TbNewPicMapper;
 import cn.fhjt.weixin.mapper.TbPublicFansMapper;
 import cn.fhjt.weixin.pojo.TbPublicFans;
 import cn.fhjt.weixin.service.PublicFansService;
@@ -29,7 +28,7 @@ public class PublicFansServiceImpl implements PublicFansService {
 
                for ( Map<String,Object> userInfo:info_list){
                    TbPublicFans publicFans = new TbPublicFans();
-                   publicFans.setId(userInfo.get("openid").toString());
+                   publicFans.setOpenid(userInfo.get("openid").toString());
                    publicFans.setSubscribe(userInfo.get("subscribe").toString());
                    publicFans.setNickName(userInfo.get("nickname")==null? null: userInfo.get("nickname").toString());
                    publicFans.setSex(userInfo.get("sex").toString());

@@ -7,12 +7,10 @@ import java.util.*;
 
 
 import cn.fhjt.weixin.mapper.SavePublicTokenMapper;
-import cn.fhjt.weixin.pojo.SavePublicToken;
-import cn.fhjt.weixin.pojo.TbBindingWechat;
-import cn.fhjt.weixin.pojo.TbCheckInRecord;
-import cn.fhjt.weixin.pojo.TbNew;
+import cn.fhjt.weixin.pojo.*;
 import cn.fhjt.weixin.pojo.entity.PageResult;
 import cn.fhjt.weixin.service.CheckInRecordService;
+import cn.fhjt.weixin.service.EmpService;
 import cn.fhjt.weixin.service.TbBindingWechatService;
 import cn.fhjt.weixin.service.TbNewService;
 import cn.fhjt.weixin.service.imp.PublicFansServiceImpl;
@@ -23,10 +21,15 @@ import cn.fhjt.weixin.utils.LocalSysUtil;
 import cn.fhjt.weixin.utils.WXAppletUserInfo;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.sun.org.apache.xalan.internal.xsltc.dom.StepIterator;
+import org.apache.commons.beanutils.BeanUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -73,6 +76,9 @@ public class WeiXinController {
     @Autowired
     private PublicFansServiceImpl publicFansService;
 
+    @Autowired
+    private EmpService empService;
+
 
 
     /**
@@ -83,13 +89,20 @@ public class WeiXinController {
      * @return
      */
     @RequestMapping("/code")
-    public Map<String, Object> isbind(String code) {
+    public Map<String, Object> isbind(String code,String openid,String sessionkey ,String nickName) {
         Map<String, Object> resmap = new HashMap();
 //		wxCode = code;
+        String secret =sessionkey;
         //获取当前微信用户的唯一标识
-        JSONObject json = getUserInfo(code);
-        String openid = json.getString("openid");
-        String secret = json.getString("session_key");
+      if(openid == null || "".equals(openid)){
+          JSONObject json = getUserInfo(code);
+          openid = json.getString("openid");
+           secret = json.getString("session_key");
+      }
+
+
+
+
         //通过唯一表示  判断是否存在数据
         TbBindingWechat bidwechat = tbBindingWechatService.findByOpenid(openid);
         resmap.put("openid", openid);
@@ -669,7 +682,7 @@ public class WeiXinController {
     }
 
 
-    //在APP.js 发起的请求
+    //在 首页 发起的请求
     @RequestMapping("/getOpenid")
     public Map<String, Object> getOpenid(String code) {
         String openid = null;
@@ -678,15 +691,116 @@ public class WeiXinController {
         String sessionkey = json.getString("session_key");
         if (openid != null) {
             TbBindingWechat byOpenid = tbBindingWechatService.findByOpenid(openid);
-            if (byOpenid != null) {
+            if (byOpenid != null && byOpenid.getState().equals("在职")) {
                 byOpenid.setSessionKey(sessionkey);
-                tbBindingWechatService.update(byOpenid);
+//                tbBindingWechatService.update(byOpenid);
+                Map<String, Object> map = new HashMap<>();
+                map.put("dept", byOpenid.getDepartment());
+                map.put("name", byOpenid.getUserName());
+                map.put("openid", byOpenid.getOpenId());
+                map.put("empid", byOpenid.getUserId());
+//                map.put("openid", openid);
+                map.put("sessionkey", sessionkey);
+                return map;
             }
         }
         Map<String, Object> map = new HashMap<>();
-        map.put("openid", openid);
-        map.put("sessionkey", sessionkey);
+        map.put("openid", "");
+        map.put("sessionkey", "");
         return map;
+    }
+
+
+    @RequestMapping("/login")
+    public  Map<String,Object> login(String empid ,String pwd,String code){
+    //B 在职  F 离职
+        Emp emp = empService.findOne(empid.trim());
+        Map<String,Object> map = new HashMap<>();
+         if(emp != null && emp.getState().equals("B")){
+           String paid = emp.getPaperId().substring(emp.getPaperId().length()-6);
+            if(pwd.trim().equals(paid)){
+
+
+                JSONObject json = this.getUserInfo(code);
+                String openid = json.getString("openid");
+                // 同一个微信号 只能登录一个员工的账号
+                TbBindingWechat bindUser = tbBindingWechatService.findByspOpenid(openid);
+                if(bindUser != null && !empid.equals(bindUser.getUserId().toString())){
+                    map.put("status" ,"1");
+                    map.put("massage","此设备已经绑定过员工，不能再进行别的员工的账号登录");
+                    return map;
+                }
+
+                TbBindingWechat idtbBindingWechat = tbBindingWechatService.findByDgenumber(emp.getEmpId());
+                // 第一次登录  进行添加相应的数据
+                if(idtbBindingWechat == null) {
+
+                    TbBindingWechat tbBindingWechat = new TbBindingWechat();
+                    tbBindingWechat.setOpenId(openid);
+                    tbBindingWechat.setCode(paid);
+                    //将工号作为id
+                    Long lId = new Long(emp.getEmpId());//*工号
+                    tbBindingWechat.setUserId(lId);
+                    tbBindingWechat.setUserName(emp.getName());
+                    tbBindingWechat.setStatus("1");//*绑定码有效性
+                    tbBindingWechat.setCreated(new Date());//*
+                    tbBindingWechat.setPhon(emp.getMobile());
+                    tbBindingWechat.setSex(emp.getSex().equals("A")? "男":"女");
+                    tbBindingWechat.setBirthday(emp.getBirthday());
+                    tbBindingWechat.setState("在职");//任职状态
+                    tbBindingWechat.setDepartment(emp.getDeptId());
+                    tbBindingWechat.setSpare1(openid);//openid 的备用字段
+//                    tbBindingWechat.setSessionKey();
+                    tbBindingWechatService.add(tbBindingWechat);
+                }
+                idtbBindingWechat.setOpenId(openid);
+                tbBindingWechatService.update(idtbBindingWechat);
+                map.put("dept", idtbBindingWechat.getDepartment());
+                map.put("name", idtbBindingWechat.getUserName());
+                map.put("openid", idtbBindingWechat.getOpenId());
+                map.put("empid", idtbBindingWechat.getUserId());
+                map.put("status" ,"0");
+                map.put("massage","登录成功");
+            } else {
+                map.put("status" ,"1");
+                map.put("massage","工号或者密码错误");
+            }
+        }
+
+        return  map;
+    }
+
+    /**
+     * 退出小程序  逻辑为  清空openID 即可
+     * @param code
+     * @return
+     */
+    @RequestMapping("/signout")
+    public  Map<String, Object> signout(String code ){
+
+        Map<String,Object> map = new HashMap<>();
+        String openid= null;
+        JSONObject json = this.getUserInfo(code);
+        openid = json.getString("openid");
+//  有时候  会出现获取openID 失败
+        if(openid == null || "".equals(openid)){
+            JSONObject jsons = this.getUserInfo(code);
+            openid = jsons.getString("openid");
+
+            map.put("status",1);
+            map.put("massage","退出异常 请稍后重试");
+
+            return  map;
+
+        }else {
+            TbBindingWechat tbBindingWechat = tbBindingWechatService.findByOpenid(openid);
+            tbBindingWechat.setOpenId(null);
+            tbBindingWechatService.update(tbBindingWechat);
+            map.put("status",0);
+            map.put("massage","退出成功！");
+            return  map;
+        }
+
     }
 
     /**

@@ -2,54 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4605f28b-be5a-4d99-b86c-c964f9669471" name="Default Changelist" comment="修改微信认证逻辑">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/attendance.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/mapper/SavePublicTokenMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/mapper/SavePublicTokenMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/mapper/TbPublicFansMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/mapper/TbPublicFansMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/pojo/SavePublicToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/pojo/TbPublicFans.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/pojo/TbPublicFansExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/service/PublicFansService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/service/imp/PublicFansServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/utils/LocalSysUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/attendance_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/attendance_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.core.resources.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.core.resources.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.project.facet.core.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.project.facet.core.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/attendance.iml" beforeDir="false" afterPath="$PROJECT_DIR$/attendance.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/controller/BindingWechatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/controller/BindingWechatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/controller/EmpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/controller/EmpController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/controller/LsUserInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/controller/LsUserInfoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/controller/NewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/controller/NewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/controller/UploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/controller/UploadController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/controller/WeiXinController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/controller/WeiXinController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/pojo/entity/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/pojo/entity/Result.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/service/imp/CheckInRecordServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/service/imp/CheckInRecordServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/service/imp/EmpServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/service/imp/EmpServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/mapper/TbPublicFansMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/mapper/TbPublicFansMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/mapper/TbPublicFansMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/mapper/TbPublicFansMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/pojo/TbPublicFans.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/pojo/TbPublicFans.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/pojo/TbPublicFansExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/pojo/TbPublicFansExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/service/TbBindingWechatService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/service/TbBindingWechatService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/service/imp/PublicFansServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/service/imp/PublicFansServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/service/imp/TbBindingWechatServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/service/imp/TbBindingWechatServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/service/imp/TbNewPicServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/service/imp/TbNewPicServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/service/imp/TbNewServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/service/imp/TbNewServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/service/imp/TbUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/service/imp/TbUserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/service/security/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/service/security/UserDetailsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/properties/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/properties/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spring/spring-security.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-security.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/spring/spring-service.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-service.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/spring/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring/springmvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/bindingWechat.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/bindingWechat.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/checkInRecord.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/checkInRecord.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/news.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/controller/newsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/controller/newsController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/controller/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/controller/userController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/service/userService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/service/userService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/lyx/LyxTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lyx/LyxTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT.war" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/controller/BindingWechatController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/controller/BindingWechatController.class" afterDir="false" />
@@ -58,471 +25,48 @@
       <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/controller/LsUserInfoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/controller/LsUserInfoController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/controller/UserController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/controller/WeiXinController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/controller/WeiXinController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/mapper/EmpMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/mapper/EmpMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/mapper/LsUserinfoMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/mapper/LsUserinfoMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/mapper/TbBindingWechatMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/mapper/TbBindingWechatMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/mapper/TbUserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/mapper/TbUserMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/pojo/Emp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/pojo/Emp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/pojo/EmpExample$Criteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/pojo/EmpExample$Criteria.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/pojo/EmpExample$Criterion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/pojo/EmpExample$Criterion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/pojo/EmpExample$GeneratedCriteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/pojo/EmpExample$GeneratedCriteria.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/pojo/EmpExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/pojo/EmpExample.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/pojo/LsUserinfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/pojo/LsUserinfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/pojo/LsUserinfoExample$Criteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/pojo/LsUserinfoExample$Criteria.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/pojo/LsUserinfoExample$Criterion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/pojo/LsUserinfoExample$Criterion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/pojo/LsUserinfoExample$GeneratedCriteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/pojo/LsUserinfoExample$GeneratedCriteria.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/pojo/LsUserinfoExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/pojo/LsUserinfoExample.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/pojo/TbBindingWechat.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/pojo/TbBindingWechat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/pojo/TbBindingWechatExample$Criteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/pojo/TbBindingWechatExample$Criteria.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/pojo/TbBindingWechatExample$Criterion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/pojo/TbBindingWechatExample$Criterion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/pojo/TbBindingWechatExample$GeneratedCriteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/pojo/TbBindingWechatExample$GeneratedCriteria.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/pojo/TbBindingWechatExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/pojo/TbBindingWechatExample.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/pojo/TbUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/pojo/TbUser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/pojo/TbUserExample$Criteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/pojo/TbUserExample$Criteria.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/pojo/TbUserExample$Criterion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/pojo/TbUserExample$Criterion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/pojo/TbUserExample$GeneratedCriteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/pojo/TbUserExample$GeneratedCriteria.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/pojo/TbUserExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/pojo/TbUserExample.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/pojo/entity/PageResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/pojo/entity/PageResult.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/pojo/entity/Result.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/pojo/entity/Result.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/service/EmpService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/service/EmpService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/service/LsUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/service/LsUserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/service/TbBindingWechatService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/service/TbBindingWechatService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/service/TbUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/service/TbUserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/service/imp/EmpServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/service/imp/EmpServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/service/imp/LsUserInfoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/service/imp/LsUserInfoServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/service/imp/TbBindingWechatServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/service/imp/TbBindingWechatServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/service/imp/TbUserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/service/imp/TbUserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/service/security/SecurityUserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/service/security/SecurityUserServiceImpl.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/service/security/UserDetailsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/service/security/UserDetailsServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/utils/CustomerContextHolder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/utils/CustomerContextHolder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/utils/DynamicDataSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/utils/DynamicDataSource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/utils/HttpsClientUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/utils/HttpsClientUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/utils/WXAppletUserInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/cn/fhjt/weixin/utils/WXAppletUserInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/mybatis/SqlMapConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/mybatis/SqlMapConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/properties/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/properties/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/spring/conf.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/spring/spring-security.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/spring/spring-security.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/spring/spring-service.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/spring/spring-service.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/spring/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/classes/spring/springmvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/admin/bindingWechat.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/admin/bindingWechat.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/admin/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/admin/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/admin/user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/css/pages-login-manage.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/css/pages-login-manage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/57b51ea9Nb862ca5e.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/Logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/b1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/b2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/b3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/banner.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/buy001.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/buy002.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/buy01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/car.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/clock.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/code.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/cooperation_banner.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/down-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/dp01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/dp02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/dp03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/dp04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/empty_heart.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/erweima.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/fail.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/gocart.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/gocart01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/gotop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/icon-red.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/intro01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/intro02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/intro03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/itemlike01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/itemlike02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/itemlike03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/itemlike04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/itemlike05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/itemlike06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/l-m01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/list.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/list.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/login-bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/manage-bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/mobile01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/mobile02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/mobile03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/mobile04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/mobile05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/mobile06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/part01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/part02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/part03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/pay1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/pay10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/pay11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/pay12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/pay13.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/pay14.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/pay15.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/pay16.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/pay17.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/pay18.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/pay19.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/pay2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/pay20.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/pay21.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/pay22.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/pay3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/pay4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/pay5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/phone-bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/phone01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/phone02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/phone03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/phone04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/phone05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/phone06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/phone07.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/phone08.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/phone09.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/phone10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/phone11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/phone12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/phone13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/phone14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/photo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/photo_icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/right.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/s1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/s2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/s3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/sampling_head.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/seckillbg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/shi_heart.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/shop-intro.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/shop-logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/shop-part.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/t.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/title_bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/_/y24.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/account.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/ad.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/ad1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/ali.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/american-express.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/itemlike/itemlike01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/itemlike/itemlike02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/itemlike/itemlike03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/itemlike/itemlike04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/itemlike/itemlike05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/itemlike/itemlike06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/pay/fail.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/pay/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/pay/pay1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/pay/pay10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/pay/pay11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/pay/pay12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/pay/pay13.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/pay/pay14.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/pay/pay15.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/pay/pay16.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/pay/pay17.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/pay/pay18.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/pay/pay19.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/pay/pay2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/pay/pay20.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/pay/pay21.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/pay/pay22.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/pay/pay3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/pay/pay4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/pay/pay5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/pay/right.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/phone/dp01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/phone/dp02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/phone/dp03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/phone/dp04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/phone/intro01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/phone/intro02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/phone/intro03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/phone/l-m01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/phone/mobile01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/phone/mobile02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/phone/mobile03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/phone/mobile04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/phone/mobile05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/phone/mobile06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/phone/part01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/phone/part02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/phone/part03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/phone/phone01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/phone/phone02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/phone/phone03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/phone/phone04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/phone/phone05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/phone/phone06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/phone/phone07.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/phone/phone08.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/phone/phone09.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/phone/phone10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/phone/phone11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/phone/phone12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/phone/phone13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/phone/phone14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/success-cart/buy001.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/success-cart/buy002.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/success-cart/buy01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/success-cart/gocart.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/success-cart/gocart01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/zoom/b1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/zoom/b2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/zoom/b3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/zoom/s1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/zoom/s2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/assets/img/zoom/s3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/avatar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/avatar04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/avatar2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/avatar3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/avatar5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/banner1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/banner1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/banner2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/banner3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/banner4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/barrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/boxed-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/boxed-bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/brand01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/brand02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/brand03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/brand04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/brand05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/brand06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/brand07.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/brand08.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/brand09.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/brand10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/brand11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/brand12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/brand13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/brand_03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/brand_05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/brand_07.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/brand_09.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/brand_11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/brand_13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/brand_15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/brand_17.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/brand_19.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/brand_21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/cartPanelViewIcons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/choosed.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/cirrus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/clock.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/delete.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/duihuan.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/erweima.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/floor-1-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/floor-1-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/floor-1-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/floor-1-4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/floor-1-5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/floor-1-6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/floor-1-b01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/floor-1-b02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/floor-1-b03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/goods.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/icon-red.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/icons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/interest01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/interest02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/interest03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/interest04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/interest05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/interest06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/like1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/like2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/like3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/like4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/like_01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/like_02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/like_03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/like_04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/like_05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/like_06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/linker.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/lock.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/loginbg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/mastercard.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/mestro.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/mod-list.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/paypal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/paypal2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/phone-bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/photo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/photo1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/photo2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/photo3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/photo4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/qq.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/quan.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/sina.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/today01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/today02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/today03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/today04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/visa.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/img/zoom.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/js/controller/LsUserController.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/js/controller/LsUserController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/js/controller/baseController.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/js/controller/baseController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/js/service/LsUserService.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/js/service/LsUserService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/attendance.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/controller/BindingWechatController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/controller/CheckInRecordController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/controller/EmpController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/controller/LoginController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/controller/LsUserInfoController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/controller/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/controller/WeiXinController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/mapper/EmpMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/mapper/LsUserinfoMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/mapper/TbBindingWechatMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/mapper/TbCheckInRecordMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/mapper/TbUserMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/pojo/Emp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/pojo/EmpExample$Criteria.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/pojo/EmpExample$Criterion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/pojo/EmpExample$GeneratedCriteria.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/pojo/EmpExample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/pojo/LsUserinfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/pojo/LsUserinfoExample$Criteria.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/pojo/LsUserinfoExample$Criterion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/pojo/LsUserinfoExample$GeneratedCriteria.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/pojo/LsUserinfoExample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/pojo/TbBindingWechat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/pojo/TbBindingWechatExample$Criteria.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/pojo/TbBindingWechatExample$Criterion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/pojo/TbBindingWechatExample$GeneratedCriteria.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/pojo/TbBindingWechatExample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/pojo/TbCheckInRecord.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/pojo/TbCheckInRecordExample$Criteria.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/pojo/TbCheckInRecordExample$Criterion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/pojo/TbCheckInRecordExample$GeneratedCriteria.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/pojo/TbCheckInRecordExample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/pojo/TbUser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/pojo/TbUserExample$Criteria.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/pojo/TbUserExample$Criterion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/pojo/TbUserExample$GeneratedCriteria.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/pojo/TbUserExample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/pojo/entity/PageResult.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/pojo/entity/Result.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/service/CheckInRecordService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/service/EmpService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/service/LsUserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/service/TbBindingWechatService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/service/TbUserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/service/imp/CheckInRecordServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/service/imp/EmpServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/service/imp/LsUserInfoServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/service/imp/TbBindingWechatServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/service/imp/TbUserServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/service/security/UserDetailsServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/utils/CustomerContextHolder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/utils/DynamicDataSource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/utils/HttpsClientUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/utils/WXAppletUserInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/SqlMapConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/SqlMapConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/js/controller/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/js/controller/userController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/js/service/userService.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/attendance-0.0.1-SNAPSHOT/js/service/userService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/controller/WeiXinController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/controller/WeiXinController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/service/TbBindingWechatService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/service/TbBindingWechatService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/service/imp/TbBindingWechatServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/fhjt/weixin/service/imp/TbBindingWechatServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/properties/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/properties/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/spring/spring-security.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring/spring-security.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/spring/spring-service.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring/spring-service.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/spring/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring/springmvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/cn.fhjt.wexin/attendance/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/cn.fhjt.wexin/attendance/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/cn.fhjt.wexin/attendance/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/cn.fhjt.wexin/attendance/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/cn.fhjt.wexin/attendance/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/cn.fhjt.wexin/attendance/pom.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-lyx.LyxTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-lyx.LyxTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/lyx.LyxTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/lyx.LyxTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/lyx/LyxTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/lyx/LyxTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/lyx/MD5Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/lyx/MD5Util.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-08-02" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-08-05" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-08-06" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/attendance/upload_0a89865e_533e_4f3e_ba38_49b709a0228f_00000000.tmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/attendance/upload_0c362ee2_2b63_4409_af82_aa0773235a4c_00000000.tmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/attendance/upload_1a0146c9_6112_4669_a7ef_c175ab94d99a_00000000.tmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/attendance/upload_28ade7ba_3a48_4cb6_8d77_9d0222c28510_00000000.tmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/attendance/upload_362fbb96_4da5_4cb6_8cbf_bfd56f2cce77_00000000.tmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/attendance/upload_6b2a0a1f_432d_4788_8522_5746ed1980bd_00000000.tmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/attendance/upload_80881d95_3add_4503_b6bb_8f4af83be3d3_00000000.tmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/attendance/upload_c76b8445_96ee_474e_89fc_10288fdcf898_00000000.tmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/attendance/upload_cadd5569_1c1d_4e2f_ab62_29ed76ad601e_00000001.tmp" beforeDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/classes/" />
-    <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/controller/WeiXinController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
-              <caret line="605" selection-start-line="605" selection-end-line="605" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/service/PublicFansService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/utils/LocalSysUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/service/imp/PublicFansServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="40" column="19" lean-forward="true" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/mapper/TbPublicFansMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -533,121 +77,9 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>TbUser</find>
-      <find>userService</find>
-      <find>user</find>
-      <find>uploadfile_ant</find>
-      <find>targetFile</find>
-      <find>insert</find>
-      <find>tbMapperMapper</find>
-      <find>selectByExample</find>
-      <find>getUserInfo</find>
-      <find>Base_Column_List</find>
-      <find>bindUser</find>
-      <find>findPage</find>
-      <find>CustomerContextHolder</find>
-      <find>chendahai</find>
-      <find>save</find>
-      <find>issubmit</find>
-      <find>issubmitMessage</find>
-      <find>reload</find>
-      <find>essage</find>
-      <find>grant_type</find>
-      <find>code</find>
-      <find>getOpenid</find>
-      <find>dataByte</find>
-      <find>findBybindcodeToOpenId</find>
-      <find>TbBindingWechat</find>
-      <find>tb_binding_wechat</find>
-      <find>user_id</find>
-      <find>map</find>
-      <find>spare3</find>
-      <find>jsonObjectAll</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>lsuser</replace>
-      <replace>Emp</replace>
-      <replace>EmpExample</replace>
-      <replace>NVARCHAR</replace>
-      <replace>emp</replace>
-      <replace>TbUserService</replace>
-      <replace>tbUserService</replace>
-      <replace>tbnewService</replace>
-      <replace>new</replace>
-      <replace />
-      <replace>TbMapperMapper</replace>
-      <replace>TbNew</replace>
-      <replace>tbNew</replace>
-      <replace>newsService</replace>
-      <replace>news</replace>
-      <replace>file</replace>
-      <replace>tbNewMapper</replace>
-      <replace>SavePublicToken</replace>
-      <replace>save_public_token</replace>
-      <replace>id</replace>
-    </replaceStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/pojo/TbNewPic.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/pojo/TbCheckInRecord.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/service/CheckInRecordService.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/service/newsService.js" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/pojo/TbNew.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/service/TbNewPicService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/service/TbNewService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/mapper/TbNewMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/service/imp/TbBindingWechatServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/service/imp/CheckInRecordServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/service/imp/LsUserInfoServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/service/imp/TbNewPicServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/service/imp/TbNewServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/service/imp/TbUserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/controller/newsController.js" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/controller/UploadController.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring/spring-service.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/controller/NewController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring/springmvc.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/service/security/UserDetailsServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/properties/db.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/controller/BindingWechatController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/service/imp/EmpServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/service/userService.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring/spring-security.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/controller/LoginController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/admin/index.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/admin/bindingWechat.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/admin/checkInRecord.html" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/pojo/entity/Result.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/controller/userController.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/admin/user.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/admin/news.html" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/pojo/savePublicToken.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/config/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/pojo/SavePublicToken.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/utils/HttpsClientUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/controller/EmpController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/controller/LsUserInfoController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/mapper/SavePublicTokenMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/mapper/SavePublicTokenMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/pojo/TbPublicFans.java" />
-        <option value="$PROJECT_DIR$/src/test/java/lyx/LyxTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/utils/LocalSysUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/service/PublicFansService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/mapper/TbPublicFansMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/controller/WeiXinController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/mapper/TbPublicFansMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/service/imp/PublicFansServiceImpl.java" />
-      </list>
-    </option>
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -670,157 +102,51 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="attendance" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="attendance" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
-        </path>
-      </expand>
-      <select />
-    </treeState>
-  </component>
   <component name="MavenRunner">
     <option name="vmOptions" value="-Dmaven.multiModuleProjectDirectory=MAVEN_HOME" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="11" />
-    <option name="y" value="24" />
-    <option name="width" value="1114" />
-    <option name="height" value="920" />
-  </component>
+  <component name="ProjectId" id="1QuFn4OHHInmEVVGftpzpHZEGhr" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="attendance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="attendance" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="attendance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="attendance" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="attendance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="attendance" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="attendance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="attendance" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="attendance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="attendance" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="weixin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="attendance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="attendance" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="weixin" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="attendance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="attendance" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="weixin" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="attendance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="attendance" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="weixin" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="imp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="attendance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="attendance" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="weixin" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="attendance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="attendance" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-    </panes>
-  </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/pojo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/src/main/webapp/admin/login.html" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="cn.fhjt.weixin.service" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\userLYXSpace\gitProject\attendance\src\main\java\cn\fhjt\weixin\pojo" />
-      <recent name="D:\userLYXSpace\gitProject\attendance\src\main\java\cn\fhjt\weixin\mapper" />
-      <recent name="D:\userLYXSpace\gitProject\attendance\src\main\webapp\js\service" />
-      <recent name="D:\userLYXSpace\gitProject\attendance\src\main\webapp\js\controller" />
-      <recent name="D:\userLYXSpace\gitProject\attendance\src\main\webapp\admin" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="cn.fhjt.weixin.mapper" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\eclipse\eclipse-workspace\attendance\src\main\resources\properties" />
       <recent name="D:\eclipse\eclipse-workspace\attendance\src\main\resources\spring" />
       <recent name="D:\eclipse\eclipse-workspace\attendance\src\main\webapp\admin" />
       <recent name="D:\eclipse\eclipse-workspace\attendance\src\main\webapp" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\userLYXSpace\gitProject\attendance\src\main\webapp\upload\201908" />
+      <recent name="D:\userLYXSpace\gitProject\attendance\src\main\java\cn\fhjt\weixin\mapper" />
+      <recent name="D:\userLYXSpace\gitProject\attendance\src\main\java\cn\fhjt\weixin\pojo" />
+      <recent name="D:\userLYXSpace\gitProject\attendance\src\main\webapp\js\service" />
+      <recent name="D:\userLYXSpace\gitProject\attendance\src\main\webapp\js\controller" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="cn.fhjt.weixin.mapper" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="cn.fhjt.weixin.service" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean" />
+    </option>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -835,22 +161,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Maven.attendance [tomcat7:run]">
-    <configuration name="LyxTest.fin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="attendance" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="lyx.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="lyx" />
-      <option name="MAIN_CLASS_NAME" value="lyx.LyxTest" />
-      <option name="METHOD_NAME" value="fin" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="LyxTest.fin1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="attendance" />
       <extension name="coverage">
@@ -899,6 +209,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LyxTest.sdaf" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="attendance" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lyx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="lyx" />
+      <option name="MAIN_CLASS_NAME" value="lyx.LyxTest" />
+      <option name="METHOD_NAME" value="sdaf" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="attendance [tomcat7:run]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -922,6 +248,34 @@
           </MavenRunnerParameters>
         </option>
       </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="out" type="Remote">
+      <module name="attendance" />
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" />
+      <option name="HOST" value="123.206.41.71" />
+      <option name="PORT" value="7777" />
+      <option name="AUTO_RESTART" value="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="7777" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="remote" type="Remote">
+      <module name="attendance" />
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" />
+      <option name="HOST" value="123.206.41.71" />
+      <option name="PORT" value="8443" />
+      <option name="AUTO_RESTART" value="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="9014" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
       <method v="2" />
     </configuration>
     <configuration name="Tomcat 9.0.22" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.22" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
@@ -1064,20 +418,22 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.LyxTest.fin" />
       <item itemvalue="JUnit.LyxTest.fin1" />
       <item itemvalue="JUnit.LyxTest.fun" />
       <item itemvalue="JUnit.LyxTest.fun2" />
+      <item itemvalue="JUnit.LyxTest.sdaf" />
       <item itemvalue="Maven.attendance [tomcat7:run]" />
+      <item itemvalue="Remote.remote" />
+      <item itemvalue="Remote.out" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.22" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Maven.attendance [tomcat7:run]" />
+        <item itemvalue="JUnit.LyxTest.sdaf" />
         <item itemvalue="JUnit.LyxTest.fun2" />
         <item itemvalue="JUnit.LyxTest.fun" />
         <item itemvalue="JUnit.LyxTest.fin1" />
-        <item itemvalue="JUnit.LyxTest.fin" />
       </list>
     </recent_temporary>
   </component>
@@ -1118,6 +474,20 @@
       <workItem from="1566536892822" duration="10571000" />
       <workItem from="1566779925401" duration="24045000" />
       <workItem from="1566866454058" duration="22248000" />
+      <workItem from="1566952056109" duration="17057000" />
+      <workItem from="1567038478624" duration="7407000" />
+      <workItem from="1567154542261" duration="2338000" />
+      <workItem from="1568612742780" duration="41000" />
+      <workItem from="1569207346038" duration="2119000" />
+      <workItem from="1569285224481" duration="13862000" />
+      <workItem from="1569371386233" duration="7045000" />
+      <workItem from="1569458858636" duration="15403000" />
+      <workItem from="1569543398819" duration="7102000" />
+      <workItem from="1569717127000" duration="4567000" />
+      <workItem from="1570495471973" duration="1238000" />
+      <workItem from="1570589946424" duration="1146000" />
+      <workItem from="1570756381197" duration="6020000" />
+      <workItem from="1571030720288" duration="940000" />
     </task>
     <task id="LOCAL-00001" summary="去除全局 变量 使用形参传递">
       <created>1565148323285</created>
@@ -1147,43 +517,15 @@
       <option name="project" value="LOCAL" />
       <updated>1565829265093</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="添加公众号认证">
+      <created>1566952200454</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1566952200454</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
-  </component>
-  <component name="TestHistory">
-    <history-entry file="LyxTest_fun2 - 2019.08.26 at 15h 46m 24s.xml">
-      <configuration name="LyxTest.fun2" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LyxTest_fun2 - 2019.08.27 at 10h 55m 17s.xml">
-      <configuration name="LyxTest.fun2" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LyxTest_fun2 - 2019.08.27 at 10h 57m 13s.xml">
-      <configuration name="LyxTest.fun2" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LyxTest_fun2 - 2019.08.27 at 10h 58m 11s.xml">
-      <configuration name="LyxTest.fun2" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LyxTest_fun2 - 2019.08.27 at 10h 58m 43s.xml">
-      <configuration name="LyxTest.fun2" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LyxTest_fun2 - 2019.08.27 at 10h 59m 11s.xml">
-      <configuration name="LyxTest.fun2" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LyxTest_fun2 - 2019.08.27 at 10h 59m 31s.xml">
-      <configuration name="LyxTest.fun2" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LyxTest_fun2 - 2019.08.27 at 11h 00m 36s.xml">
-      <configuration name="LyxTest.fun2" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LyxTest_fun2 - 2019.08.27 at 11h 01m 29s.xml">
-      <configuration name="LyxTest.fun2" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LyxTest_fun2 - 2019.08.27 at 11h 02m 51s.xml">
-      <configuration name="LyxTest.fun2" configurationId="JUnit" />
-    </history-entry>
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="427401000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1194,54 +536,28 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info anchor="top" x="1006" y="267" width="566" height="277" id="Documentation" order="0" side_tool="true" weight="0.32871014" />
-      <window_info id="Designer" order="0" />
-      <window_info id="Image Layers" order="1" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="UI Designer" order="3" />
-      <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info id="Web" order="5" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.4980315" visible="true" weight="0.22686376" />
-      <window_info id="Structure" order="7" sideWeight="0.5019685" side_tool="true" weight="0.13688946" />
-      <window_info anchor="bottom" id="Application Servers" order="0" weight="0.32871014" />
-      <window_info anchor="bottom" id="Spring" order="1" weight="0.3293011" />
-      <window_info anchor="bottom" id="Terminal" order="2" weight="0.3293011" />
-      <window_info anchor="bottom" id="Docker" order="3" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.50064266" side_tool="true" weight="0.5410498" />
-      <window_info anchor="bottom" id="Messages" order="5" weight="0.44382802" />
-      <window_info anchor="bottom" id="Java Enterprise" order="6" weight="0.3293011" />
-      <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.1816921" />
-      <window_info anchor="bottom" id="Message" order="9" />
-      <window_info anchor="bottom" id="Find" order="10" />
-      <window_info active="true" anchor="bottom" id="Debug" order="11" sideWeight="0.4993573" visible="true" weight="0.24410541" />
-      <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="14" weight="0.32871014" />
-      <window_info anchor="bottom" id="Run" order="15" weight="0.36893204" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.20244215" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="去除全局 变量 使用形参传递" />
     <MESSAGE value="打印sql，实现打卡记录管理功能" />
     <MESSAGE value="修改微信认证逻辑" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改微信认证逻辑" />
+    <MESSAGE value="添加公众号认证" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加公众号认证" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1249,61 +565,51 @@
         <line-breakpoint type="java-line">
           <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/4.0.4.RELEASE/spring-security-core-4.0.4.RELEASE.jar!/org/springframework/security/authentication/dao/AbstractUserDetailsAuthenticationProvider.class</url>
           <line>62</line>
-          <properties />
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/4.0.4.RELEASE/spring-security-core-4.0.4.RELEASE.jar!/org/springframework/security/authentication/dao/DaoAuthenticationProvider.class</url>
           <line>54</line>
-          <properties />
           <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/4.0.4.RELEASE/spring-security-core-4.0.4.RELEASE.jar!/org/springframework/security/authentication/dao/AbstractUserDetailsAuthenticationProvider.class</url>
           <line>76</line>
-          <properties />
           <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/4.0.4.RELEASE/spring-security-core-4.0.4.RELEASE.jar!/org/springframework/security/authentication/dao/DaoAuthenticationProvider.class</url>
           <line>30</line>
-          <properties />
           <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/4.0.4.RELEASE/spring-security-core-4.0.4.RELEASE.jar!/org/springframework/security/authentication/dao/DaoAuthenticationProvider.class</url>
           <line>67</line>
-          <properties />
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/4.0.4.RELEASE/spring-security-core-4.0.4.RELEASE.jar!/org/springframework/security/authentication/encoding/LdapShaPasswordEncoder.class</url>
           <line>70</line>
-          <properties />
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/4.0.4.RELEASE/spring-security-core-4.0.4.RELEASE.jar!/org/springframework/security/authentication/encoding/Md4PasswordEncoder.class</url>
           <line>25</line>
-          <properties />
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/4.0.4.RELEASE/spring-security-core-4.0.4.RELEASE.jar!/org/springframework/security/authentication/encoding/MessageDigestPasswordEncoder.class</url>
           <line>50</line>
-          <properties />
           <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/4.0.4.RELEASE/spring-security-core-4.0.4.RELEASE.jar!/org/springframework/security/authentication/encoding/PlaintextPasswordEncoder.class</url>
           <line>24</line>
-          <properties />
           <option name="timeStamp" value="38" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/lyx/LyxTest.java</url>
           <line>47</line>
-          <properties />
           <option name="timeStamp" value="52" />
         </line-breakpoint>
       </breakpoints>
@@ -1319,433 +625,14 @@
         <watch expression="ceil.toString().split(&quot;.&quot;)" />
         <watch expression="userInfo.get(&quot;city&quot;)" />
         <watch expression="userInfo.get(&quot;nickname&quot;)==null? null: userInfo.get(&quot;nickname&quot;).toString()" />
+        <watch expression="bindUser.getUserId()" language="JAVA" />
+        <watch expression="!bindUser.getUserId().equals(empid)" />
+        <watch expression="bindUser.getUserId().equals(empid)" />
+        <watch expression="bindUser.getUserId().equals(empid.trim())" />
+        <watch expression="bindUser.getUserId()" language="JAVA" />
+        <watch expression="bindUser.getUserId()" />
       </configuration>
     </watches-manager>
-  </component>
-  <component name="debuggerHistoryManager">
-    <expressions id="watch">
-      <expression>
-        <expression-string>SecurityContextHolder.getContext().getAuthentication()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>SecurityContextHolder.getContext()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>SecurityContextHolder.getContext().getAuthentication().getPrincipal()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>SecurityContextHolder</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-    </expressions>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/4.0.4.RELEASE/spring-security-core-4.0.4.RELEASE-sources.jar!/org/springframework/security/core/authority/SimpleGrantedAuthority.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/springmvc.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1034">
-          <caret line="47" column="11" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="45" column="70" selection-start-line="45" selection-start-column="70" selection-end-line="45" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/controller/CheckInRecordController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="40" column="34" lean-forward="true" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/service/imp/TbUserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="149" column="48" selection-start-line="149" selection-start-column="48" selection-end-line="149" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/controller/BindingWechatController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1024">
-          <caret line="38" column="35" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-security.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="24" column="34" lean-forward="true" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/service/userService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="35" column="56" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="81" column="32" selection-start-line="81" selection-start-column="32" selection-end-line="81" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/service/security/UserDetailsServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="39" column="48" selection-start-line="39" selection-start-column="48" selection-end-line="39" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/service/imp/EmpServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="25" column="33" lean-forward="true" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/service/imp/TbBindingWechatServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="59" column="60" selection-start-line="59" selection-start-column="47" selection-end-line="59" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/pojo/TbBindingWechat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="155" column="28" selection-start-line="155" selection-start-column="22" selection-end-line="155" selection-end-column="28" />
-          <folding>
-            <element signature="e#3092#3093#0" expanded="true" />
-            <element signature="e#3159#3160#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="212" column="36" selection-start-line="212" selection-start-column="36" selection-end-line="212" selection-end-column="36" />
-          <folding>
-            <element signature="e#3007#3013#0" expanded="true" />
-            <element signature="e#3013#3019#0" expanded="true" />
-            <element signature="e#3019#3025#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/LsUser.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1980">
-          <caret line="111" column="109" selection-start-line="111" selection-start-column="98" selection-end-line="111" selection-end-column="109" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/checkInRecord.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="32" column="52" selection-start-line="32" selection-start-column="52" selection-end-line="32" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/bindingWechat.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="28" column="20" lean-forward="true" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/pojo/entity/Result.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="25" column="16" lean-forward="true" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#846#847#0" expanded="true" />
-            <element signature="e#863#864#0" expanded="true" />
-            <element signature="e#911#912#0" expanded="true" />
-            <element signature="e#932#933#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="129" column="65" lean-forward="true" selection-start-line="129" selection-start-column="65" selection-end-line="129" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/controller/baseController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="16" column="26" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/user.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="48" column="111" selection-start-line="48" selection-start-column="86" selection-end-line="48" selection-end-column="111" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/controller/userController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="99" column="52" lean-forward="true" selection-start-line="99" selection-start-column="52" selection-end-line="99" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/news.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="110" column="71" selection-start-line="110" selection-start-column="71" selection-end-line="110" selection-end-column="71" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#td#4;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/controller/NewController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/properties/db.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="18" column="63" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/pojo/TbNew.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="25" column="26" lean-forward="true" selection-start-line="21" selection-start-column="3" selection-end-line="25" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/mapper/TbBindingWechatMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/utils/WXAppletUserInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="31" column="28" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="10" lean-forward="true" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/fastjson/1.2.28/fastjson-1.2.28-sources.jar!/com/alibaba/fastjson/JSONObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="97" column="18" selection-start-line="97" selection-start-column="18" selection-end-line="97" selection-end-column="18" />
-          <folding>
-            <element signature="e#3219#3220#0" expanded="true" />
-            <element signature="e#3254#3255#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/controller/EmpController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="100" selection-start-line="100" selection-end-line="100" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/mapper/EmpMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/controller/LsUserInfoController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1408">
-          <caret line="74" column="18" selection-start-line="74" selection-start-column="18" selection-end-line="74" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/mapper/SavePublicTokenMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.2.4.RELEASE/spring-webmvc-4.2.4.RELEASE-sources.jar!/org/springframework/web/servlet/DispatcherServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="968" selection-start-line="968" selection-end-line="968" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/4.2.4.RELEASE/spring-jdbc-4.2.4.RELEASE-sources.jar!/org/springframework/jdbc/support/SQLErrorCodeSQLExceptionTranslator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="230" selection-start-line="230" selection-end-line="230" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/mapper/SavePublicTokenMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/pojo/TbPublicFans.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="4" column="50" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/lyx/LyxTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="49" column="65" lean-forward="true" selection-start-line="48" selection-start-column="6" selection-end-line="49" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/pojo/SavePublicToken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
-          <folding>
-            <element signature="e#405#406#0" expanded="true" />
-            <element signature="e#439#440#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/service/TbBindingWechatService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="7" column="16" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/utils/HttpsClientUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2299">
-          <caret line="156" column="34" lean-forward="true" selection-start-line="156" selection-start-column="34" selection-end-line="156" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/service/imp/CheckInRecordServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="65" column="16" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/mapper/TbPublicFansMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="254" column="35" selection-start-line="254" selection-start-column="35" selection-end-line="255" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.32/mysql-connector-java-5.1.32-sources.jar!/com/mysql/jdbc/SQLError.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="1097" column="13" lean-forward="true" selection-start-line="1097" selection-start-column="13" selection-end-line="1097" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.2.4.RELEASE/spring-web-4.2.4.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="221" selection-start-line="221" selection-end-line="221" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/utils/LocalSysUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/service/PublicFansService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/controller/WeiXinController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="605" selection-start-line="605" selection-end-line="605" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/mapper/TbPublicFansMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/fhjt/weixin/service/imp/PublicFansServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="40" column="19" lean-forward="true" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
   </component>
   <component name="masterDetails">
     <states>
@@ -1757,7 +644,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>

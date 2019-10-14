@@ -81,4 +81,6 @@ public interface TbBindingWechatService {
     处理客户清理缓存的情况
      */
     TbBindingWechat finOneByCodeClear(String code);
+
+    TbBindingWechat findByspOpenid(String openid);
 }

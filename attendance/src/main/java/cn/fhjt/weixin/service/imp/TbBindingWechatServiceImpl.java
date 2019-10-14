@@ -190,6 +190,22 @@ public class TbBindingWechatServiceImpl implements TbBindingWechatService {
         }
     }
 
+    @Override
+    public TbBindingWechat findByspOpenid(String openid) {
+        CustomerContextHolder.setCustomerType(CustomerContextHolder.DATA_SOURCE_MYSQL);
+        TbBindingWechatExample example = new TbBindingWechatExample();
+        example.createCriteria().andSpare1EqualTo(openid);
+        List<TbBindingWechat> tbBindingWechat = bindingWechatMapper.selectByExample(example);
+        tbBindingWechat = tbBindingWechat == null ? new ArrayList<TbBindingWechat>() : tbBindingWechat;
+        if(tbBindingWechat.size()> 0){
+            return tbBindingWechat.get(0);
+        }
+        else{
+            return null;
+        }
+
+    }
+
     /**
      * 通过openID查询 员工绑定表
      * @param openid

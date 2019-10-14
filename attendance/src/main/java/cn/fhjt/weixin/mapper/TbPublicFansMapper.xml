@@ -2,7 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="cn.fhjt.weixin.mapper.TbPublicFansMapper" >
   <resultMap id="BaseResultMap" type="cn.fhjt.weixin.pojo.TbPublicFans" >
-    <result column="id" property="id" jdbcType="VARCHAR" />
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="openid" property="openid" jdbcType="VARCHAR" />
     <result column="subscribe" property="subscribe" jdbcType="VARCHAR" />
     <result column="nick_name" property="nickName" jdbcType="VARCHAR" />
     <result column="sex" property="sex" jdbcType="VARCHAR" />
@@ -74,8 +75,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, subscribe, nick_name, sex, country, province, city, subscribe_time, spare0, spare1, 
-    spare2, spare3
+    id, openid, subscribe, nick_name, sex, country, province, city, subscribe_time, spare0, 
+    spare1, spare2, spare3
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="cn.fhjt.weixin.pojo.TbPublicFansExample" >
     select
@@ -91,6 +92,16 @@
       order by ${orderByClause}
     </if>
   </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from tb_public_fans
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from tb_public_fans
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
   <delete id="deleteByExample" parameterType="cn.fhjt.weixin.pojo.TbPublicFansExample" >
     delete from tb_public_fans
     <if test="_parameter != null" >
@@ -98,22 +109,25 @@
     </if>
   </delete>
   <insert id="insert" parameterType="cn.fhjt.weixin.pojo.TbPublicFans" >
-    insert into tb_public_fans (id, subscribe, nick_name, 
-      sex, country, province, 
-      city, subscribe_time, spare0, 
-      spare1, spare2, spare3
-      )
-    values (#{id,jdbcType=VARCHAR}, #{subscribe,jdbcType=VARCHAR}, #{nickName,jdbcType=VARCHAR}, 
-      #{sex,jdbcType=VARCHAR}, #{country,jdbcType=VARCHAR}, #{province,jdbcType=VARCHAR}, 
-      #{city,jdbcType=VARCHAR}, #{subscribeTime,jdbcType=VARCHAR}, #{spare0,jdbcType=VARCHAR}, 
-      #{spare1,jdbcType=VARCHAR}, #{spare2,jdbcType=VARCHAR}, #{spare3,jdbcType=VARCHAR}
-      )
+    insert into tb_public_fans (id, openid, subscribe, 
+      nick_name, sex, country, 
+      province, city, subscribe_time, 
+      spare0, spare1, spare2, 
+      spare3)
+    values (#{id,jdbcType=INTEGER}, #{openid,jdbcType=VARCHAR}, #{subscribe,jdbcType=VARCHAR}, 
+      #{nickName,jdbcType=VARCHAR}, #{sex,jdbcType=VARCHAR}, #{country,jdbcType=VARCHAR}, 
+      #{province,jdbcType=VARCHAR}, #{city,jdbcType=VARCHAR}, #{subscribeTime,jdbcType=VARCHAR}, 
+      #{spare0,jdbcType=VARCHAR}, #{spare1,jdbcType=VARCHAR}, #{spare2,jdbcType=VARCHAR}, 
+      #{spare3,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="cn.fhjt.weixin.pojo.TbPublicFans" >
     insert into tb_public_fans
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
         id,
+      </if>
+      <if test="openid != null" >
+        openid,
       </if>
       <if test="subscribe != null" >
         subscribe,
@@ -151,7 +165,10 @@
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="id != null" >
-        #{id,jdbcType=VARCHAR},
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="openid != null" >
+        #{openid,jdbcType=VARCHAR},
       </if>
       <if test="subscribe != null" >
         #{subscribe,jdbcType=VARCHAR},
@@ -198,7 +215,10 @@
     update tb_public_fans
     <set >
       <if test="record.id != null" >
-        id = #{record.id,jdbcType=VARCHAR},
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.openid != null" >
+        openid = #{record.openid,jdbcType=VARCHAR},
       </if>
       <if test="record.subscribe != null" >
         subscribe = #{record.subscribe,jdbcType=VARCHAR},
@@ -240,7 +260,8 @@
   </update>
   <update id="updateByExample" parameterType="map" >
     update tb_public_fans
-    set id = #{record.id,jdbcType=VARCHAR},
+    set id = #{record.id,jdbcType=INTEGER},
+      openid = #{record.openid,jdbcType=VARCHAR},
       subscribe = #{record.subscribe,jdbcType=VARCHAR},
       nick_name = #{record.nickName,jdbcType=VARCHAR},
       sex = #{record.sex,jdbcType=VARCHAR},
@@ -256,7 +277,65 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-<!--  truncateFunction-->
+  <update id="updateByPrimaryKeySelective" parameterType="cn.fhjt.weixin.pojo.TbPublicFans" >
+    update tb_public_fans
+    <set >
+      <if test="openid != null" >
+        openid = #{openid,jdbcType=VARCHAR},
+      </if>
+      <if test="subscribe != null" >
+        subscribe = #{subscribe,jdbcType=VARCHAR},
+      </if>
+      <if test="nickName != null" >
+        nick_name = #{nickName,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null" >
+        sex = #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="country != null" >
+        country = #{country,jdbcType=VARCHAR},
+      </if>
+      <if test="province != null" >
+        province = #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null" >
+        city = #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="subscribeTime != null" >
+        subscribe_time = #{subscribeTime,jdbcType=VARCHAR},
+      </if>
+      <if test="spare0 != null" >
+        spare0 = #{spare0,jdbcType=VARCHAR},
+      </if>
+      <if test="spare1 != null" >
+        spare1 = #{spare1,jdbcType=VARCHAR},
+      </if>
+      <if test="spare2 != null" >
+        spare2 = #{spare2,jdbcType=VARCHAR},
+      </if>
+      <if test="spare3 != null" >
+        spare3 = #{spare3,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.fhjt.weixin.pojo.TbPublicFans" >
+    update tb_public_fans
+    set openid = #{openid,jdbcType=VARCHAR},
+      subscribe = #{subscribe,jdbcType=VARCHAR},
+      nick_name = #{nickName,jdbcType=VARCHAR},
+      sex = #{sex,jdbcType=VARCHAR},
+      country = #{country,jdbcType=VARCHAR},
+      province = #{province,jdbcType=VARCHAR},
+      city = #{city,jdbcType=VARCHAR},
+      subscribe_time = #{subscribeTime,jdbcType=VARCHAR},
+      spare0 = #{spare0,jdbcType=VARCHAR},
+      spare1 = #{spare1,jdbcType=VARCHAR},
+      spare2 = #{spare2,jdbcType=VARCHAR},
+      spare3 = #{spare3,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <!--  truncateFunction-->
   <delete id="truncateFunction">
     truncate table tb_public_fans
   </delete>

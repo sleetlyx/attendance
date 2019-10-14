@@ -16,6 +16,8 @@
 			location="classpath:config/application.properties" />
 	<context:component-scan
 		base-package="cn.fhjt.weixin.controller" />
+	<!-- 开启切面日志功能 的cglib代理-->
+<!--	<aop:aspectj-autoproxy proxy-target-class="true"/>-->
 <!--此处配置 使 springsecurity 方法权限注解生效	-->
 	<aop:aspectj-autoproxy proxy-target-class="true"></aop:aspectj-autoproxy>
 
