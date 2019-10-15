@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+	<title>欢迎登录</title>
+	<link rel="icon" href="assets/img/favicon.ico">
+
+
+	<link rel="stylesheet" type="text/css" href="css/webbase.css" />
+	<link rel="stylesheet" type="text/css" href="css/pages-login-manage.css" />
+
+
+	<script type="text/javascript" src="plugins/angularjs/angular.min.js">  </script>
+	<!-- 分页组件开始 -->
+	<script src="plugins/angularjs/pagination.js"></script>
+	<link rel="stylesheet" href="plugins/angularjs/pagination.css">
+	<!-- 分页组件结束 -->
+
+	<script type="text/javascript" src="js/base.js">  </script>
+	<script type="text/javascript" src="js/service/loginService.js">  </script>
+	<script type="text/javascript" src="js/controller/baseController.js">  </script>
+	<script type="text/javascript" src="js/controller/loginController.js">  </script>
+</head>
+
+<body ng-app="fhjt" ng-controller="loginController" ng-init="getLoginSession()">
+<div class="loginmanage">
+	<div class="py-container">
+		<h4 class="manage-title">打卡小程序登录中心</h4>
+		<div class="loginform">
+
+			<ul class="sui-nav nav-tabs tab-wraped">
+
+				<li class="active">
+					<a href="#profile" data-toggle="tab">
+						<h3>账户登录</h3>
+					</a>
+				</li>
+			</ul>
+			<div class="tab-content tab-wraped">
+
+				<div id="profile" class="tab-pane  active">
+<!--					<form class="sui-form" id="loginForm" method="post">-->
+						<form class="sui-form" id="loginForm" action="/attendance/login" method="post">
+						<div class="input-prepend"><span class="add-on loginname"></span>
+							<input id="prependedInput" name="username"  ng-model="username" type="text" placeholder="用户名" class="span2 input-xfat">
+						</div>
+						<div class="input-prepend"><span class="add-on loginpwd"></span>
+							<input id="prependedInput" name="password" ng-model="password" type="password" placeholder="请输入密码" class="span2 input-xfat">
+						</div>
+							<div ng-if="mesg" style="align-content: center">
+								<span style="color: red;font-size: 18px;">{{mesg}}</span>
+							</div>
+						<div class="logined">
+							    <a class="sui-btn btn-block btn-xlarge btn-danger" onclick="document.getElementById('loginForm').submit()" target="_blank">登&nbsp;&nbsp;录</a>
+<!--							<button class="sui-btn btn-block btn-xlarge btn-danger"  ng-click="submit()" target="_blank">登&nbsp;&nbsp;录</button>-->
+						</div>
+					</form>
+
+				</div>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+
+
+<!--foot-->
+<div class="py-container copyright">
+	<!-- 底部导航 -->
+	<footer class="main-footer">
+		<div class="pull-right hidden-xs">
+			<b>Version</b> 1.0.8
+		</div>
+		<strong>Copyright &copy; 2014-2017 <a href="http://www.itcast.cn">飞虎集团</a>.</strong> All rights reserved.
+	</footer>
+	<!-- 底部导航 /-->
+</div>
+
+
+<script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="js/plugins/sui/sui.min.js"></script>
+<script type="text/javascript" src="js/plugins/jquery-placeholder/jquery.placeholder.min.js"></script>
+
+<script>
+
+</script>
+</body>
+
+</html>

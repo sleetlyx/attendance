@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.fhjt.weixin.mapper.SavePublicTokenMapper" >
+  <resultMap id="BaseResultMap" type="cn.fhjt.weixin.pojo.SavePublicToken" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="public_token" property="publicToken" jdbcType="VARCHAR" />
+    <result column="spare0" property="spare0" jdbcType="VARCHAR" />
+    <result column="spare1" property="spare1" jdbcType="VARCHAR" />
+    <result column="spare2" property="spare2" jdbcType="VARCHAR" />
+
+  </resultMap>
+
+  <sql id="Base_Column_List" >
+    id,public_token, spare0 spare1, spare2
+  </sql>
+  <select id="getToken" resultMap="BaseResultMap" >
+    select
+    <include refid="Base_Column_List" />
+    from save_public_token
+  </select>
+
+  <insert id="insert" parameterType="cn.fhjt.weixin.pojo.SavePublicToken" >
+    insert into save_public_token (id, public_token, spare0, spare1, spare2)
+    values (#{id,jdbcType=BIGINT}, #{publicToken,jdbcType=VARCHAR}, #{spare0,jdbcType=VARCHAR}, #{spare1,jdbcType=VARCHAR},
+      #{spare2,jdbcType=VARCHAR})
+  </insert>
+
+  <select id="countByExample" resultType="java.lang.Integer" >
+    select count(*) from save_public_token
+  </select>
+
+
+  <update id="updateByPrimaryKeySelective" parameterType="cn.fhjt.weixin.pojo.SavePublicToken" >
+    update save_public_token
+    <set >
+      <if test="publicToken != null" >
+        public_token = #{publicToken,jdbcType=VARCHAR},
+      </if>
+
+      <if test="spare0 != null" >
+        spare0 = #{spare0,jdbcType=VARCHAR},
+      </if>
+
+      <if test="spare1 != null" >
+        spare1 = #{spare1,jdbcType=VARCHAR},
+      </if>
+      <if test="spare2 != null" >
+        spare2 = #{spare2,jdbcType=VARCHAR},
+      </if>
+
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.fhjt.weixin.pojo.SavePublicToken" >
+    update save_public_token
+    set public_token = #{publicToken,jdbcType=VARCHAR},
+      spare0= #{spare0,jdbcType=VARCHAR}
+      spare1 = #{spare1,jdbcType=VARCHAR},
+      spare2 = #{spare2,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>
