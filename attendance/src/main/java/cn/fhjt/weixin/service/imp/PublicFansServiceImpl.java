@@ -13,7 +13,7 @@ import java.util.Map;
 
 @Service
 public class PublicFansServiceImpl implements PublicFansService {
-    @Autowired
+    @Autowired(required=true)
     private TbPublicFansMapper publicFansMapper;
 
     @Override
@@ -37,8 +37,8 @@ public class PublicFansServiceImpl implements PublicFansService {
                    publicFans.setProvince(userInfo.get("province")==null? null: userInfo.get("province").toString());
                    publicFans.setCity(userInfo.get("city")==null? null: userInfo.get("city").toString());
                    publicFansMapper.insert(publicFans);
-               }//🐾"
-                //"\uD83D\uDC3E"
+               }
+
             }
         }
 

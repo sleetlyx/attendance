@@ -9,9 +9,8 @@
 
 <!--	开启secured 注解-->
 <!--	<global-method-security jsr250-annotations="enabled" />-->
-	<global-method-security secured-annotations="enabled" />
+<!--	<global-method-security secured-annotations="enabled" />-->
 
-<!--	<context:component-scan base-package="cn.fhjt.weixin.service"/>-->
 	<http pattern="/attendance/login.html" security="none"/>
 	<http pattern="/*.html" security="none"/>
 	<http pattern="/css/**" security="none"/>
@@ -21,6 +20,7 @@
 	<http pattern="/upload/**" security="none"/>
 	<http pattern="/weixin/*.do" security="none"/><!-- 放行小程序接口-->
 	<http pattern="/loginController/getLoginSession.do" security="none"/>
+	<http pattern="/empManger/findAll.do" security="none"/>
 	<!-- use-expressions:设置是否启动SpEL表达式，默认值是true。 -->
 	<http use-expressions="false">
 
@@ -59,13 +59,7 @@
 
 	<beans:bean id="passwordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
 
-<!--	<beans:bean id="userDetailsService" class="cn.fhjt.weixin.service.security.UserDetailsServiceImpl">-->
-<!--				 <beans:property name="tbUserService" ref="tbUserServiceImpl"/>-->
-<!--	</beans:bean>-->
 
-<!--	<beans:bean id="tbUserServiceImpl" class="cn.fhjt.weixin.service.imp.TbUserServiceImpl">-->
-
-<!--	</beans:bean>-->
 
 	<beans:bean id="userDetailsService" class="cn.fhjt.weixin.service.security.UserDetailsServiceImpl">
 					 <beans:property name="tbUserService" ref="tbUserServiceImpl"/>
@@ -79,19 +73,14 @@
 		</authentication-provider>
 	</authentication-manager>
 
+<!--cn.fhjt.weixin.service.imp.EmpServiceImpl-->
+<!--	<global-method-security>-->
 
-<!--	<beans:bean id="roleVoter" class="org.springframework.security.access.vote.RoleHierarchyVoter">-->
-<!--		<beans:constructor-arg ref="roleHierarchy" />-->
-<!--	</beans:bean>-->
-<!--	<beans:bean id="roleHierarchy"-->
-<!--		  class="org.springframework.security.access.hierarchicalroles.RoleHierarchyImpl">-->
-<!--		<beans:property name="hierarchy">-->
-<!--			<beans:value>-->
-<!--				ROLE_ADMIN > ROLE_STAFF-->
-<!--				ROLE_STAFF > ROLE_USER-->
-<!--				ROLE_USER > ROLE_GUEST-->
-<!--			</beans:value>-->
-<!--		</beans:property>-->
-<!--	</beans:bean>-->
+<!--	<protect-pointcut access="ROLE_READ" expression="execution(* cn.fhjt.weixin.service.imp.*ServiceImpl.*(..))"/>-->
+<!--   </global-method-security>-->
+	<!--	开启secured 注解-->
+	<!--	<global-method-security jsr250-annotations="enabled" />-->
+	<global-method-security secured-annotations="enabled"/>
+
 
 </beans:beans>

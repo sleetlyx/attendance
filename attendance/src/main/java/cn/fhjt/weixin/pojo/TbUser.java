@@ -1,9 +1,8 @@
 package cn.fhjt.weixin.pojo;
 
-import java.io.Serializable;
 import java.util.Date;
 
-public class TbUser implements Serializable {
+public class TbUser {
     private Long userId;
 
     private String userName;
@@ -21,6 +20,14 @@ public class TbUser implements Serializable {
     private String sex;
 
     private Date lastLoginTime;
+
+    private String function;
+
+    private String spare;
+
+    private String spare0;
+
+    private String spare1;
 
     public Long getUserId() {
         return userId;
@@ -92,5 +99,37 @@ public class TbUser implements Serializable {
 
     public void setLastLoginTime(Date lastLoginTime) {
         this.lastLoginTime = lastLoginTime;
+    }
+
+    public String getFunction() {
+        return function;
+    }
+
+    public void setFunction(String function) {
+        this.function = function == null ? null : function.trim();
+    }
+
+    public String getSpare() {
+        return spare;
+    }
+
+    public void setSpare(String spare) {
+        this.spare = spare == null ? null : spare.trim();
+    }
+
+    public String getSpare0() {
+        return spare0;
+    }
+
+    public void setSpare0(String spare0) {
+        this.spare0 = spare0 == null ? null : spare0.trim();
+    }
+
+    public String getSpare1() {
+        return spare1;
+    }
+
+    public void setSpare1(String spare1) {
+        this.spare1 = spare1 == null ? null : spare1.trim();
     }
 }

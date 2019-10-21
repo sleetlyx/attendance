@@ -19,4 +19,9 @@ public interface EmpMapper {
     int updateByExampleSelective(@Param("record") Emp record, @Param("example") EmpExample example);
 
     int updateByExample(@Param("record") Emp record, @Param("example") EmpExample example);
+
+    List<Emp> findempByemp(Emp emp);
+
+    int updateByPrimaryKey(Emp emp);
+    int updateStateByempid(Emp emp);
 }

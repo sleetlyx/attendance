@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="cn.fhjt.weixin.mapper.AppDeptMapper" >
+
+
+    <resultMap id="ResultMap1" type="cn.fhjt.weixin.pojo.AppDept" >
+        <result column="dept_id" property="id" jdbcType="NVARCHAR" />
+        <result column="parent_dept_id" property="pId" jdbcType="NVARCHAR" />
+        <result column="dept_name" property="name" jdbcType="NVARCHAR" />
+
+    </resultMap>
+    <select id="selectAll" resultMap="ResultMap1">
+     SELECT dept_id ,parent_dept_id,dept_name
+     FROM emp_dept
+    </select>
+
+</mapper>

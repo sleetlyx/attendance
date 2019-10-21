@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.fhjt.weixin.mapper.TbLogsMapper" >
+  <resultMap id="BaseResultMap" type="cn.fhjt.weixin.pojo.TbLogs" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="operator" property="operator" jdbcType="VARCHAR" />
+    <result column="operation_interface" property="operationInterface" jdbcType="VARCHAR" />
+    <result column="c_ip" property="cIp" jdbcType="VARCHAR" />
+    <result column="executive_business" property="executiveBusiness" jdbcType="VARCHAR" />
+    <result column="success_flag" property="successFlag" jdbcType="VARCHAR" />
+    <result column="time_consuming" property="timeConsuming" jdbcType="VARCHAR" />
+    <result column="creation_time" property="creationTime" jdbcType="TIMESTAMP" />
+    <result column="spare1" property="spare1" jdbcType="VARCHAR" />
+    <result column="spare2" property="spare2" jdbcType="VARCHAR" />
+    <result column="spare3" property="spare3" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, operator, operation_interface, c_ip, executive_business, success_flag, time_consuming, 
+    creation_time, spare1, spare2, spare3
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="cn.fhjt.weixin.pojo.TbLogsExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from tb_logs
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from tb_logs
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from tb_logs
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="cn.fhjt.weixin.pojo.TbLogsExample" >
+    delete from tb_logs
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="cn.fhjt.weixin.pojo.TbLogs" >
+    insert into tb_logs (id, operator, operation_interface, 
+      c_ip, executive_business, success_flag, 
+      time_consuming, creation_time, spare1, 
+      spare2, spare3)
+    values (#{id,jdbcType=BIGINT}, #{operator,jdbcType=VARCHAR}, #{operationInterface,jdbcType=VARCHAR}, 
+      #{cIp,jdbcType=VARCHAR}, #{executiveBusiness,jdbcType=VARCHAR}, #{successFlag,jdbcType=VARCHAR}, 
+      #{timeConsuming,jdbcType=VARCHAR}, #{creationTime,jdbcType=TIMESTAMP}, #{spare1,jdbcType=VARCHAR}, 
+      #{spare2,jdbcType=VARCHAR}, #{spare3,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.fhjt.weixin.pojo.TbLogs" >
+    insert into tb_logs
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="operator != null" >
+        operator,
+      </if>
+      <if test="operationInterface != null" >
+        operation_interface,
+      </if>
+      <if test="cIp != null" >
+        c_ip,
+      </if>
+      <if test="executiveBusiness != null" >
+        executive_business,
+      </if>
+      <if test="successFlag != null" >
+        success_flag,
+      </if>
+      <if test="timeConsuming != null" >
+        time_consuming,
+      </if>
+      <if test="creationTime != null" >
+        creation_time,
+      </if>
+      <if test="spare1 != null" >
+        spare1,
+      </if>
+      <if test="spare2 != null" >
+        spare2,
+      </if>
+      <if test="spare3 != null" >
+        spare3,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="operator != null" >
+        #{operator,jdbcType=VARCHAR},
+      </if>
+      <if test="operationInterface != null" >
+        #{operationInterface,jdbcType=VARCHAR},
+      </if>
+      <if test="cIp != null" >
+        #{cIp,jdbcType=VARCHAR},
+      </if>
+      <if test="executiveBusiness != null" >
+        #{executiveBusiness,jdbcType=VARCHAR},
+      </if>
+      <if test="successFlag != null" >
+        #{successFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="timeConsuming != null" >
+        #{timeConsuming,jdbcType=VARCHAR},
+      </if>
+      <if test="creationTime != null" >
+        #{creationTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="spare1 != null" >
+        #{spare1,jdbcType=VARCHAR},
+      </if>
+      <if test="spare2 != null" >
+        #{spare2,jdbcType=VARCHAR},
+      </if>
+      <if test="spare3 != null" >
+        #{spare3,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="cn.fhjt.weixin.pojo.TbLogsExample" resultType="java.lang.Integer" >
+    select count(*) from tb_logs
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update tb_logs
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.operator != null" >
+        operator = #{record.operator,jdbcType=VARCHAR},
+      </if>
+      <if test="record.operationInterface != null" >
+        operation_interface = #{record.operationInterface,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cIp != null" >
+        c_ip = #{record.cIp,jdbcType=VARCHAR},
+      </if>
+      <if test="record.executiveBusiness != null" >
+        executive_business = #{record.executiveBusiness,jdbcType=VARCHAR},
+      </if>
+      <if test="record.successFlag != null" >
+        success_flag = #{record.successFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="record.timeConsuming != null" >
+        time_consuming = #{record.timeConsuming,jdbcType=VARCHAR},
+      </if>
+      <if test="record.creationTime != null" >
+        creation_time = #{record.creationTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.spare1 != null" >
+        spare1 = #{record.spare1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.spare2 != null" >
+        spare2 = #{record.spare2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.spare3 != null" >
+        spare3 = #{record.spare3,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update tb_logs
+    set id = #{record.id,jdbcType=BIGINT},
+      operator = #{record.operator,jdbcType=VARCHAR},
+      operation_interface = #{record.operationInterface,jdbcType=VARCHAR},
+      c_ip = #{record.cIp,jdbcType=VARCHAR},
+      executive_business = #{record.executiveBusiness,jdbcType=VARCHAR},
+      success_flag = #{record.successFlag,jdbcType=VARCHAR},
+      time_consuming = #{record.timeConsuming,jdbcType=VARCHAR},
+      creation_time = #{record.creationTime,jdbcType=TIMESTAMP},
+      spare1 = #{record.spare1,jdbcType=VARCHAR},
+      spare2 = #{record.spare2,jdbcType=VARCHAR},
+      spare3 = #{record.spare3,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.fhjt.weixin.pojo.TbLogs" >
+    update tb_logs
+    <set >
+      <if test="operator != null" >
+        operator = #{operator,jdbcType=VARCHAR},
+      </if>
+      <if test="operationInterface != null" >
+        operation_interface = #{operationInterface,jdbcType=VARCHAR},
+      </if>
+      <if test="cIp != null" >
+        c_ip = #{cIp,jdbcType=VARCHAR},
+      </if>
+      <if test="executiveBusiness != null" >
+        executive_business = #{executiveBusiness,jdbcType=VARCHAR},
+      </if>
+      <if test="successFlag != null" >
+        success_flag = #{successFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="timeConsuming != null" >
+        time_consuming = #{timeConsuming,jdbcType=VARCHAR},
+      </if>
+      <if test="creationTime != null" >
+        creation_time = #{creationTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="spare1 != null" >
+        spare1 = #{spare1,jdbcType=VARCHAR},
+      </if>
+      <if test="spare2 != null" >
+        spare2 = #{spare2,jdbcType=VARCHAR},
+      </if>
+      <if test="spare3 != null" >
+        spare3 = #{spare3,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.fhjt.weixin.pojo.TbLogs" >
+    update tb_logs
+    set operator = #{operator,jdbcType=VARCHAR},
+      operation_interface = #{operationInterface,jdbcType=VARCHAR},
+      c_ip = #{cIp,jdbcType=VARCHAR},
+      executive_business = #{executiveBusiness,jdbcType=VARCHAR},
+      success_flag = #{successFlag,jdbcType=VARCHAR},
+      time_consuming = #{timeConsuming,jdbcType=VARCHAR},
+      creation_time = #{creationTime,jdbcType=TIMESTAMP},
+      spare1 = #{spare1,jdbcType=VARCHAR},
+      spare2 = #{spare2,jdbcType=VARCHAR},
+      spare3 = #{spare3,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

@@ -36,20 +36,25 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 		
 		List<GrantedAuthority> grantAuths = new ArrayList();
 		SimpleGrantedAuthority role_user = new SimpleGrantedAuthority("ROLE_USER");
-//		SimpleGrantedAuthority role_user = new SimpleGrantedAuthority("ROLE_ADMIN");
-		grantAuths.add(new SimpleGrantedAuthority("ROLE_findon"));
+//	SimpleGrantedAuthority role_user = new SimpleGrantedAuthority("ROLE_ADMIN");
+		grantAuths.add(new SimpleGrantedAuthority("ROLE_findByEmp"));//需要加上 role前缀  才会被识别
 		grantAuths.add(role_user);
-
-		// 去数据库进行查询:
-
-		TbUser tbUser = tbUserService.findByName(username);
-		if(tbUser != null){
-			if(tbUser.getStatus().equals("0")){
-				return new User(username,tbUser.getPassword(),grantAuths );
-			}else{
-				return null;
+		if(username.equals("admin")){
+			grantAuths.add(new SimpleGrantedAuthority("ROLE_admin"));
+			return new User(username,"$2a$10$n3kyVO2QdhE43Ul3qjV4DOm1hLG8sCbcFpIuFS7Mb2J991lNqS/Z2",grantAuths );
+		}else {
+			// 去数据库进行查询:
+			TbUser tbUser = tbUserService.findByName(username);
+			if(tbUser != null){
+				if(tbUser.getStatus().equals("0")){
+					return new User(username,tbUser.getPassword(),grantAuths );
+				}else{
+					return null;
+				}
 			}
 		}
+
+
 		return null;
 		
 	}

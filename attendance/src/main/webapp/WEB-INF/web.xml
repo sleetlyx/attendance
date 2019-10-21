@@ -11,7 +11,11 @@
 		<param-name>contextConfigLocation</param-name>
 		<param-value>classpath:spring/spring-*.xml</param-value>
 	</context-param>
-	<listener>
+<!--    <context-param>-->
+<!--        <param-name/>-->
+<!--        <param-value/>-->
+<!--    </context-param>-->
+    <listener>
 		<listener-class>
 			org.springframework.web.context.ContextLoaderListener
 		</listener-class>
@@ -36,6 +40,7 @@
 		<filter-name>CharacterEncodingFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
+
 
 
 <!-- 加载springMVC 和 service的配置 -->

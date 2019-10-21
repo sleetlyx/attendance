@@ -114,8 +114,8 @@ app.controller('userController' ,function($scope,$controller   ,userService){
 		userService.getUserName().success(function (res) {
 			$scope.currentUserName = res.userName;
 			$scope.lastTime = res.lastTime;
-
-			console.log(res,"$$$")
+			$scope.isfunction = res.isfunction;
+			console.log(res,"返回当前用户的权限信息")
 		})
 	}
 });	

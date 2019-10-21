@@ -73,8 +73,8 @@ public class WeiXinController {
     @Autowired
     private TbNewService tbNewService;
 
-    @Autowired
-    private PublicFansServiceImpl publicFansService;
+//    @Autowired(required=true)
+//    private PublicFansServiceImpl publicFansService;
 
     @Autowired
     private EmpService empService;
@@ -110,7 +110,7 @@ public class WeiXinController {
 
         if (bidwechat == null) {
             //code 响应状态码
-            resmap.put("code", 0);//没过绑定
+            resmap.put("code", 0);//没过
             resmap.put("openid", openid);
             resmap.put("sessionkey", secret);
 
@@ -615,7 +615,7 @@ public class WeiXinController {
             }
         }
         //持久化 公众号 粉丝用户的基本信息
-        publicFansService.save(jsonObjectAllList);
+//        publicFansService.save(jsonObjectAllList);
         return jsonObjectAllList;
     }
 

@@ -10,6 +10,7 @@ import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import jdk.nashorn.internal.ir.annotations.Reference;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Service;
 
 import cn.fhjt.weixin.mapper.TbUserMapper;
@@ -44,6 +45,7 @@ public class TbUserServiceImpl implements TbUserService {
 	 * 增加
 	 */
 	@Override
+	@Secured("ROLE_admin")
 	public void add(TbUser user) {
 		CustomerContextHolder.setCustomerType(CustomerContextHolder.DATA_SOURCE_MYSQL);
 		userMapper.insert(user);

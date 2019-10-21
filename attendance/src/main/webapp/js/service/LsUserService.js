@@ -20,4 +20,11 @@ app.service('lsuserService',function($http){
 	this.updateByEmpid = function (empid) {
 		return $http.get('../emp/updateByEmpid.do?empid='+empid);
 	}
+	//
+	this.updateDeptId = function (empid,deptid) {
+		return $http.get('../emp/updateEmpDeptId.do?empid='+empid+'&deptid='+deptid);
+	}
+	this.updateEmp = function(empid){
+		return $http.get('../emp/updateEmpState.do?empid='+empid);
+	}
 });

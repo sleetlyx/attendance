@@ -62,7 +62,7 @@ public class CheckInRecordServiceImpl implements CheckInRecordService {
 	 * 增加
 	 */
 	@Override
-	@Transactional(propagation= Propagation.REQUIRED)
+//	@Transactional(propagation= Propagation.REQUIRED)
 	public void add(TbCheckInRecord checkInRecord) {
 		CustomerContextHolder.setCustomerType(CustomerContextHolder.DATA_SOURCE_MYSQL);
 

@@ -7,6 +7,8 @@ import cn.fhjt.weixin.service.EmpService;
 import cn.fhjt.weixin.utils.CustomerContextHolder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -29,6 +31,9 @@ public class EmpServiceImpl implements EmpService {
     }
 
     @Override
+
+//    @RolesAllowed({"ROLE_ADMIN"})
+
     public List<Emp> findByEmp(Emp emp) {
         CustomerContextHolder.setCustomerType(CustomerContextHolder.DATA_SOURCE_SQLSERVER);
         EmpExample example = new EmpExample();
@@ -54,5 +59,34 @@ public class EmpServiceImpl implements EmpService {
         }else {
             return  empMapper.selectByExample(example);
         }
+    }
+
+    @Override
+    public List<Emp> findempByemp(Emp emp) {
+        CustomerContextHolder.setCustomerType(CustomerContextHolder.DATA_SOURCE_SQLSERVER);
+        emp = emp == null ? new Emp(): emp;
+        if(emp.getName() == null || "".equals(emp.getName())){
+            emp.setName(null);
+        }
+
+        if(emp.getEmpId() == null || "".equals(emp.getEmpId())){
+            emp.setEmpId(null);
+        }
+            return  empMapper.findempByemp(emp);
+    }
+
+    @Override
+//    @Transactional(propagation= Propagation.REQUIRES_NEW)
+    public int updateEmp(Emp emp) {
+        CustomerContextHolder.setCustomerType(CustomerContextHolder.DATA_SOURCE_SQLSERVER);
+
+        return empMapper.updateByPrimaryKey(emp);
+    }
+
+    @Override
+    public int updateStateByempid(Emp emp) {
+        CustomerContextHolder.setCustomerType(CustomerContextHolder.DATA_SOURCE_SQLSERVER);
+
+        return empMapper.updateStateByempid(emp);
     }
 }

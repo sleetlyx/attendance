@@ -11,6 +11,7 @@ import cn.fhjt.weixin.pojo.entity.Result;
 import cn.fhjt.weixin.service.EmpService;
 import cn.fhjt.weixin.service.TbUserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -36,11 +37,17 @@ public class UserController {
 	 * @return
 	 */
 	@RequestMapping("/add")
+
 	public Result add(@RequestBody TbUser user){
 		try {
 			user.setCreated(new Date());
 			BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 			user.setPassword(passwordEncoder.encode(user.getPassword().trim()));
+			if("0".equals(user.getFunction())){
+				user.setFunction("非小程序管理员");
+			}else  if("1".equals(user.getFunction())){
+				user.setFunction("小程序管理员");
+			}
 			tbUserService.add(user);
 			return new Result(true, "增加成功");
 		} catch (Exception e) {

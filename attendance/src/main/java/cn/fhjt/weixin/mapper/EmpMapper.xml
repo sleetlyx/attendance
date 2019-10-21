@@ -1,83 +1,97 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="cn.fhjt.weixin.mapper.EmpMapper" >
-  <resultMap id="BaseResultMap" type="cn.fhjt.weixin.pojo.Emp" >
-    <result column="avocation" property="avocation" jdbcType="NVARCHAR" />
-    <result column="bank_account" property="bankAccount" jdbcType="NVARCHAR" />
-    <result column="bank_code" property="bankCode" jdbcType="NVARCHAR" />
-    <result column="beg_work_date" property="begWorkDate" jdbcType="NVARCHAR" />
-    <result column="birthday" property="birthday" jdbcType="NVARCHAR" />
-    <result column="birthday_lunar" property="birthdayLunar" jdbcType="NVARCHAR" />
-    <result column="college" property="college" jdbcType="NVARCHAR" />
-    <result column="contract_beg_date" property="contractBegDate" jdbcType="NVARCHAR" />
-    <result column="contract_end_date" property="contractEndDate" jdbcType="NVARCHAR" />
-    <result column="contract_type" property="contractType" jdbcType="NVARCHAR" />
-    <result column="cross_group_id" property="crossGroupId" jdbcType="NVARCHAR" />
-    <result column="culture_degree" property="cultureDegree" jdbcType="NVARCHAR" />
-    <result column="culture_level" property="cultureLevel" jdbcType="NVARCHAR" />
-    <result column="dept_id" property="deptId" jdbcType="NVARCHAR" />
-    <result column="dept_post" property="deptPost" jdbcType="NVARCHAR" />
-    <result column="easy_code" property="easyCode" jdbcType="NVARCHAR" />
-    <result column="email" property="email" jdbcType="NVARCHAR" />
-    <result column="emp_card_no" property="empCardNo" jdbcType="NVARCHAR" />
+  <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+  <mapper namespace="cn.fhjt.weixin.mapper.EmpMapper" >
+    <resultMap id="BaseResultMap" type="cn.fhjt.weixin.pojo.Emp" >
+      <result column="avocation" property="avocation" jdbcType="NVARCHAR" />
+      <result column="bank_account" property="bankAccount" jdbcType="NVARCHAR" />
+      <result column="bank_code" property="bankCode" jdbcType="NVARCHAR" />
+      <result column="beg_work_date" property="begWorkDate" jdbcType="NVARCHAR" />
+      <result column="birthday" property="birthday" jdbcType="NVARCHAR" />
+      <result column="birthday_lunar" property="birthdayLunar" jdbcType="NVARCHAR" />
+      <result column="college" property="college" jdbcType="NVARCHAR" />
+      <result column="contract_beg_date" property="contractBegDate" jdbcType="NVARCHAR" />
+      <result column="contract_end_date" property="contractEndDate" jdbcType="NVARCHAR" />
+      <result column="contract_type" property="contractType" jdbcType="NVARCHAR" />
+      <result column="cross_group_id" property="crossGroupId" jdbcType="NVARCHAR" />
+      <result column="culture_degree" property="cultureDegree" jdbcType="NVARCHAR" />
+      <result column="culture_level" property="cultureLevel" jdbcType="NVARCHAR" />
+      <result column="dept_id" property="deptId" jdbcType="NVARCHAR" />
+      <result column="dept_post" property="deptPost" jdbcType="NVARCHAR" />
+      <result column="easy_code" property="easyCode" jdbcType="NVARCHAR" />
+      <result column="email" property="email" jdbcType="NVARCHAR" />
+      <result column="emp_card_no" property="empCardNo" jdbcType="NVARCHAR" />
+      <result column="emp_id" property="empId" jdbcType="NVARCHAR" />
+      <result column="emp_wage_type" property="empWageType" jdbcType="NVARCHAR" />
+      <result column="employ_from" property="employFrom" jdbcType="NVARCHAR" />
+      <result column="employ_type" property="employType" jdbcType="NVARCHAR" />
+      <result column="endowment_account" property="endowmentAccount" jdbcType="NVARCHAR" />
+      <result column="ext_1" property="ext1" jdbcType="NVARCHAR" />
+      <result column="ext_2" property="ext2" jdbcType="NVARCHAR" />
+      <result column="ext_3" property="ext3" jdbcType="NVARCHAR" />
+      <result column="ext_4" property="ext4" jdbcType="NVARCHAR" />
+      <result column="ext_5" property="ext5" jdbcType="NVARCHAR" />
+      <result column="ext_6" property="ext6" jdbcType="NVARCHAR" />
+      <result column="ext_7" property="ext7" jdbcType="NVARCHAR" />
+      <result column="ext_8" property="ext8" jdbcType="NVARCHAR" />
+      <result column="file_location" property="fileLocation" jdbcType="NVARCHAR" />
+      <result column="graduate_date" property="graduateDate" jdbcType="NVARCHAR" />
+      <result column="hire_date" property="hireDate" jdbcType="NVARCHAR" />
+      <result column="home_address" property="homeAddress" jdbcType="NVARCHAR" />
+      <result column="home_phone" property="homePhone" jdbcType="NVARCHAR" />
+      <result column="housing_account" property="housingAccount" jdbcType="NVARCHAR" />
+      <result column="leave_cause" property="leaveCause" jdbcType="NVARCHAR" />
+      <result column="leave_date" property="leaveDate" jdbcType="NVARCHAR" />
+      <result column="leave_method" property="leaveMethod" jdbcType="NVARCHAR" />
+      <result column="marriage_flag" property="marriageFlag" jdbcType="NVARCHAR" />
+      <result column="medicare_account" property="medicareAccount" jdbcType="NVARCHAR" />
+      <result column="mobile" property="mobile" jdbcType="NVARCHAR" />
+      <result column="msn_no" property="msnNo" jdbcType="NVARCHAR" />
+      <result column="name" property="name" jdbcType="NVARCHAR" />
+      <result column="nation" property="nation" jdbcType="NVARCHAR" />
+      <result column="native_place" property="nativePlace" jdbcType="NVARCHAR" />
+      <result column="note_info" property="noteInfo" jdbcType="NVARCHAR" />
+      <result column="order_id" property="orderId" jdbcType="INTEGER" />
+      <result column="other_im_no" property="otherImNo" jdbcType="NVARCHAR" />
+      <result column="paper_id" property="paperId" jdbcType="NVARCHAR" />
+      <result column="person_web" property="personWeb" jdbcType="NVARCHAR" />
+      <result column="polity" property="polity" jdbcType="NVARCHAR" />
+      <result column="post_date" property="postDate" jdbcType="NVARCHAR" />
+      <result column="post_degree" property="postDegree" jdbcType="NVARCHAR" />
+      <result column="practice_beg_date" property="practiceBegDate" jdbcType="NVARCHAR" />
+      <result column="practice_end_date" property="practiceEndDate" jdbcType="NVARCHAR" />
+      <result column="probation_beg_date" property="probationBegDate" jdbcType="NVARCHAR" />
+      <result column="probation_end_date" property="probationEndDate" jdbcType="NVARCHAR" />
+      <result column="qq_no" property="qqNo" jdbcType="NVARCHAR" />
+      <result column="register_location" property="registerLocation" jdbcType="NVARCHAR" />
+      <result column="related_man" property="relatedMan" jdbcType="NVARCHAR" />
+      <result column="residence_type" property="residenceType" jdbcType="NVARCHAR" />
+      <result column="sex" property="sex" jdbcType="NVARCHAR" />
+      <result column="specialty" property="specialty" jdbcType="NVARCHAR" />
+      <result column="state" property="state" jdbcType="NVARCHAR" />
+      <result column="tax_group_id" property="taxGroupId" jdbcType="NVARCHAR" />
+      <result column="technical" property="technical" jdbcType="NVARCHAR" />
+      <result column="technical_date" property="technicalDate" jdbcType="NVARCHAR" />
+      <result column="telephone" property="telephone" jdbcType="NVARCHAR" />
+      <result column="timer_passwd" property="timerPasswd" jdbcType="NVARCHAR" />
+      <result column="unemployment_account" property="unemploymentAccount" jdbcType="NVARCHAR" />
+      <result column="urgent_telephone" property="urgentTelephone" jdbcType="NVARCHAR" />
+      <result column="work_location" property="workLocation" jdbcType="NVARCHAR" />
+      <result column="bz" property="bz" jdbcType="NVARCHAR" />
+    </resultMap>
+<!-- A.emp_id,A.name,A.sex,A.paper_id,A.mobile,D.dept_name as dept_id, C.post_name as dept_post,A.state,A.hire_date -->
+  <resultMap id="BaseResultMap1" type="cn.fhjt.weixin.pojo.Emp" >
     <result column="emp_id" property="empId" jdbcType="NVARCHAR" />
-    <result column="emp_wage_type" property="empWageType" jdbcType="NVARCHAR" />
-    <result column="employ_from" property="employFrom" jdbcType="NVARCHAR" />
-    <result column="employ_type" property="employType" jdbcType="NVARCHAR" />
-    <result column="endowment_account" property="endowmentAccount" jdbcType="NVARCHAR" />
-    <result column="ext_1" property="ext1" jdbcType="NVARCHAR" />
-    <result column="ext_2" property="ext2" jdbcType="NVARCHAR" />
-    <result column="ext_3" property="ext3" jdbcType="NVARCHAR" />
-    <result column="ext_4" property="ext4" jdbcType="NVARCHAR" />
-    <result column="ext_5" property="ext5" jdbcType="NVARCHAR" />
-    <result column="ext_6" property="ext6" jdbcType="NVARCHAR" />
-    <result column="ext_7" property="ext7" jdbcType="NVARCHAR" />
-    <result column="ext_8" property="ext8" jdbcType="NVARCHAR" />
-    <result column="file_location" property="fileLocation" jdbcType="NVARCHAR" />
-    <result column="graduate_date" property="graduateDate" jdbcType="NVARCHAR" />
-    <result column="hire_date" property="hireDate" jdbcType="NVARCHAR" />
-    <result column="home_address" property="homeAddress" jdbcType="NVARCHAR" />
-    <result column="home_phone" property="homePhone" jdbcType="NVARCHAR" />
-    <result column="housing_account" property="housingAccount" jdbcType="NVARCHAR" />
-    <result column="leave_cause" property="leaveCause" jdbcType="NVARCHAR" />
-    <result column="leave_date" property="leaveDate" jdbcType="NVARCHAR" />
-    <result column="leave_method" property="leaveMethod" jdbcType="NVARCHAR" />
-    <result column="marriage_flag" property="marriageFlag" jdbcType="NVARCHAR" />
-    <result column="medicare_account" property="medicareAccount" jdbcType="NVARCHAR" />
-    <result column="mobile" property="mobile" jdbcType="NVARCHAR" />
-    <result column="msn_no" property="msnNo" jdbcType="NVARCHAR" />
+    <result column="dept_id" property="deptId" jdbcType="NVARCHAR" />
     <result column="name" property="name" jdbcType="NVARCHAR" />
-    <result column="nation" property="nation" jdbcType="NVARCHAR" />
-    <result column="native_place" property="nativePlace" jdbcType="NVARCHAR" />
-    <result column="note_info" property="noteInfo" jdbcType="NVARCHAR" />
-    <result column="order_id" property="orderId" jdbcType="INTEGER" />
-    <result column="other_im_no" property="otherImNo" jdbcType="NVARCHAR" />
-    <result column="paper_id" property="paperId" jdbcType="NVARCHAR" />
-    <result column="person_web" property="personWeb" jdbcType="NVARCHAR" />
-    <result column="polity" property="polity" jdbcType="NVARCHAR" />
-    <result column="post_date" property="postDate" jdbcType="NVARCHAR" />
-    <result column="post_degree" property="postDegree" jdbcType="NVARCHAR" />
-    <result column="practice_beg_date" property="practiceBegDate" jdbcType="NVARCHAR" />
-    <result column="practice_end_date" property="practiceEndDate" jdbcType="NVARCHAR" />
-    <result column="probation_beg_date" property="probationBegDate" jdbcType="NVARCHAR" />
-    <result column="probation_end_date" property="probationEndDate" jdbcType="NVARCHAR" />
-    <result column="qq_no" property="qqNo" jdbcType="NVARCHAR" />
-    <result column="register_location" property="registerLocation" jdbcType="NVARCHAR" />
-    <result column="related_man" property="relatedMan" jdbcType="NVARCHAR" />
-    <result column="residence_type" property="residenceType" jdbcType="NVARCHAR" />
     <result column="sex" property="sex" jdbcType="NVARCHAR" />
-    <result column="specialty" property="specialty" jdbcType="NVARCHAR" />
+    <result column="paper_id" property="paperId" jdbcType="NVARCHAR" />
+    <result column="mobile" property="mobile" jdbcType="NVARCHAR" />
+    <result column="dept_post" property="deptPost" jdbcType="NVARCHAR" />
     <result column="state" property="state" jdbcType="NVARCHAR" />
-    <result column="tax_group_id" property="taxGroupId" jdbcType="NVARCHAR" />
-    <result column="technical" property="technical" jdbcType="NVARCHAR" />
-    <result column="technical_date" property="technicalDate" jdbcType="NVARCHAR" />
-    <result column="telephone" property="telephone" jdbcType="NVARCHAR" />
-    <result column="timer_passwd" property="timerPasswd" jdbcType="NVARCHAR" />
-    <result column="unemployment_account" property="unemploymentAccount" jdbcType="NVARCHAR" />
-    <result column="urgent_telephone" property="urgentTelephone" jdbcType="NVARCHAR" />
-    <result column="work_location" property="workLocation" jdbcType="NVARCHAR" />
-    <result column="bz" property="bz" jdbcType="NVARCHAR" />
+    <result column="hire_date" property="hireDate" jdbcType="NVARCHAR" />
+    <result column="native_place" property="nativePlace" jdbcType="NVARCHAR" />
   </resultMap>
+
   <sql id="Example_Where_Clause" >
     <where >
       <foreach collection="oredCriteria" item="criteria" separator="or" >
@@ -1000,4 +1014,33 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
+
+
+  <select id="findempByemp" parameterType="cn.fhjt.weixin.pojo.Emp" resultMap="BaseResultMap1">
+select  A.emp_id,A.name,A.sex,A.paper_id,A.mobile,D.dept_name as dept_id, C.post_name as dept_post,A.state,A.native_place,A.hire_date
+  from  emp A
+    left join emp_post C on C.post_id = A.dept_post
+    left join emp_dept D on D.dept_id =A.dept_id
+        where 1=1
+            <if test="name != null ">
+                and name= #{name}
+             </if>
+            <if test="empId != null">
+                and emp_id = #{empId}
+             </if>
+  </select>
+
+  <update id="updateByPrimaryKey" parameterType="cn.fhjt.weixin.pojo.Emp">
+    update emp
+    set
+    dept_id = #{deptId}
+    where  emp_id = #{empId}
+  </update>
+  <update id="updateStateByempid" parameterType="cn.fhjt.weixin.pojo.Emp">
+    update emp
+    set
+     state = #{state,jdbcType=NVARCHAR}
+    where  emp_id = #{empId}
+  </update>
+
 </mapper>

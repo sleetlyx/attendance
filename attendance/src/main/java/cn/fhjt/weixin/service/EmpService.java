@@ -19,4 +19,10 @@ public interface EmpService {
      * @return
      */
     List<Emp> findByEmp(Emp emp);
+
+    List<Emp> findempByemp(Emp emp);
+
+    int updateEmp(Emp emp);
+
+    int updateStateByempid(Emp emp);
 }

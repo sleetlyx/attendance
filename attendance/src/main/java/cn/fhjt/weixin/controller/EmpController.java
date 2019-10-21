@@ -2,16 +2,22 @@ package cn.fhjt.weixin.controller;
 
 import cn.fhjt.weixin.pojo.Emp;
 import cn.fhjt.weixin.pojo.TbBindingWechat;
+import cn.fhjt.weixin.pojo.entity.Result;
 import cn.fhjt.weixin.service.EmpService;
 import cn.fhjt.weixin.service.TbBindingWechatService;
 import cn.fhjt.weixin.utils.WXAppletUserInfo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.*;
 
 /**
@@ -19,7 +25,7 @@ import java.util.*;
  */
 @RestController
 @RequestMapping("/emp")
-public class EmpController {
+public class EmpController{
 
     @Autowired
     private EmpService empService;
@@ -35,9 +41,10 @@ public class EmpController {
      * @return
      */
     @RequestMapping("/findBybadge")
-    public List<Emp> findBybadge(@RequestBody(required = false) Emp emp){
+    public List<Emp> findBybadge(@RequestBody(required = false) Emp emp, HttpServletRequest request){
         wxcode = null;
-        List<Emp> lsUser = empService.findByEmp(emp);
+//        List<Emp> lsUser = empService.findByEmp(emp);
+        List<Emp> lsUser = empService.findempByemp(emp);
         if(lsUser != null && lsUser.size()>0){
             for (Emp obj: lsUser ) {
                 if(obj.getSex()!= null && obj.getSex().equals("A")){
@@ -47,10 +54,22 @@ public class EmpController {
                 }
                 if(obj.getState() != null && obj.getState().equals("F")){
                     obj.setState("已离职");
-                }else if(obj.getState() == null || obj.getState().equals("B")){
+                }else if(obj.getState() == null || obj.getState().equals("H")){
+                    obj.setState("已离职");
+                }else if(obj.getState() == null || obj.getState().equals("C")){
+                    obj.setState("离职未办手续");
+                }else {
                     obj.setState("在职");
                 }
             }
+
+//            SecurityContext ctx = SecurityContextHolder.getContext();
+//            Authentication auth = ctx.getAuthentication();
+//            User user = (User) auth.getPrincipal();
+//
+//            ModelAndView mv = new ModelAndView();
+//            mv.addObject("name", "ljh");
+
             return lsUser;
         }else {
             return null;
@@ -153,5 +172,63 @@ public class EmpController {
             this.getCode(code);
         }
         return  code ;
+    }
+
+    //更新的部门id
+    @RequestMapping("/updateEmpDeptId")
+    public Result updateEmpDeptId(String empid,String deptid,HttpServletRequest request) throws Exception{
+        Emp emp = new Emp();
+        emp.setEmpId(empid);
+        List<Emp> byEmp = empService.findByEmp(emp);
+        if (byEmp != null) {
+            emp= byEmp.get(0);
+            String oringDeptid = emp.getDeptId();
+            emp.setDeptId(deptid);
+//            try {
+                int i = empService.updateEmp(emp);
+            HttpSession session = request.getSession();
+                if(i>0){
+//                    session.setAttribute("test","}由原始部门id改为");
+//                    Object userNameob = request.getSession().getAttribute("userName");
+
+                    session.setAttribute("modifier",emp.getName()+"["+emp.getEmpId()+"]由原始部门id="+oringDeptid+"改为部门id="+deptid);
+                }
+                return new Result(true,"修改成功");
+//            }catch (Exception e){
+//                return new Result(false,"修改失败");
+//            }
+        }else{
+            return new Result(false,"修改失败");
+        }
+    }
+    //更新
+    @RequestMapping("/updateEmpState")
+    public Result updateEmp(String empid,HttpServletRequest request) throws Exception{
+        Emp emp = new Emp();
+        emp.setEmpId(empid);
+        List<Emp> byEmp = empService.findByEmp(emp);
+        if (byEmp != null) {
+            emp = byEmp.get(0);
+            emp.setState("C");
+            int i = empService.updateStateByempid(emp);
+            if(i>0){
+                    request.getSession().setAttribute("modifierState",emp.getName()+"["+emp.getEmpId()+"]的状态为离职未办手续");
+
+            }
+            return new Result(true,"修改成功");
+
+        }else{
+            return new Result(false,"修改失败");
+        }
+
+
+
+
+//            try {
+
+//            }catch (Exception e){
+//                return new Result(false,"修改失败");
+//            }
+
     }
 }

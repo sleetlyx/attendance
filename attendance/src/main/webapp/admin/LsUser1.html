@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>员工管理</title>
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../plugins/adminLTE/css/AdminLTE.css">
+    <link rel="stylesheet" href="../plugins/adminLTE/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../plugins/jQuery/jquery-2.2.3.min.js"></script>
+    <script src="../plugins/bootstrap/js/bootstrap.min.js"></script>
+
+
+<!--    zThree -->
+    <link rel="stylesheet" href="../plugins/zThree/three.css" type="text/css">
+    <link rel="stylesheet" href="../plugins/zThree/zTreeStyle.css" type="text/css">
+<!--    <script type="text/javascript" src="../plugins/jQuery/jquery-2.2.3.min.js"></script>-->
+    <script type="text/javascript" src="../plugins/zThree/jquery.ztree.core.js"></script>
+
+    <script type="text/javascript" src="../plugins/angularjs/angular.min.js">  </script>
+    <!-- 分页组件开始 -->
+    <script src="../plugins/angularjs/pagination.js"></script>
+    <link rel="stylesheet" href="../plugins/angularjs/pagination.css">
+    <!-- 分页组件结束 -->
+
+
+    <script type="text/javascript" src="../js/base.js">  </script>
+    <script type="text/javascript" src="../js/service/LsUserService.js">  </script>
+    <script type="text/javascript" src="../js/controller/baseController.js">  </script>
+    <script type="text/javascript" src="../js/controller/LsUserController.js">  </script>
+
+</head>
+<body class="hold-transition skin-red sidebar-mini" ng-app="fhjt" ng-controller="LsUserController" >
+<!-- .box-body -->
+<div class="box-header with-border">
+    <h3 class="box-title">员工变更管理</h3>
+</div>
+
+<div class="box-body">
+
+    <!-- 数据表格 -->
+    <div class="table-box">
+
+        <!--工具栏-->
+        <div class="pull-left">
+            <div class="form-group form-inline">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default" title="刷新" onclick="window.location.reload();"><i class="fa fa-refresh"></i> 刷新</button>
+                </div>
+            </div>
+        </div>
+        <div class="box-tools pull-right">
+                工号：<input type="text" ng-model="searchEntity.empId">
+                姓名：<input type="text" ng-model="searchEntity.name">
+                <button class="btn btn-default" ng-click="reloadList()">查询</button>
+            </div>
+
+        </div>
+        <!--工具栏/-->
+
+        <!--数据列表-->
+        <table id="dataList" class="table table-bordered table-striped table-hover dataTable">
+            <thead>
+            <tr>
+                <th class="" style="padding-right:0px">
+                    <input id="selall" type="checkbox" class="icheckbox_square-blue">
+                </th>
+                <th class="sorting">工号</th>
+                <th class="sorting">姓名</th>
+                <th class="sorting">性别</th>
+                <th class="sorting">身份证</th>
+                <th class="sorting">电话号</th>
+                <th class="sorting">所属部门</th>
+                <th class="sorting">岗位</th>
+                <th class="sorting">入职时间</th>
+
+                <th class="sorting">状态</th>
+                <th class="sorting">所在地</th>
+
+                <th class="text-center">操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="entity in list">
+                <td><input  type="checkbox" ng-click="updateSelection($event,entity.userid)"></td>
+                <td>{{entity.empId}}</td>
+                <td>{{entity.name}}</td>
+                <td>{{entity.sex}}</td>
+                <td>{{entity.paperId}}</td>
+                <td>{{entity.mobile}}</td>
+                <td>{{entity.deptId}}</td>
+                <td>{{entity.deptPost}}</td>
+                <td>{{entity.hireDate}}</td>
+                <td>{{entity.state}}</td>
+
+                <td>{{entity.nativePlace}}</td>
+                <td class="text-center" >
+<!--                    <button ng-if="isShow[$index]"  >修改为离职未办手续</button>-->
+                    <button ng-if="isShow[$index]" type="button" class="btn bg-blue btn-xs"  ng-click="updateEmp(entity.empId)">修改为离职未办手续</button>
+                    <button ng-if="isShow[$index]" type="button" class="btn bg-olive btn-xs" data-toggle="modal" data-target="#editModal" ng-click="noteEmpId(entity.empId)">修改部门</button>
+
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <!--数据列表/-->
+    </div>
+    <!-- 数据表格 /-->
+    <!-- 分页 -->
+   <!-- <tm-pagination conf="paginationConf"></tm-pagination>-->
+</div>
+<!-- /.box-body -->
+
+<!-- 编辑窗口 -->
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" >
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="myModalLabel">修改员工所在部门</h3>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered table-striped"  width="800px">
+<!--                    <tr>-->
+<!--                        <td>部门：</td>-->
+
+<!--                        <td><input  class="form-control" ng-model="entity.empId" placeholder="工号" readonly  unselectable="on" ></td>-->
+
+<!--                    </tr>-->
+
+                    <div class="content_wrap" style="padding: 0">
+                        <div class="zTreeDemoBackground left" style="padding: 0">
+                            <tr class="list" style="position: absolute;top: 10px;width: 95%">
+
+                            <td class="title" style="width: 20%">部门名称：</td>
+                            <td  style="width: 40%;text-align: center;">
+                                <input id="citySel" class="form-control" type="text" readonly  unselectable="on" value="" />
+                                <input  id="deptId" class="form-control" type="hidden"  value=""/>
+                            </td>
+                            <td style="width: 30%;text-align: center;">
+                                <a id="menuBtn" href="#" onclick="showMenu(); return false;">点击选择部门</a>
+                            </td>
+
+                            </tr>
+                        </div>
+
+                    </div>
+
+                    <div id="menuContent" class="menuContent" style="display:none; position: absolute;width: 80%">
+                        <ul id="treeDemo" class="ztree" style="margin-top:0; width:100%;"></ul>
+                    </div>
+
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success" data-dismiss="modal" aria-hidden="true" ng-click="updateDeptId()">确定</button>
+                <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+<SCRIPT type="text/javascript">
+    <!--
+    var setting = {
+        view: {
+            dblClickExpand: false
+        },
+        data: {
+            simpleData: {
+                enable: true
+            }
+        },
+        callback: {
+            // beforeClick: beforeClick,
+            onClick: onClick
+        }
+    };
+
+
+    // function beforeClick(treeId, treeNode) {
+    //   var check = (treeNode && !treeNode.isParent);
+    //   if (!check) alert("只能选择城市...");
+    //   return check;
+    // }
+
+    function onClick(e, treeId, treeNode) {
+        debugger
+        var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+            nodes = zTree.getSelectedNodes(),
+            v = "";
+          var  deptId ="";
+        nodes.sort(function compare(a,b){return a.id-b.id;});
+        for (var i=0, l=nodes.length; i<l; i++) {
+            v += nodes[i].name + ",";
+            deptId = nodes[i].id;
+        }
+        if (v.length > 0 ) v = v.substring(0, v.length-1);
+
+        var cityObj = $("#citySel");
+        cityObj.attr("value", v);
+        $("#deptId").attr("value",deptId);
+
+    }
+
+    function showMenu() {
+        var cityObj = $("#citySel");
+        var cityOffset = $("#citySel").offset();
+        // $("#menuContent").css({left:cityOffset.left + "px", top:cityOffset.top + cityObj.outerHeight() + "px",position:"absolute"}).slideDown("fast");
+        $("#menuContent").css({left:"25%", top:"15%",position:"absolute",width:"50%"}).slideDown("fast");
+
+        $("body").bind("mousedown", onBodyDown);
+    }
+    function hideMenu() {
+        $("#menuContent").fadeOut("fast");
+        $("body").unbind("mousedown", onBodyDown);
+    }
+    function onBodyDown(event) {
+        if (!(event.target.id == "menuBtn" || event.target.id == "menuContent" || $(event.target).parents("#menuContent").length>0)) {
+            hideMenu();
+        }
+    }
+
+    $(document).ready(function(){
+
+        // var zNodes =[
+        //     {id:1, pId:0, name:"北京"},
+        //     {id:2, pId:0, name:"天津"},
+        //     {id:3, pId:0, name:"上海"},
+        //     {id:6, pId:0, name:"重庆"},
+        //     {id:4, pId:0, name:"河北省", open:true},
+        //     {id:41, pId:4, name:"石家庄"},
+        //     {id:42, pId:4, name:"保定"},
+        //     {id:43, pId:4, name:"邯郸"},
+        //     {id:44, pId:4, name:"承德"},
+        //     {id:5, pId:0, name:"广东省", open:true},
+        //     {id:51, pId:5, name:"广州"},
+        //     {id:52, pId:5, name:"深圳"},
+        //     {id:53, pId:5, name:"东莞"},
+        //     {id:54, pId:5, name:"佛山"},
+        //     {id:6, pId:0, name:"福建省", open:true},
+        //     {id:61, pId:6, name:"福州"},
+        //     {id:62, pId:6, name:"厦门"},
+        //     {id:63, pId:6, name:"泉州"},
+        //     {id:64, pId:6, name:"三明"},
+        //     {id:10, pId:10, name:"北京"},
+        //     {id:20, pId:10, name:"天津"},
+        //     {id:30, pId:10, name:"上海"},
+        //     {id:60, pId:10, name:"重庆"}
+        // ];
+        var zNodes =[]
+        $.ajax({
+            type: "POST",
+            url: "../empManger/findAll.do",
+            data: "",
+            success: function(res){
+               console.log(res);
+               zNodes = res;
+               $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+            }
+        });
+
+
+    });
+    //-->
+</SCRIPT>
+</html>
